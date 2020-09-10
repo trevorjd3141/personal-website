@@ -1,0 +1,9 @@
+Changes Needing to take place.
+New Sections in this order
+About Me (Update text)
+Education
+Work
+Projects (Make them in the shape of cards)
+Skills
+
+UI Overhaul (make look more techy)

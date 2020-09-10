@@ -23,6 +23,23 @@
 	<!--Google Ownership-->
 	<meta name="google-site-verification" content="j-Qy8ysUX15GhnWCTggk-g60gQz-byBjuIoGaOwGWoc" />
 
+	<!--Bootstrap CSS CDN-->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+	<!--my personal CSS file-->
+	<link href="style.css" rel="stylesheet" type="text/css">
+
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+
+	<!--jQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+	<!--Bootstrap jQuery CDN-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!--Font Awesome CDN-->
+	<script src="https://use.fontawesome.com/3f383c3879.js"></script>
 </head>
 
 <body data-offset="30" data-spy="scroll" data-target="nav">
@@ -58,33 +75,21 @@
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<li>
-							<a href="#objective">Objective</a>
+							<a href="#about-me">About Me</a>
+						</li>
+
+						<li>
+							<a href="experience">Experience</a>
+						</li>
+
+
+						<li>
+							<a href="#projects">Projects</a>
 						</li>
 
 
 						<li>
 							<a href="#skills">Skills</a>
-						</li>
-						<!--Table with progress bars-->
-
-
-						<li>
-							<a href="#experience">Experience</a>
-						</li>
-						<!--Experience (Christian)
-
-						Add circle buttons such as is on
-						http://ui-patterns.com/users/1/collections/lists/screenshots
-						but make it the blue-->
-
-
-						<li>
-							<a href="#likes">Likes &amp; Dislikes</a>
-						</li>
-
-
-						<li>
-							<a href="#aboutme">About Me</a>
 						</li>
 					</ul>
 					<p class="navbar-text">
@@ -102,221 +107,40 @@
 		<!--Main title with my name in huge letters-->
 
 
-		<div class="container-fluid textsection removemobile" id="namearea">
+		<div class="container-fluid text-section removemobile" id="namearea">
 			<p>&lt; Trevor Dalton &gt;</p>
 					<!--The down arrow-->
 
 			<div class="row">
 				<div class="col-md-2 col-md-offset-5">
-					<a href="#objective">
+					<a href="#about-me">
 					<div class="glyphicon glyphicon-chevron-down removemobile" id="topchevron">
 					</div></a>
 				</div>
 			</div>
 		</div>
 
+		<!--About Me-->
 
-		<!--Objective-->
+		<div class="container-fluid text-section" id="about-me">
+			<div class="text-box">
+				<h1>About Me</h1>
 
-		<div class="container-fluid textsection" id="objective">
-			<h1>Objective</h1>
-
-			<p>Hardworking student looking for a job to gain experience and network while I begin my career. I enjoy working face to face with people and am hoping to also have good relations with coworkers. I have started working from the age of sixteen and since then have enjoyed a challenge and would love a job that can give me that. I find joy in life by overcoming obstacles or more specifically, puzzles, and I want a job that can give me difficult situations that I need to figure out on my own.</p>
+				<p>
+					Hi, I'm happy that you're looking at my website. 
+					I'm a student at the University of Utah set to graduate Spring 2021.
+					But this is just the start of my journey, I'm also working part-time
+					at Northrop Grumman and learn more skills day by day.
+					I'm currently practicing my skills in Node.js and familiarizing myself
+					with Unity. Feel free to contact me!
+				</p>
+			</div>
 		</div>
-
+		
 		<div class="dividerimg" id="zion">
 		</div>
 
-
-		<!-- The Fold -->
-
-		<!--Bootstrap CSS CDN-->
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
-		<!--my personal CSS file-->
-		<link href="style.css" rel="stylesheet" type="text/css">
-
-		<!--Fonts-->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
-
-		<!--jQuery-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-
-		<!--Bootstrap jQuery CDN-->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-		<!--Font Awesome CDN-->
-		<script src="https://use.fontawesome.com/3f383c3879.js"></script>
-
-
-		<!--Table hide/show jQuery
-
-		<script>
-			$(document).ready(function(){
-				$("#row1").click(function(){
-		    		$("#row1").html("<td>HTML: You can see examples throughout this website of my experise with html</td><td>jQuery: Limited experience.  I know enough to take a snippet, understand what it's doing, and then insert it</td>");
-		    	});
-	    	});
-    	</script>
-
-		-->
-
-		<div class="container-fluid textsection" id="skills">
-			<h1>Skills</h1>
-
-			<!-- Table -->
-
-			<table class="table">
-
-					<tr>
-						<td>HTML</td>
-						<td>
-							<div class="progress">
-  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-  								</div>
-							</div>
-						</td>
-						<td>C#</td>
-						<td>
-							<div class="progress">
-  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
-  								</div>
-							</div>
-						</td>
-					</tr>
-
-
-					<tr>
-						<td>CSS</td>
-						<td>
-							<div class="progress">
-  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-  								</div>
-							</div>
-						</td>
-						<td>Warcraft 3</td>
-						<td>
-							<div class="progress">
-  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-  								</div>
-							</div>
-						</td>
-					</tr>
-
-
-					<tr>
-						<td>Python</td>
-						<td>
-							<div class="progress">
-  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-  								</div>
-							</div>
-						</td>
-						<td>Bootstrap</td>
-						<td>
-							<div class="progress">
-  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-  								</div>
-							</div>
-						</td>
-					</tr>
-
-
-					<tr>
-						<td>Command Line</td>
-						<td>
-							<div class="progress">
-  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-  								</div>
-							</div>
-						</td>
-						<td>Magento</td>
-						<td>
-							<div class="progress">
-  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-  								</div>
-							</div>
-						</td>
-					</tr>
-
-
-					<tr>
-						<td>Office Suite</td>
-						<td>
-							<div class="progress">
-  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-  								</div>
-							</div>
-						</td>
-						<td>Typing</td>
-						<td>
-							<div class="progress">
-  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-  								</div>
-							</div>
-						</td>
-					</tr>
-
-
-					<tr>
-						<td>Operating Systems</td>
-						<td>
-							<div class="progress">
-  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
-  								</div>
-							</div>
-						</td>
-						<td>Illustrator</td>
-						<td>
-							<div class="progress">
-  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-  								</div>
-							</div>
-						</td>
-					</tr>
-
-
-					<tr>
-						<td>Photoshop</td>
-						<td>
-							<div class="progress">
-  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
-  								</div>
-							</div>
-						</td>
-						<td>Tennis</td>
-						<td>
-							<div class="progress">
-  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
-  								</div>
-							</div>
-						</td>
-					</tr>
-
-
-					<tr>
-						<td>Computer Hardware</td>
-						<td>
-							<div class="progress">
-  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-  								</div>
-							</div>
-						</td>
-						<td>
-						</td>
-						<td>
-						</td>
-					</tr>
-					
-			</table>
-		</div>
-
-
-		<div class="dividerimg" id="tennis_courts">
-		</div>
-
-
-		<div class="container-fluid textsection" id="experience">
+		<div class="container-fluid text-section" id="experience">
 			<h1>Experience</h1>
 
 			<!--ClearHome-->
@@ -349,23 +173,6 @@
   				</div>
 			</div>
 
-
-			<!--CBSmith Marketing-->
-			<div class="media">
-  				<div class="media-left media-top removemobile">
-    				<a href="http://www.cbsmithmarketing.com/">
-      					<img class="media-object" src="pics/cbsmith_logo.jpg" alt="CBSmith Logo">
-    				</a>
-  				</div>
-  				<div class="media-body">
-    				<a href="http://www.cbsmithmarketing.com/">
-    					<h4 class="media-heading">CBSmith Marketing | 2016-Current</h4>
-    				</a>
-    				<p>Learned SEO and Analytics. Christian Smith helped me learn the value of SEO and how to gain value for a website on Search Engines. I learned PPC management and website analytics.</p>
-  				</div>
-			</div>
-
-
 			<!--Dixie State University-->
 			<div class="media">
   				<div class="media-left media-top removemobile">
@@ -380,265 +187,113 @@
     				<p>Dixie State is a small public university, because of the relatively small class sizes I was able to receive much individual attention and grow because of that. I graduated with an Associate's of Science in Spring of 2018.</p>
   				</div>
 			</div>
-
-			<!--Success Academy-->
-			<div class="media">
-  				<div class="media-left media-top removemobile">
-    				<a href="http://www.successacademy.org/">
-      					<img class="media-object" src="pics/success_logo.jpg" alt="Success Academy Logo">
-    				</a>
-  				</div>
-  				<div class="media-body">
-    				<a href="http://www.successacademy.org/">
-    					<h4 class="media-heading">Success Academy (HS) | 2015-2018</h4>
-    				</a>
-    				<p>Class of 2018! A scary decision for me that I decided on in my freshman year of HS. I don't regret it. Success allows students to graduate with their associate's degree on high school graduation. It did force me to mature a bit more quickly than I would have liked, but I know the accelerated learning helped me progress.</p>
-  				</div>
-			</div>
-
-			<!--Desert Hills High School-->
-			<div class="media">
-  				<div class="media-left media-top removemobile">
-    				<a href="http://dhthunder.org/">
-      					<img class="media-object" src="pics/dhhs_logo.jpg" alt="DHHS Logo">
-    				</a>
-  				</div>
-  				<div class="media-body">
-    				<a href="http://dhthunder.org/">
-    					<h4 class="media-heading">Desert Hills High School | 2015-2018</h4>
-    				</a>
-    				<p>My boundary school. I would take classes here half day during the mornings. It was an important decision for me to stay involved with my friends and school while still taking the Success program.</p>
-  				</div>
-			</div>
-
-
 		</div>
 
 		<div class="dividerimg" id="candy">
 		</div>
 
-		<!--
-			Filled Star: <i class="fa fa-star" aria-hidden="true"></i>
-			Unfilled Star: <i class="fa fa-star-o" aria-hidden="true"></i>
-		-->
+		<!-- Skills -->
 
-		<div class="container-fluid textsection" id="likes">
-			<h1>Likes &amp; Dislikes</h1>
+		<div class="container-fluid text-section" id="skills">
+			<h1>Skills</h1>
 
-			<!-- Likes and Dislikes table w/ stars -->
-			<table class="table table-striped">
+			<!-- Table -->
 
+			<table class="table">
 
-				<tr>
-					<td>Tennis</td>
-					<td>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-					</td>
-					<td>Sushi</td>
-					<td>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-					</td>
-				</tr>
+					<tr>
+						<td>Python</td>
+						<td>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+								</div>
+							</div>
+						</td>
+
+						<td>SQL</td>
+						<td>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+								</div>
+							</div>
+						</td>
+					</tr>
 
 
-				<tr>
-					<td>Coding</td>
-					<td>
-					<span>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-					</span>
-					</td>
-					<td>Gaming</td>
-					<td>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-					</td>
-				</tr>
+					<tr>
+						<td>Node.js</td>
+						<td>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+								</div>
+							</div>
+						</td>
 
-				<tr>
-					<td>Pearl Jam</td>
-					<td>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-					</td>
-					<td>Chicago</td>
-					<td>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-					</td>
-				</tr>
+						<td>Cypher</td>
+						<td>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+								</div>
+							</div>
+						</td>
+					</tr>
 
-				
-				<tr>
-					<td>Surpreme Pizza</td>
-					<td>
-					<span>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-					</span>
-					</td>
-					<td>Dota 2</td>
-					<td>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-					</td>
-				</tr>
 
-				<tr>
-					<td>Dota 2</td>
-					<td>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-					</td>
-					<td>Anime</td>
-					<td>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-					</td>
-				</tr>
+					<tr>
+						<td>HTML</td>
+						<td>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+								</div>
+							</div>
+						</td>
 
-				
-				<tr>
-					<td>Cooking</td>
-					<td>
-					<span>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-					</span>
-					</td>
-					<td>Manual Labor</td>
-					<td>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-					</td>
-				</tr>
+						<td>CSS</td>
+						<td>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+								</div>
+							</div>
+						</td>
+					</tr>
 
-				<tr>
-					<td>Beats by Dre</td>
-					<td>
-					<span>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-					</span>
-					</td>
-					<td>Goats</td>
-					<td>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-					</td>
-				</tr>
 
-				<tr>
-					<td>Pineapple Pizza</td>
-					<td>
-					<span>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-					</span>
-					</td>
-					<td>Dancing</td>
-					<td>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-					</td>
-				</tr>
+					<tr>
+						<td>Git</td>
+						<td>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+								</div>
+							</div>
+						</td>
+						<td>C#</td>
+						<td>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+								</div>
+							</div>
+						</td>
+					</tr>
 
-				<tr>
-					<td>The "Man"</td>
-					<td>
-					<span>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-					</span>
-					</td>
-					<td>Dirt</td>
-					<td>
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-						<i class="fa fa-star-o" aria-hidden="true"></i>
-					</td>
-				</tr>
 
+					<tr>
+						<td>C++</td>
+						<td>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+								</div>
+							</div>
+						</td>
+						<td>C</td>
+						<td>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+								</div>
+							</div>
+						</td>
+					</tr>			
 			</table>
-
 		</div>
-
-		<div class="dividerimg" id="sublime_code">
-		</div>
-
-
-		<!--About Me-->
-
-		<div class="container-fluid textsection" id="aboutme">
-			<h1>About Me</h1>
-
-			<div class="row">
-
-            <div class="col-md-6">
-            <p>I'm a student, a developer, and a web designer. I enjoy all aspects of nearly anything that I can type into a text editor. From an early age I have enjoyed anything that was a puzzle for me.</p>
-            </div>
-
-            <div class="col-md-6" id="leftborder">
-            <p>I enjoy tennis and love to be outdoors. Maybe Southern Utah rubbed off on my while I was growing up there. My favorite thing to do is watch movies. That may make me a little lazy but hey... it's what I enjoy.</p>
-            </div>
-
-        	</div>
 
 		</div>
 	</main>

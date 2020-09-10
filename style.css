@@ -2,158 +2,6 @@
 
 /*CSS Organized by order in HTML elements, then classes, then IDs*/
 
-
-body {
-	position: relative;
-	text-align: center;
-	overflow-x: hidden;
-	font-family: 'Raleway', sans-serif;
-	line-height: 25px;
-}
-
-h1, h2, h3 {
-	font-family: 'Open Sans', sans-serif;
-}
-
-nav {
-	margin-bottom: 0;
-}
-
-nav li {
-	padding-right: 5px;
-}
-
-nav li:active , nav li:hover {
-	background-color: #0099ff;
-}
-
-
-/*Envelope*/
-nav p {
-	color: white;
-	font-size: 22px;
-	padding-bottom: 3px;
-}
-
-table {
-	margin-top: 20px;
-}
-
-td {
-	width: 25%;
-}
-
-video {
-	padding-top: 25px;
-	height: 100%;
-	width: 100%;
-}
-
-footer {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	background-color: #434242;
-	color: white;
-	height: auto;
-}
-
-.removedesktop {
-	display: none;
-}
-
-.dividerimg {
-	/* The image used
-    background-image: url("pics/surff.jpg"); */
-
-    /* Set a specific height */
-    min-height: 200px; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-/*individual parallax scrolls.  Name of ID is the name of picture*/
-#tennis_courts { background-image: url("pics/tennis_courts.jpg"); }
-#sublime_code { background-image: url("pics/sublime_code.jpg"); }
-#candy { background-image: url("pics/candy.jpg"); }
-#zion { background-image: url("pics/zion.jpg"); }
-
-
-.textsection {
-	padding: 150px 35%; 
-	color: #434242; 
-	background-color: white;
-	font-size: 18px;
-	line-height: 1.7em;
-}
-
-.textsection p {
-	text-align: left;
-}
-
-.textsection h1 {
-	padding-bottom: 10px;
-}
-
-.progress-bar {
-	background-color: #0099ff;
-}
-
-.progress:hover {
-	width: 92%;
-}
-
-.nav-pills , .nav-tabs{
-    text-align: center;
-}
-
-.nav-tabs li a {
-	color: white;
-}
-
-.nav-tabs li , .nav-pills li {
-    float: none;
-    display: inline-block;
-    *display: inline; /* ie7 fix */
-    zoom: 1; /* hasLayout ie7 trigger */
-}
-
-.media {
-	padding: 50px 25px 10px;
-	border-bottom: 1px #0099ff solid;
-}
-
-.media-body {
-	padding-bottom: 15px;
-	padding-left: 15px;
-}
-
-.media-heading {
-	font-size: 18px;
-	font-weight: bolder;
-	color: #0099ff;
-}
-
-.fa-star , .fa-star-o {
-	font-size: 12px;
-	color: #0099ff;
-}
-
-td:nth-child(2):hover , td:nth-child(4):hover {
-	/* default size is 18px*/
-	font-size: 19px;
-}
-
-.tab-pane {
-	padding: 20px 30% 0;
-	line-height: 25pt;
-	text-align: left;
-}
-
 #emailtext {
 	padding-right: 20px;
 	margin-right: 20px;
@@ -192,41 +40,147 @@ td:nth-child(2):hover , td:nth-child(4):hover {
 	padding-bottom: 20px;
 }
 
+.removedesktop {
+	display: none;
+}
+
+.text-box {
+	border-radius: 25px;
+	border: 2px solid #0099ff;
+	padding: 40px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 14px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dividerimg {
+	/* The image used
+    background-image: url("pics/surff.jpg"); */
+
+    /* Set a specific height */
+    min-height: 200px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*individual parallax scrolls.  Name of ID is the name of picture*/
+#tennis_courts { background-image: url("pics/tennis_courts.jpg"); }
+#sublime_code { background-image: url("pics/sublime_code.jpg"); }
+#candy { background-image: url("pics/candy.jpg"); }
+#zion { background-image: url("pics/zion.jpg"); }
+
+
+.text-section {
+	padding: 150px 35%; 
+	color: #434242; 
+	background-color: white;
+	font-size: 18px;
+	line-height: 1.7em;
+}
+
+.text-section p {
+	text-align: left;
+}
+
+.text-section h1 {
+	padding-bottom: 10px;
+}
+
+.progress-bar {
+	background-color: #0099ff;
+}
+
+.nav-pills , .nav-tabs{
+    text-align: center;
+}
+
+.nav-tabs li a {
+	color: white;
+}
+
+.nav-tabs li , .nav-pills li {
+    float: none;
+    display: inline-block;
+    *display: inline; /* ie7 fix */
+    zoom: 1; /* hasLayout ie7 trigger */
+}
+
+.media {
+	padding: 50px 25px 10px;
+	border-bottom: 1px #0099ff solid;
+}
+
+.media-body {
+	padding-bottom: 15px;
+	padding-left: 15px;
+}
+
+.media-heading {
+	font-size: 18px;
+	font-weight: bolder;
+	color: #0099ff;
+}
+
+.tab-pane {
+	padding: 20px 30% 0;
+	line-height: 25pt;
+	text-align: left;
+}
+
+body {
+	position: relative;
+	text-align: center;
+	overflow-x: hidden;
+	font-family: 'Raleway', sans-serif;
+	line-height: 25px;
+}
+
+h1, h2, h3 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+	margin-bottom: 0;
+}
+
+nav li {
+	padding-right: 5px;
+}
+
+nav li:active , nav li:hover {
+	background-color: #0099ff;
+}
+
+/*Envelope*/
+nav p {
+	color: white;
+	font-size: 22px;
+	padding-bottom: 3px;
+}
+
+table {
+	margin-top: 20px;
+}
+
+td {
+	width: 25%;
+}
+
+tr:hover {
+	background-color: rgb(245, 245, 245);
+}
+
+footer {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #434242;
+	color: white;
+	height: auto;
+}
+
 @media only screen and (max-width: 767px) {
-
-	table td:nth-child(4n+0), table td:nth-child(4n+3){
-		display: none;
-	}
-
-
-	.media {
-		padding:50px 0px 10px;
-	}
-
-	.dividerimg {
-		background-color: #434242;
-		min-height: 50px;
-		background-image: none;
-	}
-
-	#objective {
-		margin-top:15px;
-	}
-
-	/* Deleted top image since the text gets removed for
-	mobile too so there isn't a random carbon bar */
-
-	.removemobile {
-		display:none;
-	}
-
-	.textsection {
-		padding: 50px;
-	}
-
-	.glyphicon-triangle-bottom {
-		font-size: 8pt;
-	}
 
 	#mobile-brand {
 		display: initial;
@@ -245,6 +199,31 @@ td:nth-child(2):hover , td:nth-child(4):hover {
 		color: #434242;
 		padding: 30px 15% 10px;
 		font-size: 12pt;
+	}
+
+	.media {
+		padding:50px 0px 10px;
+	}
+
+	.dividerimg {
+		background-color: #434242;
+		min-height: 50px;
+		background-image: none;
+	}
+
+	/* Deleted top image since the text gets removed for
+	mobile too so there isn't a random carbon bar */
+
+	.removemobile {
+		display:none;
+	}
+
+	.text-section {
+		padding: 50px;
+	}
+
+	.glyphicon-triangle-bottom {
+		font-size: 8pt;
 	}
 
 }
