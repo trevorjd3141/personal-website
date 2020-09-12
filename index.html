@@ -24,7 +24,7 @@
 	<meta name="google-site-verification" content="j-Qy8ysUX15GhnWCTggk-g60gQz-byBjuIoGaOwGWoc" />
 
 	<!--Bootstrap CSS CDN-->
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
 
 	<!--my personal CSS file-->
 	<link href="style.css" rel="stylesheet" type="text/css">
@@ -36,88 +36,47 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
 	<!--Bootstrap jQuery CDN-->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 	<!--Font Awesome CDN-->
 	<script src="https://use.fontawesome.com/3f383c3879.js"></script>
 </head>
-
-<body data-offset="30" data-spy="scroll" data-target="nav">
-	<span id="top"></span>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">
-			<!--For the mobile navbar-->
-
-
-			<div class="navbar-header">
-
-				<!-- Pills -->
-
-				<button aria-expanded="false" class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" type="button">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-
-
-				<!-- Name at top left -->
-
-				<a class="navbar-brand" href="#top">
-					<span class="removemobile">TD</span>
-					<span class="removedesktop" id="mobile-brand">Trevor Dalton</span>
-				</a>
-			</div>
-
-
-			<div>
-				<!--Desktop navbar-->
-
-				<div class="collapse navbar-collapse" id="myNavbar">
-					<ul class="nav navbar-nav">
-						<li>
-							<a href="#about-me">About Me</a>
-						</li>
-
-						<li>
-							<a href="experience">Experience</a>
-						</li>
-
-
-						<li>
-							<a href="#projects">Projects</a>
-						</li>
-
-
-						<li>
-							<a href="#skills">Skills</a>
-						</li>
-					</ul>
-					<p class="navbar-text">
-							<a href="mailto:trevorjd3141@gmail.com" class="navbar-link removemobile">
-								<i class="fa fa-envelope" aria-hidden="true"></i>
-							</a>
-						</i>
-					</p>
-				</div>
-			</div>
-		</div>
-	</nav>
-
+<nav id="my-nav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<a class="navbar-brand" href="#">TD</a>
+  
+	<div class="collapse navbar-collapse">
+		  <ul class="navbar-nav nav-pills">
+			<li class="nav-item">
+				  <a class="nav-link" href="#about-me">About</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#experience">Experience</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#education">Education</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#projects">Projects</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#skills">Skills</a>
+			</li>
+	  </ul>
+	</div>
+</nav>
+<body data-spy="scroll" data-target="#my-nav" data-offset="10">
 	<main>
 		<!--Main title with my name in huge letters-->
-
-
 		<div class="container-fluid text-section removemobile" id="namearea">
 			<p>&lt; Trevor Dalton &gt;</p>
-					<!--The down arrow-->
-
-			<div class="row">
-				<div class="col-md-2 col-md-offset-5">
-					<a href="#about-me">
-					<div class="glyphicon glyphicon-chevron-down removemobile" id="topchevron">
-					</div></a>
-				</div>
-			</div>
+	
+			<!--The down arrow-->
+			<a href="#about-me">
+				<i id="top-chevron" class="fa fa-chevron-down" aria-hidden="true"></i>
+			</a>
 		</div>
 
 		<!--About Me-->
@@ -127,21 +86,20 @@
 				<h1>About Me</h1>
 
 				<p>
-					Hi, I'm happy that you're looking at my website. 
+					Hi, welcome to my port 
 					I'm a student at the University of Utah set to graduate Spring 2021.
 					But this is just the start of my journey, I'm also working part-time
-					at Northrop Grumman and learn more skills day by day.
-					I'm currently practicing my skills in Node.js and familiarizing myself
+					at Northrop Grumman and try to learn more every day.
+					<br><br> I'm currently practicing my skills in Node.js and familiarizing myself
 					with Unity. Feel free to contact me!
 				</p>
 			</div>
 		</div>
 		
-		<div class="dividerimg" id="zion">
-		</div>
+		<div class="dividerimg" id="zion"></div>
 
 		<div class="container-fluid text-section" id="experience">
-			<h1>Experience</h1>
+			<h1>Work Experience</h1>
 
 			<!--ClearHome-->
 			<div class="media">
@@ -189,112 +147,126 @@
 			</div>
 		</div>
 
-		<div class="dividerimg" id="candy">
+		<div class="dividerimg" id="zion"></div>
+
+		<!-- Education -->
+
+		<div class="container-fluid text-section" id="education">
+			<h1>Education</h1>
+
+			<!--ClearHome-->
+			<div class="media">
+  				<div class="media-left media-top removemobile">
+    				<a href="https://clearhome.us/">
+      					<img class="media-object" src="pics/clearhome_logo.png" alt="ClearHome Logo">
+    				</a>
+  				</div>
+  				<div class="media-body">
+    				<a href="https://clearhome.us/">
+    					<h4 class="media-heading">ClearHome | Summer 2019</h4>
+    				</a>
+    				<p>Sold AT&amp;T products for the entirety of the summer. I'd never really had to work with people like I had to when I sold. I learned a ton about presentation in this job that will be invaluable for the rest of my career.</p>
+  				</div>
+			</div>
+
+			<!--University of Utah-->
+			<div class="media">
+  				<div class="media-left media-top removemobile">
+    				<a href="https://www.utah.edu/">
+      					<img class="media-object" src="pics/utah_logo.png" alt="University of Utah Logo">
+    				</a>
+  				</div>
+  				<div class="media-body">
+    				<a href="https://www.utah.edu/">
+    					<h4 class="media-heading">University of Utah | Fall 2018 to Current</h4>
+    				</a>
+    				<p>Utah's top research institution. I credit any understanding I have of algorithms and computer systems to the my favorite professors here.</p>
+  				</div>
+			</div>
+
+			<!--Dixie State University-->
+			<div class="media">
+  				<div class="media-left media-top removemobile">
+    				<a href="https://dixie.edu/">
+      					<img class="media-object" src="pics/dixie_logo.jpg" alt="DSU Logo">
+    				</a>
+  				</div>
+  				<div class="media-body">
+    				<a href="https://dixie.edu/">
+    					<h4 class="media-heading">Dixie State University | 2015-2018</h4>
+    				</a>
+    				<p>Dixie State is a small public university, because of the relatively small class sizes I was able to receive much individual attention and grow because of that. I graduated with an Associate's of Science in Spring of 2018.</p>
+  				</div>
+			</div>
 		</div>
+
+		<div class="dividerimg" id="candy"></div>
+
+		<!-- Projects -->
+
+		<div class="container-fluid text-section" id="projects">
+			<h1>Projects</h1>
+			<div class="card" style="width: 18rem;">
+				<img src="..." class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Card title</h5>
+				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <a href="#" class="btn btn-primary">Go somewhere</a>
+				</div>
+			  </div>
+		</div>
+
+		<div class="dividerimg" id="candy"></div>
 
 		<!-- Skills -->
 
 		<div class="container-fluid text-section" id="skills">
 			<h1>Skills</h1>
-
-			<!-- Table -->
-
-			<table class="table">
-
-					<tr>
-						<td>Python</td>
-						<td>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
-								</div>
-							</div>
-						</td>
-
-						<td>SQL</td>
-						<td>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
-								</div>
-							</div>
-						</td>
-					</tr>
-
-
-					<tr>
-						<td>Node.js</td>
-						<td>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
-								</div>
-							</div>
-						</td>
-
-						<td>Cypher</td>
-						<td>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-								</div>
-							</div>
-						</td>
-					</tr>
-
-
-					<tr>
-						<td>HTML</td>
-						<td>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
-								</div>
-							</div>
-						</td>
-
-						<td>CSS</td>
-						<td>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
-								</div>
-							</div>
-						</td>
-					</tr>
-
-
-					<tr>
-						<td>Git</td>
-						<td>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
-								</div>
-							</div>
-						</td>
-						<td>C#</td>
-						<td>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-								</div>
-							</div>
-						</td>
-					</tr>
-
-
-					<tr>
-						<td>C++</td>
-						<td>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-								</div>
-							</div>
-						</td>
-						<td>C</td>
-						<td>
-							<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
-								</div>
-							</div>
-						</td>
-					</tr>			
-			</table>
-		</div>
-
+			<div class="col-5 col-sm-5">
+				<h1>Hello</h1>
+			</div>
+			<div class="col-7 col-sm-7">
+				<div class="progress">
+					<div class="progress-bar tag-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">Python</div>
+					<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: calc(.8*90%)"></div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar tag-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">Node.js</div>
+					<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: calc(.8*60%)"></div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar tag-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">SQL</div>
+					<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: calc(.8*85%)"></div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar tag-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">Cypher</div>
+					<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: calc(.8*60%)"></div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar tag-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">HTML</div>
+					<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: calc(.8*80%)"></div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar tag-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">CSS</div>
+					<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: calc(.8*80%)"></div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar tag-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">Git</div>
+					<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: calc(.8*85%)"></div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar tag-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">C#</div>
+					<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: calc(.8*50%)"></div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar tag-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">C++</div>
+					<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: calc(.8*40%)"></div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar tag-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">C</div>
+					<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: calc(.8*30%)"></div>
+				</div>
+			</div>
 		</div>
 	</main>
 
@@ -313,102 +285,13 @@
 </script>
 
 <footer>
-		<div class="container-fluid">
-
-			<div class="removemobile" id="desktop-tabs">
-				<!-- Nav tabs for desktop-->
-
-
-				<ul class="nav nav-tabs" role="tablist">
-					<li class="active" role="presentation">
-						<a aria-controls="contactme" data-toggle="tab" href="#contactme" role="tab">Contact Me</a>
-					</li>
-
-
-					<li role="presentation">
-						<a aria-controls="whywebsite" data-toggle="tab" href="#whywebsite" role="tab">Why Make a Website?</a>
-					</li>
-
-					<li role="presentation">
-						<a aria-controls="references" data-toggle="tab" href="#references" role="tab">References</a>
-					</li>
-				</ul>
-				<!-- Tab panes -->
-
-
-				<!--Contact Me-->
-
-				<div class="tab-content">
-					<div class="tab-pane active" id="contactme" role="tabpanel">
-						You can email me at trevorjd3141@gmail.com anytime. I will usually be able to respond within 24 hours but sometimes cannot because of extenuating circumstances. If you would like to call me just shoot me up an email and I’ll be able to give you my phone number.
-					</div>
-
-
-					<!--Why a Website?-->
-
-					<div class="tab-pane" id="whywebsite" role="tabpanel">
-						I believe that a website shows my capabilities of not only starting and completing a project, but of a basis for my work ethic. I taught myself how to use many of the functionalities you see on this website and I believe showcasing this it makes me a more hireable prospect. A website takes patience and a basic knowledge of HTML, CSS, and possibly jQuery if you want to get fancy.  Again, by building this website it SHOWS that I know how to do it instead of just writing about it.
-
-					</div>
-
-
-					<!--References-->
-
-					<div class="tab-pane" id="references" role="tabpanel">
-						Because of the sensitivity of this information, references will only be given if I am shown evidence of hiring and that you will not abuse the information.  Even so, I will only give out references after a phone call.
-					</div>
-				</div>
-			</div>
-
-
-			<!--Accordion for mobile-->
-
-			<div aria-multiselectable="true" class="panel-group removedesktop" id="accordion" role="tablist">
-				<div class="panel panel-default">
-					<div class="panel-heading" id="headingOne" role="tab">
-						<h4 class="panel-title"><a aria-controls="collapseOne" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#collapseOne" role="button">
-						Contact Me <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-						</h4>
-					</div>
-
-
-					<!-- Contact Me -->
-
-					<div aria-labelledby="headingOne" class="panel-collapse collapse" id="collapseOne" role="tabpanel">
-						<div class="panel-body">
-							You can email me at trevorjd3141@gmail.com anytime. I will usually be able to respond within 24 hours but sometimes cannot because of extenuating circumstances. If you would like to call me just shoot me up an email and I’ll be able to give you my phone number.
-						</div>
-					</div>
-				</div>
-
-
-				<!-- Why a Website? -->
-
-				<div class="panel panel-default">
-					<div class="panel-heading" id="headingThree" role="tab">
-						<h4 class="panel-title"><a aria-controls="collapseThree" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseThree" role="button">
-						Why a Website? <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-						</h4>
-					</div>
-
-
-					<div aria-labelledby="headingThree" class="panel-collapse collapse" id="collapseThree" role="tabpanel">
-						<div class="panel-body">
-							I believe that a website shows my capabilities of not only starting and completing a project, but of a basis for my work ethic. I taught myself how to use many of the functionalities you see on this website and I believe showcasing this it makes me a more hireable prospect. A website takes practical knowledge of HTML, CSS, and Javascript. Again, by building this website it SHOWS that I know how to do it instead of just writing about it.
-
-						</div>
-					</div>
-				</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+</footer>
 	<!--Copyright below the footer-->
 
 
-	<div id="copyright">
-		<p>&copy; Copyright Trevor Dalton</p>
-	</div>
+<div id="copyright">
+	<p>&copy; Copyright Trevor Dalton</p>
+</div>
 
 </body>
 </html>

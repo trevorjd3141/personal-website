@@ -21,18 +21,23 @@
 	text-align: center;
 }
 
-#topchevron {
+#top-chevron {
 	font-size: 100%;
 	color: white;
 	margin: 40px auto 350px;
+	left: 50%;
 }
 
-#topchevron:hover {
+#top-chevron:hover {
 	color: #434242;
 }
 
 #leftborder {
 	border-left: 1px grey solid;
+}
+
+#skills {
+	padding: 150px 20%;
 }
 
 #copyright p {
@@ -71,7 +76,6 @@
 #candy { background-image: url("pics/candy.jpg"); }
 #zion { background-image: url("pics/zion.jpg"); }
 
-
 .text-section {
 	padding: 150px 35%; 
 	color: #434242; 
@@ -86,25 +90,6 @@
 
 .text-section h1 {
 	padding-bottom: 10px;
-}
-
-.progress-bar {
-	background-color: #0099ff;
-}
-
-.nav-pills , .nav-tabs{
-    text-align: center;
-}
-
-.nav-tabs li a {
-	color: white;
-}
-
-.nav-tabs li , .nav-pills li {
-    float: none;
-    display: inline-block;
-    *display: inline; /* ie7 fix */
-    zoom: 1; /* hasLayout ie7 trigger */
 }
 
 .media {
@@ -123,10 +108,22 @@
 	color: #0099ff;
 }
 
-.tab-pane {
-	padding: 20px 30% 0;
-	line-height: 25pt;
-	text-align: left;
+.progress {
+	background: rgba(245, 245, 245, 1);
+	border: 0px solid rgba(245, 245, 245, 1);
+	border-radius: 3px; 
+	height: 30px;
+}
+
+.progress-bar {
+	background: #0099ff;
+}
+
+.tag-bar {
+	background: #255e84;
+	vertical-align: middle;
+	padding-top: 5px;
+	font-weight: bold;
 }
 
 body {
@@ -141,35 +138,14 @@ h1, h2, h3 {
 	font-family: 'Open Sans', sans-serif;
 }
 
-nav {
-	margin-bottom: 0;
-}
-
-nav li {
-	padding-right: 5px;
-}
-
 nav li:active , nav li:hover {
-	background-color: #0099ff;
+	color: white;
 }
 
 /*Envelope*/
 nav p {
 	color: white;
 	font-size: 22px;
-	padding-bottom: 3px;
-}
-
-table {
-	margin-top: 20px;
-}
-
-td {
-	width: 25%;
-}
-
-tr:hover {
-	background-color: rgb(245, 245, 245);
 }
 
 footer {
@@ -181,29 +157,6 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-
-	#mobile-brand {
-		display: initial;
-	}
-
-	#likes, #skills {
-		padding: 50px 20px;
-	}
-
-	#leftborder {
-		border: none;
-	}
-
-	#accordion {
-		display: initial;
-		color: #434242;
-		padding: 30px 15% 10px;
-		font-size: 12pt;
-	}
-
-	.media {
-		padding:50px 0px 10px;
-	}
 
 	.dividerimg {
 		background-color: #434242;
