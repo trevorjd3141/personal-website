@@ -36,8 +36,33 @@
 	padding-bottom: 20px;
 }
 
+/*individual parallax scrolls.  Name of ID is the name of picture*/
+#tennisCourts { background-image: url("pics/tennis_courts.jpg"); }
+#sublimeCode { background-image: url("pics/sublime_code.jpg"); }
+#candy { background-image: url("pics/candy.jpg"); }
+#zion { background-image: url("pics/zion.jpg"); }
+
 .removedesktop {
 	display: none;
+}
+
+.nav-item::after{
+	content:'';
+	display:block;
+	width:0px;
+	left: 10px;
+	bottom: 10px;
+	height:2px;
+	background: #47d5ff;
+	transition: 0.3s;
+}
+
+.nav-item:hover::after{
+	width:100%;
+}
+
+.nav-link{
+	transition:0.3s;
 }
 
 .text-box {
@@ -60,12 +85,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-/*individual parallax scrolls.  Name of ID is the name of picture*/
-#tennis_courts { background-image: url("pics/tennis_courts.jpg"); }
-#sublime_code { background-image: url("pics/sublime_code.jpg"); }
-#candy { background-image: url("pics/candy.jpg"); }
-#zion { background-image: url("pics/zion.jpg"); }
 
 .text-section {
 	padding: 150px 25%; 
@@ -122,6 +141,11 @@
 	font-weight: bold;
 }
 
+.nav-pills .active {
+	color: white !important;
+	background-color: rgba(0, 0, 0, 0.0) !important;
+}
+
 body {
 	position: relative;
 	text-align: center;
@@ -132,16 +156,6 @@ body {
 
 h1, h2, h3 {
 	font-family: 'Open Sans', sans-serif;
-}
-
-nav li:active , nav li:hover {
-	color: white;
-}
-
-/*Envelope*/
-nav p {
-	color: white;
-	font-size: 22px;
 }
 
 footer {
