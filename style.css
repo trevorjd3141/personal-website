@@ -27,13 +27,22 @@
 	color: #434242;
 }
 
-#leftborder {
-	border-left: 1px grey solid;
+#education a {
+	font-size: 18px;
+	color: black;
 }
 
-#copyright p {
-	padding-top: 20px;
-	padding-bottom: 20px;
+#education a:hover {
+	text-decoration: underline;
+}
+
+#projects .card img {
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+#projects .card:hover img {
+    -webkit-transform: scale(1.075);
+    transform: scale(1.075);
 }
 
 /*individual parallax scrolls.  Name of ID is the name of picture*/
@@ -93,6 +102,13 @@
 	background: #0099ff;
 }
 
+.tag-bar {
+	background: #255e84;
+	vertical-align: middle;
+	padding-top: 5px;
+	font-weight: bold;
+}
+
 .dividerimg {
 	/* The image used
     background-image: url("pics/surff.jpg"); */
@@ -123,43 +139,33 @@
 	padding-bottom: 40px;
 }
 
-.media {
-	padding: 50px 25px 10px;
-	border-bottom: 1px #0099ff solid;
-}
-
-.media-body {
-	padding-bottom: 15px;
-	padding-left: 15px;
-}
-
-.media-heading {
-	font-size: 18px;
-	font-weight: bolder;
-	color: #0099ff;
-}
-
-.tag-bar {
-	background: #255e84;
-	vertical-align: middle;
-	padding-top: 5px;
-	font-weight: bold;
-}
-
 .card {
 	overflow: hidden;
 }
 
-.card img {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
+.tech-tags {
+	list-style: none;
 }
-.card:hover img {
-    -webkit-transform: scale(1.075);
-    transform: scale(1.075);
+
+.tech-tags li {
+	background-color: #0099ff;
+	color: white;
+	font-size: 80%;
+	display: inline-block;
+	padding: 0px 8px;
+	margin: 10px 3px 3px;
+	border-radius: 10px;
+	-webkit-transition: .5s ease-in-out;
+	transition: .25s ease-in-out;
+	backface-visibility: hidden;
 }
+
+.tech-tags li:hover {
+    -webkit-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
+
 
 
 body {
