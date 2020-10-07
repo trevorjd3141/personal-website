@@ -2,7 +2,7 @@
 
 /*CSS Organized by order in HTML elements, then classes, then IDs*/
 
-#namearea {
+#name-area {
 	padding: 350px 15% 200px;
 	font-size: 72px;
 	color: white;
@@ -12,7 +12,7 @@
     background-repeat: no-repeat;
 }
 
-#namearea p {
+#name-area p {
 	text-align: center;
 }
 
@@ -25,6 +25,11 @@
 
 #top-chevron:hover {
 	color: #434242;
+}
+
+#education .card {
+	margin: auto auto 40px;
+	border-radius: 10px;
 }
 
 #education a {
@@ -123,10 +128,18 @@
     background-size: cover;
 }
 
+.title-separator {
+	display: block;
+	width: 350px;
+	height: 3px;
+	background: #0099ff;
+	margin: auto auto 40px;
+	float: none;
+}
+
 .text-section {
 	padding: 150px 25%; 
 	color: #434242; 
-	background-color: white;
 	font-size: 18px;
 	line-height: 1.7em;
 }
@@ -136,7 +149,7 @@
 }
 
 .text-section h1 {
-	padding-bottom: 40px;
+	padding-bottom: 15px;
 }
 
 .card {
