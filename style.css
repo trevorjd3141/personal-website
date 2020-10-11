@@ -27,10 +27,6 @@
 	color: #434242;
 }
 
-#experience img {
-	max-height: 60px;
-}
-
 #education .card, #experience .card {
 	margin: auto auto 40px;
 	border-radius: 10px;
@@ -60,8 +56,6 @@
 }
 
 /*individual parallax scrolls.  Name of ID is the name of picture*/
-#tennisCourts { background-image: url("pics/tennis_courts.jpg"); }
-#sublimeCode { background-image: url("pics/sublime_code.jpg"); }
 #candy { background-image: url("pics/candy.jpg"); }
 #zion { background-image: url("pics/zion.jpg"); }
 
@@ -145,6 +139,20 @@
 
 .card {
 	overflow: hidden;
+}
+
+.stack-icons img {
+	max-height: 60px;
+}
+
+.stack-icons .col {
+	-webkit-transition: .5s ease-in-out;
+	transition: .25s ease-in-out;
+}
+
+.stack-icons .col:hover {
+	-webkit-transform: scale(1.03);
+	transform: scale(1.03);
 }
 
 .tech-tags {
