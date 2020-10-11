@@ -46,13 +46,13 @@
 }
 
 #projects .card img {
-    -webkit-transition: .5s ease-in-out;
-	transition: .5s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 	max-height: 250px;
 }
 #projects .card:hover img {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 /*individual parallax scrolls.  Name of ID is the name of picture*/
