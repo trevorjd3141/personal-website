@@ -45,13 +45,18 @@
 	text-decoration: underline;
 }
 
+#projects {
+	padding: 150px 20%;
+}
+
 #projects .card img {
     -webkit-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	max-height: 250px;
 }
 #projects .card:hover img {
-    -webkit-transform: scale(1.075);
-    transform: scale(1.075);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 /*individual parallax scrolls.  Name of ID is the name of picture*/
@@ -138,25 +143,6 @@
 	float: none;
 }
 
-.text-section {
-	padding: 150px 25%; 
-	color: #434242; 
-	font-size: 18px;
-	line-height: 1.7em;
-}
-
-.text-section p {
-	text-align: left;
-}
-
-.text-section .col p {
-	text-align: center;
-}
-
-.text-section h1 {
-	padding-bottom: 15px;
-}
-
 .card {
 	overflow: hidden;
 }
@@ -195,6 +181,25 @@ h1, h2, h3 {
 	font-family: 'Open Sans', sans-serif;
 }
 
+section {
+	padding: 150px 25%; 
+	color: #434242; 
+	font-size: 18px;
+	line-height: 1.7em;
+}
+
+section p {
+	text-align: left;
+}
+
+section .col p {
+	text-align: center;
+}
+
+section h1 {
+	padding-bottom: 15px;
+}
+
 footer {
 	padding-top: 50px;
 	padding-bottom: 50px;
@@ -218,7 +223,7 @@ footer {
 		display:none;
 	}
 
-	.text-section {
+	section {
 		padding: 50px;
 	}
 

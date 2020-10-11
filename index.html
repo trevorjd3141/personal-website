@@ -67,18 +67,18 @@
 <body data-spy="scroll" data-target="#my-nav" data-offset="10">
 	<main>
 		<!--Main title with my name in huge letters-->
-		<div class="container-fluid text-section removemobile" id="name-area">
+		<section class="removemobile" id="name-area">
 			<p>&lt; Trevor Dalton &gt;</p>
 	
 			<!--The down arrow-->
 			<a href="#about-me">
 				<i id="top-chevron" class="fa fa-chevron-down" aria-hidden="true"></i>
 			</a>
-		</div>
+		</section>
 
 		<!--About Me-->
 
-		<div class="container-fluid text-section" id="about-me">
+		<section id="about-me">
 			<div class="row justify-content-between">
 				<div class="text-box col-6 col-sm-6">
 					<h1>About Me</h1>
@@ -135,13 +135,13 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 		
 		<div class="dividerimg" id="zion"></div>
 
 		<!-- Experience -->
 
-		<div class="container-fluid text-section" id="experience">
+		<section id="experience">
 			<h1>Experience</h1>
 			<div class="title-separator"></div>
 			
@@ -225,13 +225,13 @@
 				</div>
 			</div>
 
-		</div>
+		</section>
 
 		<div class="dividerimg" id="zion"></div>
 
 		<!-- Education -->
 
-		<div class="container-fluid text-section" id="education">
+		<section id="education">
 			<h1>Education</h1>
 			<div class="title-separator"></div>
 
@@ -304,139 +304,126 @@
 				</div>
 			</div>
  
-		</div>
+		</section>
 
 		<div class="dividerimg" id="candy"></div>
 
 		<!-- Projects -->
 
-		<div class="container-fluid text-section" id="projects">
+		<section id="projects">
 			<h1>Projects</h1>
 			<div class="title-separator"></div>
-			<div class="row row-cols-1 row-cols-md-3">
+			<div class="card-columns">
 
-				<div class="col mb-4">
-					<div class="card h-100">
-					  <img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted Pic">
-					  <div class="card-body">
-							<h5 class="card-title">Ascii Image Converter</h5>
-								<p class="card-text">
-									Converts an image to its Ascii equivalent.
-									The image above is an egg I tested this on.
-								</p>
-							<a href="https://github.com/trevorjd3141/asciiConverter" class="btn btn-primary stretched-link">Github Repo</a>
-					  </div>
-					</div>
-			  	</div>
-				<div class="col mb-4">
-					<div class="card h-100">
-					  <img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted Pic">
-					  <div class="card-body">
-							<h5 class="card-title">Ascii Image Converter</h5>
-								<p class="card-text">
-									Converts an image to its Ascii equivalent.
-									The image above is an egg I tested this on.
-								</p>
-							<a href="https://github.com/trevorjd3141/asciiConverter" class="btn btn-primary stretched-link">Github Repo</a>
-					  </div>
-					</div>
-				  </div>
-				<div class="col mb-4">
-					<div class="card h-100">
-					  <img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted Pic">
-					  <div class="card-body">
-							<h5 class="card-title">Ascii Image Converter</h5>
-								<p class="card-text">
-									Converts an image to its Ascii equivalent.
-									The image above is an egg I tested this on.
-								</p>
-							<a href="https://github.com/trevorjd3141/asciiConverter" class="btn btn-primary stretched-link">Github Repo</a>
-					  </div>
-					</div>
-			  	</div>
-				  
-				<div class="col mb-4">
-					<div class="card h-100">
-					  <img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted Pic">
-					  <div class="card-body">
-							<h5 class="card-title">Ascii Image Converter</h5>
-								<p class="card-text">
-									Converts an image to its Ascii equivalent.
-									The image above is an egg I tested this on.
-								</p>
-							<a href="https://github.com/trevorjd3141/asciiConverter" class="btn btn-primary stretched-link">Github Repo</a>
-					  </div>
-					</div>
-			  	</div>
-				<div class="col mb-4">
-					<div class="card h-100">
-					  <img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted Pic">
-					  <div class="card-body">
-							<h5 class="card-title">Ascii Image Converter</h5>
-								<p class="card-text">
-									Converts an image to its Ascii equivalent.
-									The image above is an egg I tested this on.
-								</p>
-							<a href="https://github.com/trevorjd3141/asciiConverter" class="btn btn-primary stretched-link">Github Repo</a>
-					  </div>
+				<div class="card">
+					<img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted">
+					<div class="card-body">
+						<h5 class="card-title">Ascii Image Converter</h5>
+						<p class="card-text">
+							Converts an image to its Ascii equivalent using 
+							multiprocessing techniques. The image above is
+							an egg I tested this on.
+						</p>
+						<a href="https://github.com/trevorjd3141/asciiConverter" class="btn btn-primary stretched-link">Github Repo</a>
 					</div>
 				</div>
-				<div class="col mb-4">
-					<div class="card h-100">
-					  <img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted Pic">
-					  <div class="card-body">
-							<h5 class="card-title">Ascii Image Converter</h5>
-								<p class="card-text">
-									Converts an image to its Ascii equivalent.
-									The image above is an egg I tested this on.
-								</p>
-							<a href="https://github.com/trevorjd3141/asciiConverter" class="btn btn-primary stretched-link">Github Repo</a>
-					  </div>
+				<div class="card">
+					<img src="pics/cardPics/personalWebsite.jpg" class="card-img-top" alt="Personal Website">
+					<div class="card-body">
+						<h5 class="card-title">Personal Website</h5>
+						<p class="card-text">
+							Portfolio website all designed by me to
+							showcase my talents and allow me to express
+							my resume in a virtual medium.
+						</p>
+						<a href="https://github.com/trevorjd3141/personal-website" class="btn btn-primary stretched-link">Github Repo</a>
 					</div>
 				</div>
-				  
-				<div class="col mb-4">
-					<div class="card h-100">
-					  <img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted Pic">
-					  <div class="card-body">
-							<h5 class="card-title">Ascii Image Converter</h5>
-								<p class="card-text">
-									Converts an image to its Ascii equivalent.
-									The image above is an egg I tested this on.
-								</p>
-							<a href="https://github.com/trevorjd3141/asciiConverter" class="btn btn-primary stretched-link">Github Repo</a>
-					  </div>
-					</div>
-			  	</div>
-				<div class="col mb-4">
-					<div class="card h-100">
-					  <img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted Pic">
-					  <div class="card-body">
-							<h5 class="card-title">Ascii Image Converter</h5>
-								<p class="card-text">
-									Converts an image to its Ascii equivalent.
-									The image above is an egg I tested this on.
-								</p>
-							<a href="https://github.com/trevorjd3141/asciiConverter" class="btn btn-primary stretched-link">Github Repo</a>
-					  </div>
+				<div class="card">
+					<img src="pics/cardPics/flappy.png" class="card-img-top" alt="Flappy Bird">
+					<div class="card-body">
+						<h5 class="card-title">PyGame Flappy Bird</h5>
+						<p class="card-text">
+							Recreation of flappy bird created in Python using
+							the PyGame library.
+						</p>
+						<a href="https://github.com/trevorjd3141/flappy-bird" class="btn btn-primary stretched-link">Github Repo</a>
 					</div>
 				</div>
-				<div class="col mb-4">
-					<div class="card h-100">
-					  <img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted Pic">
-					  <div class="card-body">
-							<h5 class="card-title">Ascii Image Converter</h5>
-								<p class="card-text">
-									Converts an image to its Ascii equivalent.
-									The image above is an egg I tested this on.
-								</p>
-							<a href="https://github.com/trevorjd3141/asciiConverter" class="btn btn-primary stretched-link">Github Repo</a>
-					  </div>
+
+				<div class="card">
+					<img src="pics/cardPics/brazilDeep.jpg" class="card-img-top" alt="Reddit Deepfryer">
+					<div class="card-body">
+						<h5 class="card-title">Reddit Deepfryer</h5>
+						<p class="card-text">
+							Bot that parses subreddits for keywords and, when
+							triggered, will take an image and return a deep
+							fried version of it to the user.
+						</p>
+						<a href="https://github.com/trevorjd3141/deep-frying-bot" class="btn btn-primary stretched-link">Github Repo</a>
 					</div>
-			  	</div>
+				</div>
+				<div class="card">
+					<img src="pics/cardPics/nbaBirthdates.png" class="card-img-top" alt="NBA Birthdate Graph">
+					<div class="card-body">
+						<h5 class="card-title">NBA Player Birthdate Analysis</h5>
+						<p class="card-text">
+							Generates a figure I used to test a hypothesis on
+							NBA Players having primarily Summer and Early Fall
+							birthdates. The figure helped me conclude that this
+							was false.
+						</p>
+						<a href="https://github.com/trevorjd3141/nbaplayerbirthdays" class="btn btn-primary stretched-link">Github Repo</a>
+					</div>
+				</div>
+				<div class="card">
+					<img src="pics/cardPics/urbanDictionary.png" class="card-img-top" alt="Urban Dictionary Logo">
+					<div class="card-body">
+						<h5 class="card-title">Urban Dictionary Word of the Day</h5>
+						<p class="card-text">
+							Scrapes (using BS4) the last ten "word of the days"
+							from Urban Dictionary and prints it to stdout.
+						</p>
+						<a href="https://github.com/trevorjd3141/urban-dictionary-scraper" class="btn btn-primary stretched-link">Github Repo</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted Pic">
+					<div class="card-body">
+						<h5 class="card-title">Ascii Image Converter</h5>
+						<p class="card-text">
+							Converts an image to its Ascii equivalent.
+							The image above is an egg I tested this on.
+						</p>
+						<a href="https://github.com/trevorjd3141/asciiConverter" class="btn btn-primary stretched-link">Github Repo</a>
+					</div>
+				</div>
+				<div class="card">
+					<img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted Pic">
+					<div class="card-body">
+						<h5 class="card-title">Ascii Image Converter</h5>
+						<p class="card-text">
+							Converts an image to its Ascii equivalent.
+							The image above is an egg I tested this on.
+						</p>
+						<a href="https://github.com/trevorjd3141/asciiConverter" class="btn btn-primary stretched-link">Github Repo</a>
+					</div>
+				</div>
+				<div class="card">
+					<img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted Pic">
+					<div class="card-body">
+						<h5 class="card-title">Ascii Image Converter</h5>
+						<p class="card-text">
+							Converts an image to its Ascii equivalent.
+							The image above is an egg I tested this on.
+						</p>
+						<a href="https://github.com/trevorjd3141/asciiConverter" class="btn btn-primary stretched-link">Github Repo</a>
+					</div>
+				</div>
 				  
 			</div>
-		</div>
+		</section>
 
 	</main>
 
