@@ -27,17 +27,21 @@
 	color: #434242;
 }
 
-#education .card {
+#experience img {
+	max-height: 60px;
+}
+
+#education .card, #experience .card {
 	margin: auto auto 40px;
 	border-radius: 10px;
 }
 
-#education a {
+#education a, #experience a {
 	font-size: 18px;
 	color: black;
 }
 
-#education a:hover {
+#education a:hover, #experience a:hover {
 	text-decoration: underline;
 }
 
@@ -115,9 +119,6 @@
 }
 
 .dividerimg {
-	/* The image used
-    background-image: url("pics/surff.jpg"); */
-
     /* Set a specific height */
     min-height: 200px; 
 
@@ -146,6 +147,10 @@
 
 .text-section p {
 	text-align: left;
+}
+
+.text-section .col p {
+	text-align: center;
 }
 
 .text-section h1 {
@@ -177,9 +182,6 @@
     -webkit-transform: scale(1.05);
 	transform: scale(1.05);
 }
-
-
-
 
 body {
 	position: relative;

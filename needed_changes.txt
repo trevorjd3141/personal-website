@@ -2,25 +2,13 @@ Changes Needing to take place.
 
 Create overall "card" theme
 Experience
-Education
+Education (done)
 Projects (Make them in the shape of cards)
 Skills
 Footer
-
-Keep Education as the media object
-theme but make bubbles underneath for different
-classes taken.
-Or possibly make education media objects that look
-similar to what it looks like now.
-Mostly rectangular with bubbles inside for the classes.
 
 Don't display the bars for skills under the about me
 but instead have a button for it under the text bubble.
 When the button is pressed shove the text to the left
 and animate the bars spawning on the right to what it
 currently looks like.
-
-Make the header look more responsive when hovering
-over a nav link.
-
-Text is stupid in about me "welcome to my port" fix it.
