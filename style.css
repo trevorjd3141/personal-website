@@ -27,6 +27,23 @@
 	color: #434242;
 }
 
+#about-me {
+	padding: 150px 20%;
+}
+
+#about-me .text-box {
+	animation: slideInRight 0.75s ease-in-out;
+
+}
+
+#about-me .col p {
+	text-align: left;
+}
+
+#bottom-progress-bar {
+	margin-bottom: 0px;
+}
+
 #education .card, #experience .card {
 	margin: auto auto 40px;
 	border-radius: 10px;
@@ -112,7 +129,6 @@
 
 .tag-bar {
 	background: #255e84;
-	vertical-align: middle;
 	padding-top: 5px;
 	font-weight: bold;
 }
