@@ -36,30 +36,31 @@
 }
 
 #about-bubbles li {
-	border: 1px black solid;
-	color: black;
+	padding: 0 10px;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
+	border: 1px black solid;
+	color: black;
 	background-color: white;
-
 }
 
 #about-bubbles li.active {
-	background-color: #1d7ab7;
+	color: white;
+	background-color: #2d94da;
+	border: 1px #2d94da solid;
 }
 
 #about-bubbles li:hover {
 	cursor: pointer;
-	background-color: #4a9acf;
-}
-
-#about-bubbles li.active, #about-bubbles li:hover {
+	background-color:  #1d7ab7;
 	color: white;
 	border: 1px #1d7ab7 solid;
 }
 
-#bottom-progress-bar {
-	margin-bottom: 0px;
+#about-bubbles li.active:hover {
+	color: white;
+	background-color: #1d7ab7;
+	border: 1px #1d7ab7 solid;
 }
 
 #education .card, #experience .card {
@@ -246,8 +247,12 @@ section h1 {
 }
 
 svg {
-	width: 100%;
 	height: 100%;
+	width: 100%;
+}
+
+rect {
+	fill: #0099ff;
 }
 
 footer {
