@@ -40,6 +40,28 @@
 	text-align: left;
 }
 
+#about-bubbles li {
+	border: 1px black solid;
+	color: black;
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	background: linear-gradient(to top, #1d7ab7 50%, #fff 50%);
+	background-size: 100% 200%;
+	background-position: top left;
+}
+
+#about-bubbles li.active, #about-bubbles li:hover {
+	border: none;
+	color: white;
+	background-color: #1d7ab7;
+	background-position: bottom left;
+	border: 1px #1d7ab7 solid;
+}
+
+#about-bubbles li:hover {
+	cursor: pointer;
+}
+
 #bottom-progress-bar {
 	margin-bottom: 0px;
 }
@@ -58,6 +80,18 @@
 	text-decoration: underline;
 }
 
+#education .bubble-tags li {
+	background-color: #1d7ab7;
+	color: white;
+	-webkit-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+
+#education .bubble-tags li:hover {
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
 #projects {
 	padding: 150px 20%;
 }
@@ -72,7 +106,7 @@
     transform: scale(1.03);
 }
 
-/*individual parallax scrolls.  Name of ID is the name of picture*/
+/*individual background images.  Name of ID is the name of picture*/
 #candy { background-image: url("pics/candy.jpg"); }
 #zion { background-image: url("pics/zion.jpg"); }
 
@@ -171,26 +205,17 @@
 	transform: scale(1.03);
 }
 
-.tech-tags {
+.bubble-tags {
 	list-style: none;
 }
 
-.tech-tags li {
-	background-color: #1d7ab7;
-	color: white;
+.bubble-tags li {
 	font-size: 80%;
 	display: inline-block;
 	padding: 0px 8px;
 	margin: 10px 3px 3px;
 	border-radius: 10px;
-	-webkit-transition: .5s ease-in-out;
-	transition: .25s ease-in-out;
 	backface-visibility: hidden;
-}
-
-.tech-tags li:hover {
-    -webkit-transform: scale(1.05);
-	transform: scale(1.05);
 }
 
 body {
