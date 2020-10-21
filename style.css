@@ -37,30 +37,21 @@
 
 #about-bubbles li {
 	padding: 0 10px;
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-	border: 1px black solid;
-	color: black;
-	background-color: white;
-}
-
-#about-bubbles li.active {
 	color: white;
-	background-color: #2d94da;
-	border: 1px #2d94da solid;
+	background-color: #3fa2e4;
 }
 
 #about-bubbles li:hover {
 	cursor: pointer;
-	background-color:  #1d7ab7;
-	color: white;
-	border: 1px #1d7ab7 solid;
+	background-color: #17669b;
 }
 
 #about-bubbles li.active:hover {
-	color: white;
-	background-color: #1d7ab7;
-	border: 1px #1d7ab7 solid;
+	background-color: #135480;
+}
+
+#about-bubbles li.active {
+	background-color: #104468;
 }
 
 #education .card, #experience .card {
@@ -140,28 +131,6 @@
 	border: 2px solid #0099ff;
 	padding: 40px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 14px 0 rgba(0, 0, 0, 0.19);
-}
-
-.progress {
-	background: rgba(245, 245, 245, 1);
-	border: 0px solid rgba(245, 245, 245, 1);
-	border-radius: 3px; 
-	height: 30px;
-	margin-bottom: 15px;
-}
-
-.progress span {
-	float: right;
-}
-
-.progress-bar {
-	background: #0099ff;
-}
-
-.tag-bar {
-	background: #255e84;
-	padding-top: 5px;
-	font-weight: bold;
 }
 
 .dividerimg {
@@ -253,6 +222,10 @@ svg {
 
 rect {
 	fill: #0099ff;
+}
+
+rect.active {
+	fill: #015994;
 }
 
 footer {
