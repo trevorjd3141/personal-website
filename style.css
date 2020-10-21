@@ -228,6 +228,12 @@ rect.active {
 	fill: #015994;
 }
 
+text {
+	font-weight: 200;
+	font-size: 18px;
+	color: #434242
+}
+
 footer {
 	padding-top: 50px;
 	padding-bottom: 50px;

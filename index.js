@@ -1,20 +1,38 @@
 const rectSpacing = 30;
+const rectStretch = 15;
 const animationLength = 700;
 
 function createShapeBars (data) {
+    // Add SVG
     d3.select('#skills').select('svg')
         .append('g')
         .attr('id', 'rectGroup');
 
-    d3.select('#rectGroup').selectAll('rect').data(data)
-        .join('rect')
-        .attr('id', d => d.id)
+    // Add groups for rect/text
+    d3.select('#rectGroup').selectAll('g').data(data)
+        .enter().append('g')
+        .attr('transform', (d,i) => "translate(0, " + i*rectSpacing + ")")
+        .attr('id', d => d.id);
+
+    // Add rects
+    d3.select('#rectGroup').selectAll('g').data(data)
+        .append('rect')
         .attr('height', 20)
         .attr('width', 0)
-        .attr('transform', (d,i) => "translate(0, " + i*rectSpacing + ")")
         .transition()
         .duration((d,i) => 400 + i*100)
         .attr('width', d => d.value*3);
+    
+    // Add text for rectangles
+    d3.select('#rectGroup').selectAll('g').data(data)
+        .append('text')
+        .transition()
+        .duration((d,i) => 400 + i*100)
+        .attr('transform', (d,i) => {
+            let xShift = d.value*3 + 10;
+            return "translate(" + xShift + ", 17)"
+        })
+        .text(d => d.name);
 }
 
 $(document).ready(function(){
@@ -34,11 +52,11 @@ $(document).ready(function(){
                 // Activate the appropriate rectangle
                 d3.select('#rectGroup').selectAll('rect')
                     .classed('active', false);
-                d3.select("#" + d.id).classed('active', !currStatus);
+                d3.select("#" + d.id).select('rect').classed('active', !currStatus);
 
                 // Create spacing for rectangles
                 if (!currStatus) {
-                    d3.select('#rectGroup').selectAll('rect')
+                    d3.select('#rectGroup').selectAll('g')
                         .transition()
                         .duration(animationLength)
                         .attr('transform', (rectD, rectI) => {
@@ -51,12 +69,12 @@ $(document).ready(function(){
                             } else if (rectI === i) {
                                 // Activated rectangle gets shifted down
                                 // By one "stretch"
-                                let yPos = i ? rectI*rectSpacing + rectSpacing : rectI*rectSpacing;
+                                let yPos = i ? rectI*rectSpacing + rectStretch : rectI*rectSpacing;
                                 return "translate(0, " + yPos + ")";
                             } else {
                                 // Rectangles below the activated one
                                 // Get shifted down by two "stretches"
-                                let yPos = i ? rectI*rectSpacing + rectSpacing*2 : rectI*rectSpacing + rectSpacing;
+                                let yPos = i ? rectI*rectSpacing + rectStretch*2 : rectI*rectSpacing + rectStretch;
                                 return "translate(0, " + yPos + ")";                                    
                             }
                         });
