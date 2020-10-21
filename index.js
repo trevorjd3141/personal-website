@@ -5,8 +5,11 @@ function createShapeBars (data) {
     d3.select('#skills').select('svg').selectAll('rect').data(data)
         .join('rect').filter(d => activeSkills[d.name])
         .attr('height', 20)
-        .attr('width', d => d.value*3)
-        .attr('transform', (d,i) => "translate(0, "+ i*32 + ")");
+        .attr('width', 0)
+        .attr('transform', (d,i) => "translate(0, "+ i*32 + ")")
+        .transition()
+        .duration((d,i) => 400 + i*100)
+        .attr('width', d => d.value*3);
 }
 
 $(document).ready(function(){
