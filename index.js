@@ -79,7 +79,7 @@ $(document).ready(function(){
                             }
                         });
                 } else {
-                    d3.select('#rectGroup').selectAll('rect')
+                    d3.select('#rectGroup').selectAll('g')
                         .transition()
                         .duration(animationLength)
                         .attr('transform', (rectD, rectI) => {
