@@ -1,8 +1,17 @@
 const rectSpacing = 30;
 const rectStretch = 15;
 const animationLength = 700;
+var dataConst;
 
 function createShapeBars (data) {
+    dataConst = data;
+
+    // Create scale for the data
+    let scale = d3
+        .scaleLinear()
+        .domain([0, d3.max(data, d => d.value)])
+        .range([0, 300]);
+
     // Add SVG
     d3.select('#skills').select('svg')
         .append('g')
@@ -11,7 +20,7 @@ function createShapeBars (data) {
     // Add groups for rect/text
     d3.select('#rectGroup').selectAll('g').data(data)
         .enter().append('g')
-        .attr('transform', (d,i) => "translate(0, " + i*rectSpacing + ")")
+        .attr('transform', (d,i) => "translate(5, " + i*rectSpacing + ")")
         .attr('id', d => d.id);
 
     // Add rects
@@ -20,8 +29,8 @@ function createShapeBars (data) {
         .attr('height', 20)
         .attr('width', 0)
         .transition()
-        .duration((d,i) => 400 + i*100)
-        .attr('width', d => d.value*3);
+        .duration((d,i) => 400 + i*200)
+        .attr('width', d => scale(d.value));
     
     // Add text for rectangles
     d3.select('#rectGroup').selectAll('g').data(data)
@@ -29,10 +38,21 @@ function createShapeBars (data) {
         .transition()
         .duration((d,i) => 400 + i*100)
         .attr('transform', (d,i) => {
-            let xShift = d.value*3 + 10;
+            let xShift = scale(d.value) + 10;
             return "translate(" + xShift + ", 17)"
         })
         .text(d => d.name);
+
+    d3.select("#skills").select("svg").append("g")
+        .attr('id', 'skillAxis')
+        .attr('transform', (d,i) => {
+            let yShift = data.length*rectSpacing;
+            return "translate(5, " + yShift + ")"
+        })
+        .call(d3.axisBottom(scale).ticks(5));
+
+
+
 }
 
 $(document).ready(function(){
@@ -54,6 +74,15 @@ $(document).ready(function(){
                     .classed('active', false);
                 d3.select("#" + d.id).select('rect').classed('active', !currStatus);
 
+                // Move Axis
+                d3.select("#skillAxis")
+                    .transition()
+                    .duration(animationLength)
+                    .attr('transform', () => {
+                        let yShift = i ? dataConst.length*rectSpacing + rectStretch*2 : dataConst.length*rectSpacing + rectStretch;
+                        return "translate(5, " + yShift + ")"
+                    });
+
                 // Create spacing for rectangles
                 if (!currStatus) {
                     d3.select('#rectGroup').selectAll('g')
@@ -65,17 +94,17 @@ $(document).ready(function(){
                                 // Rectangles above the activated
                                 // one aren't shifted
                                 let yPos = rectI*rectSpacing;
-                                return "translate(0, " + yPos + ")";
+                                return "translate(5, " + yPos + ")";
                             } else if (rectI === i) {
                                 // Activated rectangle gets shifted down
                                 // By one "stretch"
                                 let yPos = i ? rectI*rectSpacing + rectStretch : rectI*rectSpacing;
-                                return "translate(0, " + yPos + ")";
+                                return "translate(5, " + yPos + ")";
                             } else {
                                 // Rectangles below the activated one
                                 // Get shifted down by two "stretches"
                                 let yPos = i ? rectI*rectSpacing + rectStretch*2 : rectI*rectSpacing + rectStretch;
-                                return "translate(0, " + yPos + ")";                                    
+                                return "translate(5, " + yPos + ")";                                    
                             }
                         });
                 } else {
@@ -83,7 +112,15 @@ $(document).ready(function(){
                         .transition()
                         .duration(animationLength)
                         .attr('transform', (rectD, rectI) => {
-                            return "translate(0, " + rectI*rectSpacing + ")";
+                            return "translate(5, " + rectI*rectSpacing + ")";
+                        });
+
+                    d3.select("#skillAxis")
+                        .transition()
+                        .duration(animationLength)
+                        .attr('transform', () => {
+                            let yShift = dataConst.length*rectSpacing;
+                            return "translate(5, " + yShift + ")"
                         });
                 }
             });
