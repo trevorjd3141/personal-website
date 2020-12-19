@@ -7,8 +7,4 @@ Education (done)
 Projects (done)
 Footer
 
-Don't display the bars for skills under the about me
-but instead have a button for it under the text bubble.
-When the button is pressed shove the text to the left
-and animate the bars spawning on the right to what it
-currently looks like.
+Create new mockup for About Me
