@@ -1,10 +1,7 @@
 Changes Needing to take place.
 
-Create overall "card" theme
-About Me
+About Me (done)
 Experience (done)
 Education (done)
 Projects (done)
 Footer
-
-Create new mockup for About Me
