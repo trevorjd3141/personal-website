@@ -31,27 +31,22 @@
 	padding: 150px 20%;
 }
 
+#about-me img {
+	padding: 15px;
+	max-height: 170px;
+	border-radius: 50%;
+}
+
+#about-me .title-separator {
+	width: 100%;	
+}
+
+#about-me .row {
+	margin: auto 20%;
+}
+
 #about-me .col p {
 	text-align: left;
-}
-
-#about-bubbles li {
-	padding: 0 10px;
-	color: white;
-	background-color: #3fa2e4;
-}
-
-#about-bubbles li:hover {
-	cursor: pointer;
-	background-color: #17669b;
-}
-
-#about-bubbles li.active:hover {
-	background-color: #135480;
-}
-
-#about-bubbles li.active {
-	background-color: #104468;
 }
 
 #education .card, #experience .card {
@@ -97,6 +92,7 @@
 /*individual background images.  Name of ID is the name of picture*/
 #candy { background-image: url("pics/candy.jpg"); }
 #zion { background-image: url("pics/zion.jpg"); }
+#writing { background-image: url("pics/writing.jpg"); }
 
 .removedesktop {
 	display: none;
