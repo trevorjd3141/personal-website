@@ -28,7 +28,11 @@
 }
 
 #about-me {
-	padding: 150px 20%;
+	padding: 150px 30%;
+}
+
+#about-me .text-box {
+	padding: 30px 40px;
 }
 
 #about-me img {
@@ -41,12 +45,9 @@
 	width: 100%;	
 }
 
-#about-me .row {
-	margin: auto 20%;
-}
-
 #about-me .col p {
 	text-align: left;
+	margin-bottom: 0px;
 }
 
 #education .card, #experience .card {
