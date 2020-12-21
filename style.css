@@ -21,10 +21,10 @@
 	color: white;
 	margin: 40px auto 350px;
 	left: 50%;
-	-webkit-animation: bounce 0.75s ease-in-out 3;
-	-moz-animation: bounce 0.75s ease-in-out 3;
-	-o-animation: bounce 0.75s ease-in-out 3;
-	animation: bounce 0.75s ease-in-out 3;
+	-webkit-animation: bounce 0.75s ease-in-out 4;
+	-moz-animation: bounce 0.75s ease-in-out 4;
+	-o-animation: bounce 0.75s ease-in-out 4;
+	animation: bounce 0.75s ease-in-out 4;
 }
 
 #top-chevron:hover {
