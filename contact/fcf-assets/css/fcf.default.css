@@ -243,19 +243,19 @@ html {
 }
 
 .input::-moz-placeholder,.textarea::-moz-placeholder,.select select::-moz-placeholder {
-  color: rgba(54, 54, 54, 0.3);
+  color: rgb(54, 54, 54);
 }
 
 .input::-webkit-input-placeholder,.textarea::-webkit-input-placeholder,.select select::-webkit-input-placeholder {
-  color: rgba(54, 54, 54, 0.3);
+  color: rgb(54, 54, 54);
 }
 
 .input:-moz-placeholder,.textarea:-moz-placeholder,.select select:-moz-placeholder {
-  color: rgba(54, 54, 54, 0.3);
+  color: rgb(54, 54, 54);
 }
 
 .input:-ms-input-placeholder,.textarea:-ms-input-placeholder,.select select:-ms-input-placeholder {
-  color: rgba(54, 54, 54, 0.3);
+  color: rgb(54, 54, 54);
 }
 
 .input:hover,.textarea:hover,.select select:hover {
@@ -275,19 +275,19 @@ html {
 }
 
 .input[disabled]::-moz-placeholder,.textarea[disabled]::-moz-placeholder,.select select[disabled]::-moz-placeholder {
-  color: rgba(122, 122, 122, 0.3);
+  color: rgb(122,122,122);
 }
 
 .input[disabled]::-webkit-input-placeholder,.textarea[disabled]::-webkit-input-placeholder,.select select[disabled]::-webkit-input-placeholder {
-  color: rgba(122, 122, 122, 0.3);
+  color: rgb(122,122,122);
 }
 
 .input[disabled]:-moz-placeholder,.textarea[disabled]:-moz-placeholder,.select select[disabled]:-moz-placeholder {
-  color: rgba(122, 122, 122, 0.3);
+  color:  rgb(122,122,122);
 }
 
 .input[disabled]:-ms-input-placeholder,.textarea[disabled]:-ms-input-placeholder,.select select[disabled]:-ms-input-placeholder {
-  color: rgba(122, 122, 122, 0.3);
+  color: rgb(122,122,122);
 }
 
 .input,.textarea {
@@ -581,7 +581,7 @@ html {
 }
 
 .field:not(:last-child) {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .field-label .label {
@@ -634,7 +634,7 @@ html {
   }
 
   .field-body > .field:not(:last-child) {
-    margin-right: 0.75rem;
+    margin-right: 1.25rem;
   }
 }
 

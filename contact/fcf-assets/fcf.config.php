@@ -89,7 +89,7 @@ define('EMAIL_TO_CC_NAME', '');
 define('EMAIL_TO_BCC', '');
 define('EMAIL_TO_BCC_NAME', '');
 
-define('EMAIL_FROM', 'trevor.dalton@trevorjdalton.com');
+define('EMAIL_FROM', 'contact-form@trevorjdalton.com');
 define('EMAIL_FROM_NAME', 'Trevor Dalton');
 
 define('EMAIL_REPLY_TO', 'FIELD:Email');

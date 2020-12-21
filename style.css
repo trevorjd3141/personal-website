@@ -1,6 +1,6 @@
 /*Trevor's website!*/
 
-/*CSS Organized by order in HTML elements, then classes, then IDs*/
+/*CSS Organized by order in ids, then classes, then HTML elements */
 
 #name-area {
 	padding: 350px 15% 200px;
@@ -212,19 +212,6 @@ section h1 {
 	padding-bottom: 15px;
 }
 
-svg {
-	height: 100%;
-	width: 100%;
-}
-
-rect {
-	fill: #0099ff;
-}
-
-rect.active {
-	fill: #015994;
-}
-
 text {
 	font-weight: 200;
 	font-size: 18px;
@@ -234,9 +221,17 @@ text {
 footer {
 	padding-top: 50px;
 	padding-bottom: 50px;
-	background-color: #434242;
+	background-color: #343a40;
 	color: white;
 	height: auto;
+}
+
+footer .title-separator {
+	margin: auto auto 20px;
+}
+
+footer p {
+	margin: auto auto 30px;
 }
 
 @media only screen and (max-width: 767px) {
