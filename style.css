@@ -21,10 +21,38 @@
 	color: white;
 	margin: 40px auto 350px;
 	left: 50%;
+	-webkit-animation: bounce 0.75s 3;
+	-moz-animation: bounce 0.75s 3;
+	-o-animation: bounce 0.75s 3;
+	animation: bounce 0.75s 3;
 }
 
 #top-chevron:hover {
 	color: #434242;
+}
+
+@-webkit-keyframes bounce {
+	0%       { margin: 40px auto 350px; }
+	50%      { margin: 60px auto 330px; }
+	100%     { margin: 40px auto 350px; }
+}
+
+@-moz-keyframes bounce {
+	0%       { margin: 40px auto 350px; }
+	50%      { margin: 60px auto 330px; }
+	100%     { margin: 40px auto 350px; }
+}
+
+@-o-keyframes bounce {
+	0%       { margin: 40px auto 350px; }
+	50%      { margin: 60px auto 330px; }
+	100%     { margin: 40px auto 350px; }
+}
+
+@keyframes bounce {
+	0%       { margin: 40px auto 350px; }
+	50%      { margin: 60px auto 330px; }
+	100%     { margin: 40px auto 350px; }
 }
 
 #about-me {
