@@ -1,0 +1,24 @@
+.wrapper {
+    padding: 50px 30%;
+    text-align: center;
+    background-color: #343a40;
+    color: white;
+}
+
+a {
+    color: #0099ff;
+}
+
+a:hover {
+    color: #0099ff;
+    text-decoration: underline;
+}
+
+#checkmark {
+    height: 200px;
+}
+
+#copyright {
+    margin: auto;
+    text-align: center;
+}
