@@ -71,7 +71,7 @@
 <body data-spy="scroll" data-target="#my-nav" data-offset="10">
 	<main>
 		<!--Main title with my name in huge letters-->
-		<section class="removemobile" id="name-area">
+		<section class="remove-mobile" id="name-area">
 			<p>&lt; Trevor Dalton &gt;</p>
 	
 			<!--The down arrow-->
@@ -84,13 +84,20 @@
 
 		<section id="about-me">
 			<div class="text-box">
-				<div class="row">
+				<div class="row remove-mobile">
 					<div class="col-8 mt-5">
 						<h1>About Me</h1>
 						<div class="title-separator"></div>
 					</div>
 					<div class="col-3">
 						<img id="headshot" src="pics/headshot.jpg" alt="Professional Headshot">
+					</div>
+				</div>
+
+				<div class="row remove-desktop">
+					<div class="col">
+						<h1>About Me</h1>
+						<div class="title-separator"></div>
 					</div>
 				</div>
 
@@ -110,7 +117,7 @@
 				</div>
 				<hr>
 				<div class="row justify-content-center pt-2">
-					<div class="col-6">
+					<div class="col">
 						<a href="http://trevorjdalton.com/resume.pdf" class="btn btn-primary mr-3" type="button">R&eacute;sum&eacute;</a>
 						<a href="https://github.com/trevorjd3141/personal-website" class="btn btn-primary" type="button">Source Code</a>
 					</div>
@@ -118,7 +125,7 @@
 			</div>
 		</section>
 		
-		<div class="dividerimg" id="writing"></div>
+		<div class="divider-img" id="writing"></div>
 
 		<!-- Experience -->
 
@@ -145,13 +152,13 @@
 						as part of the GBSD program. I was often tasked with research
 						and data exploration tasks. Northrop Grumman makes it a priority for
 						me to maintain my programming skills and learn new technologies
-						and will be paying for a masters program in Data Science
+						and will be assisting me in a masters program in Data Science
 						I intend to start in 2021.
 					</p>
 					<h6 class="card-subtitle my-3">
 						<strong>Period: </strong> May 2020 - Present
 					</h6>
-					<div class="row mt-4 stack-icons">
+					<div class="row mt-4 stack-icons remove-mobile">
 						<div class="col">
 							<img alt="python icon" src="pics/icons/python.png">
 							<p>Python</p>
@@ -163,6 +170,10 @@
 						<div class="col">
 							<img alt="node.js icon" src="pics/icons/nodejs.png">
 							<p>Node.js</p>
+						</div>
+						<div class="col">
+							<img alt="mongodb icon" src="pics/icons/mongodb.png">
+							<p>mongoDB</p>
 						</div>
 						<div class="col">
 							<img alt="mysql icon" src="pics/icons/mysql.png">
@@ -208,7 +219,7 @@
 
 		</section>
 
-		<div class="dividerimg" id="zion"></div>
+		<div class="divider-img" id="zion"></div>
 
 		<!-- Education -->
 
@@ -287,7 +298,7 @@
  
 		</section>
 
-		<div class="dividerimg" id="candy"></div>
+		<div class="divider-img" id="candy"></div>
 
 		<!-- Projects -->
 

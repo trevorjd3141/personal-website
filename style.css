@@ -21,10 +21,10 @@
 	color: white;
 	margin: 40px auto 350px;
 	left: 50%;
-	-webkit-animation: bounce 0.75s 3;
-	-moz-animation: bounce 0.75s 3;
-	-o-animation: bounce 0.75s 3;
-	animation: bounce 0.75s 3;
+	-webkit-animation: bounce 0.75s ease-in-out 3;
+	-moz-animation: bounce 0.75s ease-in-out 3;
+	-o-animation: bounce 0.75s ease-in-out 3;
+	animation: bounce 0.75s ease-in-out 3;
 }
 
 #top-chevron:hover {
@@ -123,7 +123,7 @@
 #zion { background-image: url("pics/zion.jpg"); }
 #writing { background-image: url("pics/writing.jpg"); }
 
-.removedesktop {
+.remove-desktop {
 	display: none;
 }
 
@@ -158,7 +158,7 @@
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 14px 0 rgba(0, 0, 0, 0.19);
 }
 
-.dividerimg {
+.divider-img {
     /* Set a specific height */
     min-height: 200px; 
 
@@ -264,21 +264,48 @@ footer p {
 
 @media only screen and (max-width: 767px) {
 
-	.dividerimg {
+	#about-me {
+		padding: 100px 25px 25px;
+	}
+
+	#about-me .text-box {
+		border: 1px solid rgba(0,0,0,.125);
+		border-radius: 10px;
+		box-shadow: none;
+	}
+
+	#about-me .title-separator {
+		margin: auto;
+	}
+
+	#projects {
+		padding: 100px 25px 25px;
+	}
+
+	.title-separator {
+		width: 200px;
+	}
+
+	.remove-desktop {
+		display: initial;
+	}
+
+	.remove-mobile {
+		display: none;
+	}
+
+	.bubble-tags {
+		padding: 0px;
+	}
+
+	.divider-img {
 		background-color: #434242;
 		min-height: 50px;
 		background-image: none;
 	}
 
-	/* Deleted top image since the text gets removed for
-	mobile too so there isn't a random carbon bar */
-
-	.removemobile {
-		display:none;
-	}
-
 	section {
-		padding: 50px;
+		padding: 25px;
 	}
 
 	.glyphicon-triangle-bottom {
