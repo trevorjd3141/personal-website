@@ -13,7 +13,7 @@
     <![endif]-->
 
 	<!--Meta Info-->
-	<meta content="Trevor Dalton is a hard-working developer from St George, Utah" name="Trevor Dalton">
+	<meta content="Trevor Dalton is a Full-Stack Developer with a B.S. in Computer Science" name="Trevor Dalton">
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -26,6 +26,9 @@
 	<!--Bootstrap CSS CDN-->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
 
+	<!--Bootstrap Icons CDN-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
 	<!-- Personal CSS File -->
 	<link href="style.css" rel="stylesheet" type="text/css">
 
@@ -34,7 +37,7 @@
     <link href="fcf-assets/css/fcf.default-custom.css" rel="stylesheet">
 
 	<!--Fonts-->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|DM+Mono" rel="stylesheet">
 
 	<!--jQuery-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -72,11 +75,14 @@
 	<main>
 		<!--Main title with my name in huge letters-->
 		<section class="remove-mobile" id="name-area">
-			<p>&lt; Trevor Dalton &gt;</p>
+			<i class="bi bi-chevron-left"></i>
+			<p>Trevor Dalton</p>
+			<i class="bi bi-chevron-right"></i>
+
 	
 			<!--The down arrow-->
 			<a href="#about-me">
-				<i id="top-chevron" class="fa fa-chevron-down" aria-hidden="true"></i>
+				<i id="top-chevron" class="bi bi-chevron-down" aria-hidden="true"></i>
 			</a>
 		</section>
 
@@ -104,13 +110,14 @@
 				<div class="row">
 					<div class="col">
 						<p>
-							Hi, welcome to my portfolio 
-							I'm a student at the University of Utah set to graduate Spring 2021.
-							But this is just the start of my journey, I'm  working part-time
-							at Northrop Grumman and I'm grateful to get to learn from some of the most
-							intelligent people I've met in this industry.
-							<br><br> I'm currently practicing my skills in Node.js and getting into game development
-							with Unity on my own time. Feel free to contact me!
+							I'm a developer with a B.S. in Computer Science from the
+							University of Utah.
+							I'm current working at Northrop Grumman as a Software Engineer.
+							I'm particularly interested in Machine Learning, Deep Learning,
+							and Natural Language Processing. 
+							<br><br> Currently reading "How to Avoid a Climate Disaster"
+							by Bill Gates and "Knife of Dreams" by Robert Jordan.
+							Feel free to message me about anything book-related or otherwise.
 						</p>
 						
 					</div>
@@ -132,8 +139,57 @@
 		<section id="experience">
 			<h1>Experience</h1>
 			<div class="title-separator"></div>
+
+			<!--Northrop Grumman Full-Time-->
+			<div class="card">
+				<div class="card-body">
+					<div class="card-title mt-2">
+						<a href="https://www.northropgrumman.com/">
+							<h4>Northrop Grumman</h4>
+						</a>
+					</div>
+					<h6 class="card-subtitle mb-3 text-muted">
+						Associate Software Engineer
+					</h6>
+
+					<p>
+						I work on a Workflow Management Platform centered around
+						graph-based development. On a daily basis, I work with
+						TypeScript, JavaScript, and React. I am concurrently
+						working through Andrew Mead's
+						<a href="https://www.udemy.com/course/react-2nd-edition/">Complete React Developer Course</a>
+						to deepen my understanding of the technologies
+						I'm interacting with.
+					</p>
+					<h6 class="card-subtitle my-3">
+						<strong>Period: </strong> May 2021 - Present
+					</h6>
+					<div class="row mt-4 stack-icons remove-mobile">
+						<div class="col">
+							<img alt="typescript icon" src="pics/icons/typescript.png">
+							<p>TypeScript</p>
+						</div>
+						<div class="col">
+							<img alt="javascript icon" src="pics/icons/javascript.png">
+							<p>JavaScript</p>
+						</div>
+						<div class="col">
+							<img alt="node.js icon" src="pics/icons/nodejs.png">
+							<p>Node.js</p>
+						</div>
+						<div class="col">
+							<img alt="react icon" src="pics/icons/react.png">
+							<p>React</p>
+						</div>
+						<div class="col">
+							<img alt="git icon" src="pics/icons/git.png">
+							<p>Git</p>
+						</div>
+					</div>
+				</div>
+			</div>
 			
-			<!--Northrop Grumman-->
+			<!--Northrop Grumman Intern-->
 			<div class="card">
 				<div class="card-body">
 					<div class="card-title mt-2">
@@ -146,26 +202,19 @@
 					</h6>
 
 					<p>
-						As a member of the fortune 100,
-						Northrop Grumman has created many innovative solutions in
-						defense sector. My team specializes in advanced data analytics
-						as part of the GBSD program. I was often tasked with research
-						and data exploration tasks. Northrop Grumman makes it a priority for
-						me to maintain my programming skills and learn new technologies
-						and will be assisting me in a masters program in Data Science
-						I intend to start in 2021.
+						As an intern, I was often straddling both research
+						and implementation tasks. This gave me a breadth of knowledge in skills
+						such as Python, Node.js, and Neo4j. I got the chance to work on a
+						data science pipeline built around modeling failures for equipment
+						at various sites owned by the government.
 					</p>
 					<h6 class="card-subtitle my-3">
-						<strong>Period: </strong> May 2020 - Present
+						<strong>Period: </strong> May 2020 - May 2021
 					</h6>
 					<div class="row mt-4 stack-icons remove-mobile">
 						<div class="col">
 							<img alt="python icon" src="pics/icons/python.png">
 							<p>Python</p>
-						</div>
-						<div class="col">
-							<img alt="javascript icon" src="pics/icons/javascript.png">
-							<p>JavaScript</p>
 						</div>
 						<div class="col">
 							<img alt="node.js icon" src="pics/icons/nodejs.png">
@@ -204,12 +253,10 @@
 					</h6>
 
 					<p>
-						Clearhome is the #1 AT&T retailer in the US. As a
-						member of their sales force I sold AT&T/DirectTV products
-						in the Knoxville, TN and Green Bay, WI area. I refined
-						my communication and negotiation skills thoroughly and often.
-						I usually worked 60+ hour long weeks in order to pay for my
-						tuition for the next year.
+						Clearhome is the #1 AT&T retailer in the US. As a member of their sales force I sold AT&T/DirectTV products
+						in the Knoxville, TN and Green Bay, WI area. I refined my communication and negotiation skills thoroughly and often.
+						I value my time at Clearhome and believe that the 60+ hour weeks not only paid my tuition, but also gave me
+						many skills that shaped me professionally.
 					</p>
 					<h6 class="card-subtitle my-3">
 						<strong>Period: </strong> March 2019 - May 2020
@@ -241,25 +288,26 @@
 					</h6>
 
 					<p>
-						Utah's top research institution. Here I am finishing my
-						degree in Computer Science. The University of Utah held me
-						to a high standard and served me some extremely rigorous
-						courses which certainly helped my skills in programming.
-						I took many classes to explore my understanding in Data Science
-						and Analysis as well as courses to cement my understanding of
-						Software Engineering.
+						Utah's top research institution. I received a B.S. in Computer
+						Science in the Spring of 2021. I took courses in Software
+						Engineering and Data Science. I'm grateful for the opportunities
+						I had while I was at the U and I appreciate my professors for holding
+						my to a high standard. I was a member of Triangle, a STEM fraternity where
+						I met many of my closest colleagues.
 					</p>
 					<h6 class="card-subtitle my-3">
-						<strong>Graduating In:</strong> 2021
+						<strong>Graduated In:</strong> 2021
 					</h6>
 
 					<ul class="bubble-tags">
 						<li>Algorithms</li>
+						<li>Artificial Intelligence</li>
 						<li>Data Visualization</li>
 						<li>Operating Systems</li>
 						<li>Database Systems</li>
 						<li>Machine Learning</li>
 						<li>NLP</li>
+						<li>Information Systems</li>
 						<li>Computer Systems</li>
 					</ul>
 				</div>
@@ -278,13 +326,12 @@
 					</h6>
 
 					<p>
-						Dixie State is a great school, because of the relatively
-						small class sizes I was able to receive much individual
-						attention and grow because of that. I graduated with an
-						Associate's of Science in Spring of 2018 coinciding with my
-						High School graduation. I took many of my general education
-						credits here as well as my beginning Computer Science classes such
-						as Data Structures and Algorithms.
+						I took concurrent enrollment classes at DSU thanks to the Success Academy
+						Program that enabled me to graduate high school with enough credits to
+						earn my associates degree at 18. I loved the small class sizes and community.
+						The individual attention I received from professors kindled my
+						passion for mathematics, science, and computing. Subjects I'm still passionate
+						about today.
 					</p>
 					<h6 class="card-subtitle mb-3">
 						<strong>Graduated In:</strong> 2018
@@ -308,41 +355,17 @@
 			<div class="card-columns">
 
 				<div class="card">
-					<img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted">
+					<img src="pics/cardPics/bdv.png" class="card-img-top" alt="Bank Document Verifier">
 					<div class="card-body">
-						<h5 class="card-title">Ascii Image Converter</h5>
+						<h5 class="card-title">Bank Document Verifier</h5>
 						<p class="card-text">
-							Converts an image to its Ascii equivalent using 
-							multiprocessing techniques. The image above is
-							an egg I tested this on.
+							A collaborative workspace geared to enable financial
+							institutions to automate their application processes. Here, banks can automatically
+							verify the validity of important documents such as W2s, Schedule C's, and etc. and
+							approve applicants. BDV allows for real-time communication to ensure loans are processed
+							accurately and timely.
 						</p>
-						<a href="https://github.com/trevorjd3141/asciiConverter" class="btn btn-primary stretched-link">Github Repo</a>
-					</div>
-				</div>
-				<div class="card">
-					<img src="pics/cardPics/jojo.jpg" class="card-img-top" alt="Jojo's Bizarre Adventure">
-					<div class="card-body">
-						<h5 class="card-title">Jojo Music Player</h5>
-						<p class="card-text">
-							Script that plays the theme song for Jojo's Bizarre
-							Adventure with a fade-in and fade-out effect. Intended
-							to be used alongside Auto Hot Keys.
-						</p>
-						<a href="https://github.com/trevorjd3141/JojoPlayer" class="btn btn-primary stretched-link">Github Repo</a>
-					</div>
-				</div>
-				
-				<div class="card">
-					<img src="pics/cardPics/nbaBirthdates.png" class="card-img-top" alt="NBA Birthdate Graph">
-					<div class="card-body">
-						<h5 class="card-title">NBA Player Birthdate Analysis</h5>
-						<p class="card-text">
-							Generates a figure I used to test a hypothesis on
-							NBA Players having primarily Summer and Early Fall
-							birthdates. The figure helped me conclude that this
-							was false.
-						</p>
-						<a href="https://github.com/trevorjd3141/nbaplayerbirthdays" class="btn btn-primary stretched-link">Github Repo</a>
+						<a href="https://bdvapp.com/" class="btn btn-primary stretched-link">Demo</a>
 					</div>
 				</div>
 				<div class="card">
@@ -358,13 +381,40 @@
 				</div>
 
 				<div class="card">
+					<img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted">
+					<div class="card-body">
+						<h5 class="card-title">Ascii Image Converter</h5>
+						<p class="card-text">
+							An application that allows users to submit images and convert
+							them to their Ascii equivalents. Multiprocessing is used to speed
+							up conversion on larger images. The image above is
+							an egg I tested this on.
+						</p>
+						<a href="https://github.com/trevorjd3141/asciiConverter" class="btn btn-primary stretched-link">Github Repo</a>
+					</div>
+				</div>
+				<div class="card">
+					<img src="pics/cardPics/nbaBirthdates.png" class="card-img-top" alt="NBA Birthdate Graph">
+					<div class="card-body">
+						<h5 class="card-title">NBA Player Birthdate Analysis</h5>
+						<p class="card-text">
+							Generates a figure I used to test a hypothesis on
+							NBA Players having primarily Summer and Early Fall
+							birthdates. The figure helped me conclude that this
+							was false.
+						</p>
+						<a href="https://github.com/trevorjd3141/nbaplayerbirthdays" class="btn btn-primary stretched-link">Github Repo</a>
+					</div>
+				</div>
+
+
+				<div class="card">
 					<img src="pics/cardPics/personalWebsite.jpg" class="card-img-top" alt="Personal Website">
 					<div class="card-body">
 						<h5 class="card-title">Personal Website</h5>
 						<p class="card-text">
-							Portfolio website all designed by me to
-							showcase my talents and allow me to express
-							my resume in a virtual medium.
+							Portfolio website designed by me to showcase my talents and allow me to express
+							my resume in a virtual medium. Created with HTML, CSS, and Bootstrap.
 						</p>
 						<a href="https://github.com/trevorjd3141/personal-website" class="btn btn-primary stretched-link">Github Repo</a>
 					</div>
@@ -374,12 +424,25 @@
 					<div class="card-body">
 						<h5 class="card-title">Urban Dictionary Word of the Day</h5>
 						<p class="card-text">
-							Scrapes (using BS4) the last ten "word of the days"
-							from Urban Dictionary and prints it to stdout.
+							A webscraper built using the Beautiful Soup 4 library that collects
+							the last 10 "words of the day" from Urban Dictionary.
 						</p>
 						<a href="https://github.com/trevorjd3141/urban-dictionary-scraper" class="btn btn-primary stretched-link">Github Repo</a>
 					</div>
 				</div>
+
+				<!-- <div class="card">
+					<img src="pics/cardPics/jojo.jpg" class="card-img-top" alt="Jojo's Bizarre Adventure">
+					<div class="card-body">
+						<h5 class="card-title">Jojo Music Player</h5>
+						<p class="card-text">
+							Script that plays the theme song for Jojo's Bizarre
+							Adventure with a fade-in and fade-out effect. Intended
+							to be used alongside Auto Hot Keys.
+						</p>
+						<a href="https://github.com/trevorjd3141/JojoPlayer" class="btn btn-primary stretched-link">Github Repo</a>
+					</div>
+				</div> -->
   
 			</div>
 		</section>

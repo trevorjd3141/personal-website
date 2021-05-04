@@ -3,7 +3,7 @@
 /*CSS Organized by order in ids, then classes, then HTML elements */
 
 #name-area {
-	padding: 350px 15% 200px;
+	padding: 375px 15% 200px;
 	font-size: 72px;
 	color: white;
 	background-image: url(pics/jumbotron.jpg);
@@ -12,14 +12,11 @@
     background-repeat: no-repeat;
 }
 
-#name-area p {
-	text-align: center;
-}
-
 #top-chevron {
-	font-size: 100%;
+	font-size: 120%;
+	display: block;
 	color: white;
-	margin: 40px auto 350px;
+	margin: 0px auto 350px;
 	left: 50%;
 	-webkit-animation: bounce 0.75s ease-in-out 4;
 	-moz-animation: bounce 0.75s ease-in-out 4;
@@ -31,28 +28,35 @@
 	color: #434242;
 }
 
+#name-area p {
+	text-align: center;
+    font-family: 'DM Mono', monospace;
+	display: inline;
+	font-size: 100%;
+}
+
 @-webkit-keyframes bounce {
-	0%       { margin: 40px auto 350px; }
-	50%      { margin: 60px auto 330px; }
-	100%     { margin: 40px auto 350px; }
+	0%       { margin: 0px auto 320px; }
+	50%      { margin: 20px auto 300px; }
+	100%     { margin: 0px auto 320px; }
 }
 
 @-moz-keyframes bounce {
-	0%       { margin: 40px auto 350px; }
-	50%      { margin: 60px auto 330px; }
-	100%     { margin: 40px auto 350px; }
+	0%       { margin: 0px auto 320px; }
+	50%      { margin: 20px auto 300px; }
+	100%     { margin: 0px auto 320px; }
 }
 
 @-o-keyframes bounce {
-	0%       { margin: 40px auto 350px; }
-	50%      { margin: 60px auto 330px; }
-	100%     { margin: 40px auto 350px; }
+	0%       { margin: 0px auto 320px; }
+	50%      { margin: 20px auto 300px; }
+	100%     { margin: 0px auto 320px; }
 }
 
 @keyframes bounce {
-	0%       { margin: 40px auto 350px; }
-	50%      { margin: 60px auto 330px; }
-	100%     { margin: 40px auto 350px; }
+	0%       { margin: 0px auto 320px; }
+	50%      { margin: 20px auto 300px; }
+	100%     { margin: 0px auto 320px; }
 }
 
 #about-me {
@@ -83,8 +87,7 @@
 	border-radius: 10px;
 }
 
-#education a, #experience a {
-	font-size: 18px;
+#education h4, #experience h4 {
 	color: black;
 }
 
