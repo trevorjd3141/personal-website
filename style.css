@@ -4,7 +4,7 @@
 
 #name-area {
 	padding: 375px 15% 200px;
-	font-size: 72px;
+	font-size: 54pt;
 	color: white;
 	background-image: url(pics/jumbotron.jpg);
 	background-size: cover;
@@ -227,7 +227,7 @@ h1, h2, h3 {
 section {
 	padding: 150px 25%; 
 	color: #434242; 
-	font-size: 18px;
+	font-size: 13pt;
 	line-height: 1.7em;
 }
 
@@ -245,7 +245,7 @@ section h1 {
 
 text {
 	font-weight: 200;
-	font-size: 18px;
+	font-size: 13pt;
 	color: #434242
 }
 
@@ -263,6 +263,30 @@ footer .title-separator {
 
 footer p {
 	margin: auto auto 30px;
+}
+
+@media only screen and (max-width: 1300px) {
+	#name-area {
+		font-size: 40pt;
+		padding: 350px 5% 5px;
+		background-image: url(pics/tablet_jumbotron.jpg);
+	}
+
+	#about-me {
+		padding: 150px 10%;
+	}
+
+	#projects {
+		padding: 150px 5%;
+	}
+
+	.card-columns {
+		column-count: 2;
+	}
+
+	section {
+		padding: 150px 10%;
+	}
 }
 
 @media only screen and (max-width: 767px) {
@@ -310,9 +334,4 @@ footer p {
 	section {
 		padding: 25px;
 	}
-
-	.glyphicon-triangle-bottom {
-		font-size: 8pt;
-	}
-
 }
