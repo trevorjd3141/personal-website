@@ -181,6 +181,22 @@
 	float: none;
 }
 
+.links a {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* Otherwise there'll be a text underline
+   when hovering over the icons */
+.links a:hover {
+	text-decoration: none;
+}
+
+.links i {
+	vertical-align: middle;
+	font-size: 20pt;
+}
+
 .card {
 	overflow: hidden;
 }
