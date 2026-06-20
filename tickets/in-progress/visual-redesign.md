@@ -21,7 +21,7 @@ explicit user sign-off.
 - DM Mono tech tags replacing stack icon grids in experience
 - `↗` text links replacing Bootstrap buttons throughout
 - Resume removed from site: PDF deleted, link removed from hero
-- About section: terminal block layout with text links replacing Bootstrap icons
+- About section merged into hero: expanded bio with personal line, all social/source links added to hero CTA, separate about section and nav link removed
 - Social/nav links in `--color-accent`, not Bootstrap default blue
 - Copyright in DM Mono
 - Custom ease-out scroll (750ms cubic, JS-driven) replacing CSS smooth scroll

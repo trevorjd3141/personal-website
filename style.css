@@ -122,43 +122,6 @@ html {
   background: var(--color-border);
 }
 
-.about-content {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-}
-
-.about-text {
-  flex: 1;
-  min-width: 0;
-}
-
-#about-me #headshot {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.about-links {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.about-link {
-  font-family: 'DM Mono', monospace;
-  font-size: 13px;
-  color: var(--color-accent);
-  text-decoration: none;
-}
-
-.about-link:hover {
-  color: var(--color-accent-light);
-  text-decoration: underline;
-}
 
 #hero {
   padding: 140px 25% 80px;
@@ -543,15 +506,6 @@ footer p {
 
 	.projects-grid {
 		column-count: 1;
-	}
-
-	.about-content {
-		flex-direction: column;
-	}
-
-	#about-me #headshot {
-		width: 80px;
-		height: 80px;
 	}
 
 	section {
