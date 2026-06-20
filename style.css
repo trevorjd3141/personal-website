@@ -532,19 +532,42 @@ section h1 {
 }
 
 footer {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	background-color: #343a40;
-	color: white;
-	height: auto;
+  padding: 60px 25%;
+  background-color: #212529;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: left;
+  height: auto;
 }
 
-footer .title-separator {
-	margin: auto auto 20px;
+[data-theme="dark"] footer {
+  background-color: #0d0f12;
+}
+
+.footer-header .hash,
+.footer-header .section-name {
+  color: #ffffff;
+}
+
+.footer-rule {
+  background: rgba(255, 255, 255, 0.15);
 }
 
 footer p {
-	margin: auto auto 30px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 20px;
+}
+
+.footer-email {
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  color: var(--color-accent-light);
+  text-decoration: none;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 1300px) {
