@@ -163,9 +163,9 @@ html {
 .hero-cursor {
   display: inline-block;
   width: 2px;
-  height: 0.75em;
+  height: 0.8em;
   background-color: var(--color-accent);
-  vertical-align: baseline;
+  vertical-align: middle;
   margin-left: 6px;
   animation: blink 1s step-end infinite;
 }
@@ -198,7 +198,8 @@ html {
   flex-wrap: wrap;
 }
 
-.hero-link {
+.hero-link,
+.hero-link:visited {
   font-family: 'DM Mono', monospace;
   font-size: 13px;
   color: var(--color-accent);
@@ -331,6 +332,10 @@ html {
 
 #education .exp-block {
   border-left-color: var(--color-accent);
+}
+
+#education .arrow-list li {
+  font-size: 12px;
 }
 
 .exp-header {

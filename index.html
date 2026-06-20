@@ -51,7 +51,7 @@
 	<!--Font Awesome CDN-->
 	<script src="https://use.fontawesome.com/3f383c3879.js"></script>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#my-nav" data-bs-offset="10">
+<body>
 <nav id="my-nav" class="navbar navbar-expand-lg fixed-top">
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#pill-target" aria-controls="pill-target" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -437,6 +437,23 @@
       localStorage.setItem('theme', next);
       updateLabel();
     });
+  })();
+
+  (function() {
+    var links = Array.from(document.querySelectorAll('#my-nav .nav-link[href^="#"]'));
+    var targets = links.map(function(l) { return document.querySelector(l.getAttribute('href')); });
+    function onScroll() {
+      var nav = document.getElementById('my-nav');
+      var navH = nav ? nav.offsetHeight : 70;
+      var scrollY = window.scrollY + navH + 16;
+      var active = -1;
+      targets.forEach(function(t, i) {
+        if (t && t.getBoundingClientRect().top + window.scrollY <= scrollY) active = i;
+      });
+      links.forEach(function(l, i) { l.classList.toggle('active', i === active); });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   })();
 
   (function() {
