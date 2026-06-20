@@ -7,11 +7,13 @@ with no real benefit. GitHub Pages deploys straight from the repo root with zero
 configuration. If the site grows significantly (blog, dynamic content), a static
 site generator like Astro or Next.js would be the upgrade path.
 
-## Bootstrap 4.5 (not 5)
-Bootstrap 4.5 was chosen when the site was first built for its mature ecosystem
-and solid documentation. Upgrading to Bootstrap 5 would remove the jQuery
-dependency and clean up some CSS class names, but there's no urgent reason to
-do so — a future redesign is the right moment for that upgrade.
+## Bootstrap 5.3
+Upgraded from Bootstrap 4.5 to 5.3 (June 2026). Bootstrap 5 drops the jQuery
+dependency entirely, which removed ~87 KB of JS from the page. The `card-columns`
+class was removed in Bootstrap 5; replaced with a custom `projects-grid` CSS
+class using `column-count` (3 columns desktop → 2 at 1300px → 1 at 767px).
+Smooth scroll is now handled by a 1000ms `requestAnimationFrame` easing function
+rather than `scroll-behavior: smooth` (which cannot be given a duration).
 
 ## Contact form: FCF (Free Contact Form)
 The contact form uses the FCF PHP library (`fcf-assets/`) which sends email via
@@ -26,8 +28,8 @@ configuration needed for a static portfolio of this size.
 
 ## Single-file structure
 All content is in one `index.html` rather than split across pages. The site uses
-scroll-spy navigation (`data-spy="scroll"`) so each section is a smooth-scroll
-anchor. This keeps deployment trivial and avoids any routing concerns.
+Bootstrap 5 scroll-spy navigation (`data-bs-spy="scroll"`) so each section is a
+smooth-scroll anchor. This keeps deployment trivial and avoids any routing concerns.
 
 ## Image storage: local `pics/`
 Project card images and tech stack icons are stored locally in `pics/` rather

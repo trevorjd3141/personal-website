@@ -8,7 +8,7 @@ It presents Trevor Dalton's experience, education, and projects in a résumé-st
 
 ### Current state
 - Single `index.html` with five sections: name hero, About Me, Experience, Education, Projects.
-- Responsive via Bootstrap 4.5 grid; custom styles in `style.css`.
+- Responsive via Bootstrap 5.3 grid; custom styles in `style.css`. No jQuery dependency.
 - Contact form via FCF (Free Contact Form) PHP library in `fcf-assets/`.
 - Resume PDF served from `assets/trevor_dalton_resume.pdf`.
 - Custom domain `trevorjdalton.com` via `CNAME` on GitHub Pages.
