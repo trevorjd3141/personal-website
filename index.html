@@ -4,11 +4,23 @@
 
 <html lang="en">
 <head>
-	<title>Trevor Dalton</title>
+	<title>Trevor Dalton - Senior Data Engineer</title>
 	<meta charset="utf-8">
 
 	<!--Meta Info-->
 	<meta content="Trevor Dalton is a Senior Data Engineer with a passion for agentic AI systems and data pipelines" name="description">
+
+	<!--Open Graph / social card-->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://trevorjdalton.com/">
+	<meta property="og:title" content="Trevor Dalton - Senior Data Engineer">
+	<meta property="og:description" content="Trevor Dalton is a Senior Data Engineer with a passion for agentic AI systems and data pipelines.">
+	<meta property="og:image" content="https://trevorjdalton.com/pics/og-card.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Trevor Dalton - Senior Data Engineer">
+	<meta name="twitter:description" content="Trevor Dalton is a Senior Data Engineer with a passion for agentic AI systems and data pipelines.">
+	<meta name="twitter:image" content="https://trevorjdalton.com/pics/og-card.png">
+	<link rel="canonical" href="https://trevorjdalton.com/">
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -21,9 +33,6 @@
 
 	<!--Bootstrap CSS CDN-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-	<!--Bootstrap Icons CDN-->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
 
 	<!-- Inline: read theme preference before first paint to avoid flash -->
 	<script>
@@ -44,19 +53,18 @@
 
 
 	<!--Fonts-->
+	<!--Preconnect for Google Fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css?family=Raleway|DM+Mono&display=swap" rel="stylesheet">
 
 	<!--Bootstrap JS CDN-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
-	<!--Font Awesome CDN-->
-	<script src="https://use.fontawesome.com/3f383c3879.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#experience">Skip to content</a>
 <nav id="my-nav" class="navbar navbar-expand-lg fixed-top">
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#pill-target" aria-controls="pill-target" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
   <a class="navbar-brand" href="#">~/trevordalton</a>
   <div class="collapse navbar-collapse" id="pill-target">
     <ul class="navbar-nav nav-pills ms-auto">
@@ -70,8 +78,11 @@
         <a class="nav-link" href="#projects">projects</a>
       </li>
     </ul>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">☾ dark</button>
   </div>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">☾ dark</button>
+  <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#pill-target" aria-controls="pill-target" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 </nav>
 	<main>
 		<!-- Terminal hero -->
@@ -79,22 +90,22 @@
 		  <div class="hero-prompt"><span class="hero-prefix">$ </span>whoami</div>
 		  <h1 class="hero-name">Trevor Dalton<span class="hero-cursor"></span></h1>
 		  <div class="hero-role"><span class="hero-comment">// </span>Senior Data Engineer</div>
-		  <p class="hero-bio">Building agentic AI pipelines and data infrastructure at M Science. Passionate about LLMs and the engineering challenges of putting them into production. When I'm not coding I'm lifting weights, playing pickleball, or reading. Currently on <em>The Count of Monte Cristo</em> by Alexandre Dumas. Always happy to talk books or anything else.</p>
+		  <p class="hero-bio">Building agentic AI pipelines and data infrastructure at M Science. Passionate about LLMs and the engineering challenges of putting them into production. When I'm not coding I'm lifting weights, playing pickleball, or reading. Always happy to talk books or anything else.</p>
 		  <div class="hero-cta">
 		    <a href="mailto:trevorjd3141@gmail.com" class="hero-link">Email me</a>
-		    <a href="https://www.linkedin.com/in/trevor-dalton/" class="hero-link">↗ LinkedIn</a>
-		    <a href="https://github.com/trevorjd3141" class="hero-link">↗ GitHub</a>
-		    <a href="https://www.instagram.com/trevorjd3141/" class="hero-link">↗ Instagram</a>
-		    <a href="https://github.com/trevorjd3141/personal-website" class="hero-link">↗ Source code</a>
+		    <a href="https://www.linkedin.com/in/trevor-dalton/" class="hero-link" target="_blank" rel="noopener noreferrer">↗ LinkedIn</a>
+		    <a href="https://github.com/trevorjd3141" class="hero-link" target="_blank" rel="noopener noreferrer">↗ GitHub</a>
+		    <a href="https://www.instagram.com/trevorjd3141/" class="hero-link" target="_blank" rel="noopener noreferrer">↗ Instagram</a>
+		    <a href="https://github.com/trevorjd3141/personal-website" class="hero-link" target="_blank" rel="noopener noreferrer">↗ Source code</a>
 		  </div>
 		</section>
 
 		<!-- Experience -->
 
-		<section id="experience">
+		<section id="experience" aria-labelledby="experience-heading">
 			<div class="section-header">
 			  <span class="hash">#</span>
-			  <span class="section-name">experience</span>
+			  <h2 id="experience-heading" class="section-name">experience</h2>
 			  <div class="section-rule"></div>
 			</div>
 
@@ -102,7 +113,7 @@
 			<div class="exp-block">
 				<div class="exp-header">
 					<div class="exp-header-left">
-						<div class="exp-company"><a href="https://mscience.com/">M Science</a></div>
+						<div class="exp-company"><a href="https://mscience.com/" target="_blank" rel="noopener noreferrer">M Science</a></div>
 						<div class="exp-roles">
 							<span class="exp-role">Senior Data Engineer</span> <span class="exp-date-inline">(Jan 2026–present)</span>
 							<span class="exp-sep"> · </span>
@@ -137,7 +148,7 @@
 			<div class="exp-block">
 				<div class="exp-header">
 					<div class="exp-header-left">
-						<div class="exp-company"><a href="https://www.northropgrumman.com/">Northrop Grumman</a></div>
+						<div class="exp-company"><a href="https://www.northropgrumman.com/" target="_blank" rel="noopener noreferrer">Northrop Grumman</a></div>
 						<div class="exp-roles">
 							<span class="exp-role">Data Engineer</span> <span class="exp-date-inline">(May 2021–Mar 2022)</span>
 							<span class="exp-sep"> · </span>
@@ -166,38 +177,28 @@
 				</div>
 			</div>
 
-			<!-- Clearhome
-			<div class="card">
-				<div class="card-body">
-					<div class="card-title mt-2">
-						<a href="https://www.clearhome.us/">
-							<h4>Clearhome</h4>
-						</a>
+			<!-- Certifications -->
+			<div class="exp-block">
+				<div class="exp-header">
+					<div class="exp-header-left">
+						<div class="exp-company">Certifications</div>
+						<div class="exp-roles">
+							<a href="assets/aws-cert.pdf" target="_blank" rel="noopener noreferrer" class="exp-cert-link">AWS Cloud Practitioner</a>
+							<span class="exp-sep"> · </span>
+							<a href="assets/neo4j-cert.pdf" target="_blank" rel="noopener noreferrer" class="exp-cert-link">Neo4j Certified Professional</a>
+						</div>
 					</div>
-					<h6 class="card-subtitle mb-3 text-muted">
-						Sales Representative
-					</h6>
-
-					<p>
-						Clearhome is the #1 AT&T retailer in the US. As a member of their sales force I sold AT&T/DirectTV products
-						in the Knoxville, TN and Green Bay, WI area. I refined my communication and negotiation skills thoroughly and often.
-						I value my time at Clearhome and believe that the 60+ hour weeks not only paid my tuition, but also gave me
-						many skills that shaped me professionally.
-					</p>
-					<h6 class="card-subtitle my-3">
-						<strong>Period: </strong> March 2019 - May 2020
-					</h6>
 				</div>
-			</div> -->
+			</div>
 
 		</section>
 
 		<!-- Education -->
 
-		<section id="education">
+		<section id="education" aria-labelledby="education-heading">
 			<div class="section-header">
 			  <span class="hash">#</span>
-			  <span class="section-name">education</span>
+			  <h2 id="education-heading" class="section-name">education</h2>
 			  <div class="section-rule"></div>
 			</div>
 
@@ -205,7 +206,7 @@
 			<div class="exp-block">
 				<div class="exp-header">
 					<div class="exp-header-left">
-						<div class="exp-company"><a href="https://ischoolonline.berkeley.edu/data-science/">University of California, Berkeley</a></div>
+						<div class="exp-company"><a href="https://ischoolonline.berkeley.edu/data-science/" target="_blank" rel="noopener noreferrer">University of California, Berkeley</a></div>
 						<div class="exp-roles">M.S. Information and Data Science</div>
 					</div>
 					<div class="exp-date-range">2024</div>
@@ -227,7 +228,7 @@
 			<div class="exp-block">
 				<div class="exp-header">
 					<div class="exp-header-left">
-						<div class="exp-company"><a href="https://www.cs.utah.edu/">University of Utah</a></div>
+						<div class="exp-company"><a href="https://www.cs.utah.edu/" target="_blank" rel="noopener noreferrer">University of Utah</a></div>
 						<div class="exp-roles">B.S. Computer Science</div>
 					</div>
 					<div class="exp-date-range">2021</div>
@@ -250,7 +251,7 @@
 			<div class="exp-block">
 				<div class="exp-header">
 					<div class="exp-header-left">
-						<div class="exp-company"><a href="https://utahtech.edu/">Utah Tech University</a></div>
+						<div class="exp-company"><a href="https://utahtech.edu/" target="_blank" rel="noopener noreferrer">Utah Tech University</a></div>
 						<div class="exp-roles">A.S. Computer Science</div>
 					</div>
 					<div class="exp-date-range">2018</div>
@@ -266,40 +267,31 @@
 
 		<!-- Projects -->
 
-		<section id="projects">
+		<section id="projects" aria-labelledby="projects-heading">
 			<div class="section-header">
 			  <span class="hash">#</span>
-			  <span class="section-name">projects</span>
+			  <h2 id="projects-heading" class="section-name">projects</h2>
 			  <div class="section-rule"></div>
 			</div>
 			<div class="projects-grid">
 
 				<div class="card">
-					<img src="pics/cardPics/datadrip.png" class="card-img-top" alt="Datadrip">
+					<img src="pics/cardPics/datadrip.png" class="card-img-top" alt="Datadrip" width="800" height="200" loading="lazy">
 					<div class="card-body">
-						<h5 class="card-title">Datadrip: AI for Financial Analysts</h5>
+						<h3 class="card-title">Datadrip: AI for Financial Analysts</h3>
 						<p class="card-text">
-							Datadrip automates earnings analyses for publicly traded companies using state-of-the-art technology.
-							It frees research analysts from manual work by extracting and summarizing critical data instantly.
-							Retail investors gain rapid insights into revenue trends and presentation summaries in a concise format.
-							For financial analysts, Datadrip converts presentations into Excel sheets for seamless modeling integration,
-							enhancing decision-making and maximizing returns effortlessly.
+							Automates earnings analysis for publicly traded companies. Extracts and summarizes financial data from earnings presentations using computer vision, generative AI, and visual Q/A. Built in 16 weeks; awarded 2nd place in Berkeley MIDS capstone presentations.
 							<br/><br/>
-							During Datadrip's 16-week development, the Datadrip team leveraged cutting-edge models in computer vision, generative AI, and visual Q/A.
-							Datadrip exemplifies the evolving landscape of AI-driven financial analysis tools, highlighting the potential for
-							cutting-edge technologies to democratize access to critical financial information and elevate data-driven
-							decision-making in the financial sector.
-							<br/><br/>
-							You can view the demo <a href="https://www.youtube.com/watch?v=RvQUBRAscxc">here!</a>
+							You can view the demo <a href="https://www.youtube.com/watch?v=RvQUBRAscxc" target="_blank" rel="noopener noreferrer">here.</a>
 						</p>
-						<a href="https://dianalnguyen.github.io/datadrip/" class="card-link">↗ Website</a>
+						<a href="https://dianalnguyen.github.io/datadrip/" class="card-link" target="_blank" rel="noopener noreferrer">↗ Website</a>
 					</div>
 				</div>
 
 				<div class="card">
-					<img src="pics/cardPics/bdv.png" class="card-img-top" alt="Bank Document Verifier">
+					<img src="pics/cardPics/bdv.png" class="card-img-top" alt="Bank Document Verifier" width="800" height="200" loading="lazy">
 					<div class="card-body">
-						<h5 class="card-title">Bank Document Verifier</h5>
+						<h3 class="card-title">Bank Document Verifier</h3>
 						<p class="card-text">
 							A collaborative workspace geared to enable financial
 							institutions to automate their application processes. Created using Angular, TypeScript,
@@ -311,96 +303,47 @@
 							The Bank Document Verifier team was awarded 2nd place in the University of Utah's
 							School of Computing's 2021 Spring capstone presentations
 						</p>
-						<a href="https://bdvapp.com/" class="card-link">↗ Demo</a>
+						<a href="https://bdvapp.com/" class="card-link" target="_blank" rel="noopener noreferrer">↗ Demo</a>
 					</div>
 				</div>
 				<div class="card">
-					<img src="pics/cardPics/ayeaye.png" class="card-img-top" alt="Aye-Aye">
+					<img src="pics/cardPics/ayeaye.png" class="card-img-top" alt="Aye-Aye" width="800" height="200" loading="lazy">
 					<div class="card-body">
-						<h5 class="card-title">Aye-Aye: Semantic Lexicon Induction</h5>
+						<h3 class="card-title">Aye-Aye: Semantic Lexicon Induction</h3>
 						<p class="card-text">
 							A semi-supervised lexicon induction algorithm!
 							Given just a few seed words this the Aye-Aye can learn any semantic category to a high degree of precision
 						</p>
-						<a href="https://github.com/trevorjd3141/aye-aye" class="card-link">↗ GitHub</a>
+						<a href="https://github.com/trevorjd3141/aye-aye" class="card-link" target="_blank" rel="noopener noreferrer">↗ GitHub</a>
 					</div>
 				</div>
 
 
 				<div class="card">
-					<img src="pics/cardPics/personalWebsite.jpg" class="card-img-top" alt="Personal Website">
+					<img src="pics/cardPics/personalWebsite.jpg" class="card-img-top" alt="Personal Website" width="800" height="200" loading="lazy">
 					<div class="card-body">
-						<h5 class="card-title">Personal Website</h5>
+						<h3 class="card-title">Personal Website</h3>
 						<p class="card-text">
 							Passion project of mine I have maintained since 2018 to keep with my web development roots and have an online portfolio
 							for people to stay updated on my journey
 						</p>
-						<a href="https://github.com/trevorjd3141/personal-website" class="card-link">↗ GitHub</a>
+						<a href="https://github.com/trevorjd3141/personal-website" class="card-link" target="_blank" rel="noopener noreferrer">↗ GitHub</a>
 					</div>
 				</div>
-				<!-- archived: PyGame Flappy Bird
 				<div class="card">
-					<img src="pics/cardPics/flappy.png" class="card-img-top" alt="Flappy Bird">
+					<img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="ASCII Converter" width="800" height="200" loading="lazy">
 					<div class="card-body">
-						<h5 class="card-title">PyGame Flappy Bird</h5>
-						<p class="card-text">
-							Recreation of flappy bird created in Python using
-							the PyGame library.
-						</p>
-						<a href="https://github.com/trevorjd3141/flappy-bird" class="card-link">↗ GitHub</a>
-					</div>
-				</div>
-				-->
-				<div class="card">
-					<img src="pics/cardPics/asciiConverter.jpg" class="card-img-top" alt="Ascii Converted">
-					<div class="card-body">
-						<h5 class="card-title">ASCII Image Converter</h5>
+						<h3 class="card-title">ASCII Image Converter</h3>
 						<p class="card-text">
 							An application that allows users to submit images and convert
 							them to their ASCII equivalents. Multiprocessing is used to speed
 							up conversion on larger images. The image above is
 							an egg I tested this on.
 						</p>
-						<a href="https://github.com/trevorjd3141/asciiConverter" class="card-link">↗ GitHub</a>
+						<a href="https://github.com/trevorjd3141/asciiConverter" class="card-link" target="_blank" rel="noopener noreferrer">↗ GitHub</a>
 					</div>
 				</div>
 
-				<!-- <div class="card">
-					<img src="pics/cardPics/urbanDictionary.png" class="card-img-top" alt="Urban Dictionary Logo">
-					<div class="card-body">
-						<h5 class="card-title">Urban Dictionary Word of the Day</h5>
-						<p class="card-text">
-							A webscraper built using the Beautiful Soup 4 library that collects
-							the last 10 "words of the day" from Urban Dictionary.
-						</p>
-						<a href="https://github.com/trevorjd3141/urban-dictionary-scraper" class="card-link">↗ GitHub</a>
-					</div>
-				</div> -->
-				<!-- <div class="card">
-					<img src="pics/cardPics/nbaBirthdates.png" class="card-img-top" alt="NBA Birthdate Graph">
-					<div class="card-body">
-						<h5 class="card-title">NBA Player Birthdate Analysis</h5>
-						<p class="card-text">
-							Generates a figure I used to test a hypothesis on
-							NBA Players having primarily Summer and Early Fall
-							birthdates. The figure helped me conclude that this
-							was false.
-						</p>
-						<a href="https://github.com/trevorjd3141/nbaplayerbirthdays" class="card-link">↗ GitHub</a>
-					</div>
-				</div> -->
-				<!-- <div class="card">
-					<img src="pics/cardPics/jojo.jpg" class="card-img-top" alt="Jojo's Bizarre Adventure">
-					<div class="card-body">
-						<h5 class="card-title">Jojo Music Player</h5>
-						<p class="card-text">
-							Script that plays the theme song for Jojo's Bizarre
-							Adventure with a fade-in and fade-out effect. Intended
-							to be used alongside Auto Hot Keys.
-						</p>
-						<a href="https://github.com/trevorjd3141/JojoPlayer" class="card-link">↗ GitHub</a>
-					</div>
-				</div> -->
   
 			</div>
 		</section>
@@ -451,7 +394,15 @@
       targets.forEach(function(t, i) {
         if (t && t.getBoundingClientRect().top + window.scrollY <= scrollY) active = i;
       });
-      links.forEach(function(l, i) { l.classList.toggle('active', i === active); });
+      links.forEach(function(l, i) {
+        var isActive = i === active;
+        l.classList.toggle('active', isActive);
+        if (isActive) {
+          l.setAttribute('aria-current', 'page');
+        } else {
+          l.removeAttribute('aria-current');
+        }
+      });
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();

@@ -1,0 +1,33 @@
+{
+  "planPath": "docs/superpowers/plans/2026-06-20-portfolio-audit-fixes.md",
+  "tasks": [
+    {
+      "id": 1,
+      "subject": "Task 1: P0 Credibility Batch",
+      "status": "pending",
+      "description": "**Goal:** Fix all P0 items -- stale docs, broken heading outline, dead CDN links, contrast failures, dead files.\n\n**Files:**\n- Modify: `README.md`, `AGENTS.md`, `CLAUDE.md`, `PROJECT.md`, `DECISIONS.md`\n- Modify: `index.html`, `style.css`\n- Delete: `thank-you.html`\n\n**Acceptance Criteria:**\n- [ ] README describes Bootstrap 5.3.3 not 4.5, no jQuery, no FCF, mailto contact\n- [ ] AGENTS.md accurately describes current stack\n- [ ] CLAUDE.md Tech Stack has no Bootstrap Icons CDN, no Font Awesome, no FCF, no Open Sans\n- [ ] PROJECT.md role is Senior Data Engineer / Data Engineer, not Data Analytics Engineer\n- [ ] DECISIONS.md references hand-rolled JS scrollspy and 500ms (not data-bs-spy or 1000ms)\n- [ ] Sections have h2 headings with aria-labelledby\n- [ ] Project cards use h3 not h5\n- [ ] Bootstrap Icons link and Font Awesome script removed from head\n- [ ] --color-text-faint: #6c757d (light), #868e96 (dark)\n- [ ] thank-you.html deleted\n- [ ] Commented-out card blocks removed from index.html\n\n**Verify:** Open index.html in browser. Dev-tools Accessibility heading outline shows h1 > h2 > h2 > h2 > h3 x5. Date text contrast improved.\n\n```json:metadata\n{\"files\": [\"README.md\", \"AGENTS.md\", \"CLAUDE.md\", \"PROJECT.md\", \"DECISIONS.md\", \"index.html\", \"style.css\", \"thank-you.html\"], \"verifyCommand\": \"open index.html in browser; check heading outline in accessibility inspector\", \"acceptanceCriteria\": [\"README describes Bootstrap 5.3.3 not 4.5\", \"No Font Awesome or Bootstrap Icons CDN tags\", \"Sections have h2 headings with aria-labelledby\", \"Project cards use h3 not h5\", \"thank-you.html deleted\", \"Commented-out card blocks removed\", \"--color-text-faint darkened in both themes\"], \"modelTier\": \"standard\"}\n```"
+    },
+    {
+      "id": 2,
+      "subject": "Task 2: P1 Hiring Impact Batch",
+      "status": "pending",
+      "blockedBy": [1],
+      "description": "**Goal:** Add OG tags, cert links, fix external links, fix mobile theme toggle, improve image performance, and prune orphaned images.\n\n**Files:**\n- Modify: `index.html`, `style.css`\n- Delete: 14 orphaned image files\n\n**Acceptance Criteria:**\n- [ ] OG title, description, image, url, type meta tags present in head\n- [ ] Twitter card meta tags present\n- [ ] Canonical link present\n- [ ] preconnect for fonts.gstatic.com added\n- [ ] Certifications block links aws-cert.pdf and neo4j-cert.pdf\n- [ ] All external links have target=_blank rel=noopener noreferrer\n- [ ] Theme toggle visible on mobile without hamburger\n- [ ] Brand first, collapse second, toggle third, toggler last in navbar\n- [ ] Card img tags have width, height, loading=lazy\n- [ ] 14 orphaned images deleted\n\n**Verify:** 375px mobile shows theme toggle before hamburger. Inspect head for OG tags. grep index.html for deleted image filenames finds nothing.\n\n```json:metadata\n{\"files\": [\"index.html\", \"style.css\"], \"verifyCommand\": \"open index.html at 375px viewport; check dev tools head; grep index.html for deleted filenames\", \"acceptanceCriteria\": [\"OG and Twitter meta tags in head\", \"Theme toggle visible on mobile\", \"External links have target=_blank\", \"Cert block in experience section\", \"Card images have width/height/loading attrs\", \"14 orphaned images deleted\"], \"modelTier\": \"standard\"}\n```"
+    },
+    {
+      "id": 3,
+      "subject": "Task 3: P2 Polish Batch",
+      "status": "pending",
+      "blockedBy": [2],
+      "description": "**Goal:** Fix padding consistency, body alignment, line-height, dead CSS, projects grid reading order, aria-current, and skip link.\n\n**Files:**\n- Modify: `index.html`, `style.css`\n\n**Acceptance Criteria:**\n- [ ] Padding uses max(20px, calc((100% - 920px) / 2)) formula\n- [ ] body text-align: left\n- [ ] body line-height: 1.6\n- [ ] Dead CSS rules removed (.nav-item::after, .nav-link transition, .nav-pills .active, scroll-behavior: auto, -webkit- prefixes)\n- [ ] Scrollspy JS sets aria-current=page on active link\n- [ ] Skip-to-content link visible on keyboard focus\n- [ ] .projects-grid uses CSS grid (not column-count)\n\n**Verify:** Tab through page -- skip link appears first. Scroll for aria-current in devtools. Resize to 1920px and check padding. Resize to 375px and verify 1-column projects.\n\n```json:metadata\n{\"files\": [\"index.html\", \"style.css\"], \"verifyCommand\": \"open index.html; tab for skip link; scroll for aria-current in devtools; resize to 1920px and 375px\", \"acceptanceCriteria\": [\"Consistent padding formula\", \"body text-align left\", \"body line-height 1.6\", \"Dead CSS removed\", \"projects-grid uses CSS grid\", \"aria-current on active nav link\", \"Skip link on keyboard focus\"], \"modelTier\": \"standard\"}\n```"
+    },
+    {
+      "id": 4,
+      "subject": "Task 4: P3 Content Pass + Final Commit",
+      "status": "pending",
+      "blockedBy": [3],
+      "description": "**Goal:** Fix title tag, tighten hero bio and Datadrip copy, update PROJECT.md, then land the entire ticket as ONE commit.\n\n**Files:**\n- Modify: `index.html`, `PROJECT.md`\n- Move: `tickets/in-progress/portfolio-audit-fixes.md` to `tickets/completed/`\n- Commit: all staged changes as one commit, merge to master\n\n**Acceptance Criteria:**\n- [ ] title tag: Trevor Dalton - Senior Data Engineer\n- [ ] Hero bio has no book title\n- [ ] Datadrip copy is 2-3 short sentences, no marketing language\n- [ ] PROJECT.md updated with certs linked, correct roles\n- [ ] Ticket moved to completed\n- [ ] Single commit on fix/portfolio-audit-fixes covering Tasks 1-4\n- [ ] Branch merged to master and deleted\n\n**Verify:** Browser tab shows Trevor Dalton - Senior Data Engineer. Hero bio concise. Datadrip card terse. git log --oneline master shows one ticket commit.\n\n```json:metadata\n{\"files\": [\"index.html\", \"PROJECT.md\", \"tickets/\"], \"verifyCommand\": \"git log --oneline master | head -3; open index.html; check title in tab and Datadrip card copy\", \"acceptanceCriteria\": [\"Title tag correct\", \"Hero bio has no book title\", \"Datadrip copy concise\", \"Single commit on master\"], \"modelTier\": \"mechanical\"}\n```"
+    }
+  ],
+  "lastUpdated": "2026-06-20T00:00:00Z"
+}

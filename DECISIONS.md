@@ -12,8 +12,7 @@ Upgraded from Bootstrap 4.5 to 5.3 (June 2026). Bootstrap 5 drops the jQuery
 dependency entirely, which removed ~87 KB of JS from the page. The `card-columns`
 class was removed in Bootstrap 5; replaced with a custom `projects-grid` CSS
 class using `column-count` (3 columns desktop → 2 at 1300px → 1 at 767px).
-Smooth scroll is now handled by a 1000ms `requestAnimationFrame` easing function
-rather than `scroll-behavior: smooth` (which cannot be given a duration).
+Smooth scroll is handled by a 500ms `requestAnimationFrame` easing function rather than `scroll-behavior: smooth` (which cannot be given a duration).
 
 ## Contact section: mailto link
 The original FCF PHP form never worked on GitHub Pages (static hosting only).
@@ -28,9 +27,7 @@ The `CNAME` file pins the custom domain `trevorjdalton.com`. No CDN or edge
 configuration needed for a static portfolio of this size.
 
 ## Single-file structure
-All content is in one `index.html` rather than split across pages. The site uses
-Bootstrap 5 scroll-spy navigation (`data-bs-spy="scroll"`) so each section is a
-smooth-scroll anchor. This keeps deployment trivial and avoids any routing concerns.
+All content is in one `index.html` rather than split across pages. Scroll-spy is hand-rolled in vanilla JS in `index.html` -- it reads `window.scrollY` on each scroll event and toggles the `active` class on the matching nav link. Smooth-scroll on nav-link clicks is a custom 500ms `requestAnimationFrame` easing function. This keeps deployment trivial and avoids any routing concerns.
 
 ## Image storage: local `pics/`
 Project card images and tech stack icons are stored locally in `pics/` rather

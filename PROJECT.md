@@ -11,11 +11,12 @@ It presents Trevor Dalton's experience, education, and projects in a résumé-st
 - "Terminal Light" visual redesign complete — CSS custom properties, greyscale accent, dark mode toggle, DM Mono typography, terminal-style section headers and content blocks.
 - Responsive via Bootstrap 5.3 grid; custom styles in `style.css`. No jQuery dependency.
 - Contact in footer: `# reach out` terminal header and `→ mailto:` text link.
-- No resume link or PDF (removed).
+- Certifications linked in the experience section (AWS Cloud Practitioner, Neo4j Certified Professional).
+- No resume PDF (removed previously; re-add if a current resume is available).
 - Custom domain `trevorjdalton.com` via `CNAME` on GitHub Pages.
 
 ### Experience shown (most recent → oldest)
-- M Science — Data Analytics Engineer (March 2022 – Present)
+- M Science — Senior Data Engineer (Jan 2026 – present), Data Engineer (Mar 2022 – Dec 2025)
 - Northrop Grumman — Data Engineer (May 2021 – March 2022)
 - Northrop Grumman — Data Engineering Intern (May 2020 – May 2021)
 
@@ -25,8 +26,8 @@ It presents Trevor Dalton's experience, education, and projects in a résumé-st
 - Utah Tech University — Associate of Science (2018)
 
 ### Certifications
-- AWS cert (`assets/aws-cert.pdf`)
-- Neo4j cert (`assets/neo4j-cert.pdf`)
+- AWS Cloud Practitioner (`assets/aws-cert.pdf`) -- linked in experience section
+- Neo4j Certified Professional (`assets/neo4j-cert.pdf`) -- linked in experience section
 
 ## How to preview
 Open `index.html` in any browser — no server needed for local preview.

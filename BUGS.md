@@ -19,3 +19,9 @@
   screens.** The CSS uses `background-size: cover` but the aspect ratio of the
   images may clip unexpectedly on very narrow viewports.
 
+## OG Card Image Missing
+
+`pics/og-card.png` is referenced by the Open Graph and Twitter Card meta tags but does not exist in the repo. Social card previews (LinkedIn shares, Slack unfurls, Twitter cards) will show a broken image until this is created.
+
+**Fix:** Create a 1200x630 PNG at `pics/og-card.png` using a design tool (Figma, Canva, etc.) matching the Terminal Light aesthetic (white background, DM Mono typography, name and title). Commit it to the repo.
+

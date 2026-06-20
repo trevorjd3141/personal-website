@@ -11,11 +11,9 @@ Hosted on GitHub Pages at trevorjdalton.com.
 - Maintain fast load times and mobile responsiveness.
 
 # Tech Stack
-- Plain HTML5 / CSS3 / vanilla JavaScript — no build step
+- Plain HTML5 / CSS3 / vanilla JavaScript -- no build step
 - Bootstrap 5.3.3 (CSS + JS via CDN) for layout and responsive grid
-- Bootstrap Icons 1.13.1 (CDN) and Font Awesome for icons
-- Google Fonts (Open Sans, Raleway, DM Mono)
-- FCF (Free Contact Form) — PHP-based contact form in `fcf-assets/` (broken on GitHub Pages; replacement tracked in tickets)
+- Google Fonts (Raleway, DM Mono) via CDN
 - GitHub Pages for hosting; custom domain via `CNAME`
 
 # Setup & Environment
@@ -30,7 +28,6 @@ index.html          # Single page — all sections live here
 style.css           # Custom styles
 assets/             # PDFs (resume, certs)
 pics/               # Images: headshot, project cards, icons, dividers
-fcf-assets/         # Contact form PHP + CSS + JS
 CNAME               # GitHub Pages custom domain
 ```
 

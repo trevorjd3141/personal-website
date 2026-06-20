@@ -10,7 +10,7 @@
   --color-border-muted: #f1f3f5;
   --color-text:         #212529;
   --color-text-muted:   #6c757d;
-  --color-text-faint:   #adb5bd;
+  --color-text-faint:   #6c757d;
   --color-accent:       #343a40;
   --color-accent-light: #495057;
 }
@@ -22,19 +22,34 @@
   --color-border-muted: #2c3038;
   --color-text:         #e9ecef;
   --color-text-muted:   #868e96;
-  --color-text-faint:   #495057;
+  --color-text-faint:   #868e96;
   --color-accent:       #adb5bd;
   --color-accent-light: #ced4da;
-}
-
-html {
-	scroll-behavior: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
 	.hero-cursor {
 		animation: none;
 	}
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  border: 1px solid var(--color-border);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #my-nav {
@@ -129,6 +144,7 @@ html {
   font-weight: 700;
   color: var(--color-text);
   white-space: nowrap;
+  margin: 0;
 }
 
 .section-rule {
@@ -139,7 +155,7 @@ html {
 
 
 #hero {
-  padding: 140px 25% 80px;
+  padding: 140px max(20px, calc((100% - 920px) / 2)) 80px;
   text-align: left;
   background-color: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
@@ -195,7 +211,6 @@ html {
   line-height: 1.7;
   max-width: 600px;
   margin-bottom: 24px;
-  text-align: left;
 }
 
 .hero-cta {
@@ -220,7 +235,7 @@ html {
 
 
 #projects {
-	padding: 60px 20%;
+	padding: 60px max(20px, calc((100% - 920px) / 2));
 }
 
 #projects .card {
@@ -237,6 +252,7 @@ html {
   font-size: 13px;
   font-weight: 700;
   color: var(--color-text);
+  margin-top: 0;
   margin-bottom: 8px;
 }
 
@@ -249,7 +265,6 @@ html {
 }
 
 #projects .card img {
-  -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   max-height: 200px;
   width: 100%;
@@ -257,7 +272,6 @@ html {
 }
 
 #projects .card:hover img {
-  -webkit-transform: scale(1.03);
   transform: scale(1.03);
 }
 
@@ -292,39 +306,16 @@ html {
 }
 
 .projects-grid {
-	column-count: 3;
-	column-gap: 1.25rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.25rem;
 }
 
 .projects-grid .card {
-	break-inside: avoid;
-	margin-bottom: 1.25rem;
+	margin-bottom: 0;
 }
 
 
-.nav-item::after {
-	content: '';
-	display: block;
-	width: 0px;
-	left: 10px;
-	bottom: 10px;
-	height: 2px;
-	background: var(--color-accent-light);
-	transition: 0.3s;
-}
-
-.nav-item:hover::after {
-	width: 100%;
-}
-
-.nav-link {
-	transition: 0.3s;
-}
-
-.nav-pills .active {
-	color: var(--color-text) !important;
-	background-color: rgba(0, 0, 0, 0.0) !important;
-}
 
 
 
@@ -333,7 +324,6 @@ html {
   border-left: 2px solid var(--color-border);
   padding-left: 20px;
   margin-bottom: 40px;
-  text-align: left;
 }
 
 #education .exp-block {
@@ -376,6 +366,16 @@ html {
   line-height: 1.6;
 }
 
+.exp-cert-link {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.exp-cert-link:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
 .exp-role {
   color: var(--color-text-muted);
 }
@@ -410,7 +410,6 @@ html {
   font-size: 14px;
   color: var(--color-text);
   line-height: 1.6;
-  text-align: left;
 }
 
 .arrow-list li::before {
@@ -440,10 +439,10 @@ html {
 
 body {
 	position: relative;
-	text-align: center;
+	text-align: left;
 	overflow-x: hidden;
 	font-family: 'Raleway', sans-serif;
-	line-height: 25px;
+	line-height: 1.6;
 	background-color: var(--color-bg);
 	color: var(--color-text);
 }
@@ -453,14 +452,10 @@ h1, h2, h3 {
 }
 
 section {
-	padding: 60px 25%;
+	padding: 60px max(20px, calc((100% - 920px) / 2));
 	color: var(--color-text);
 	font-size: 14px;
-	line-height: 1.7em;
-}
-
-section p {
-	text-align: left;
+	line-height: 1.7;
 }
 
 #copyright {
@@ -477,11 +472,10 @@ section p {
 }
 
 footer {
-  padding: 60px 25%;
+  padding: 60px max(20px, calc((100% - 920px) / 2));
   background-color: var(--color-border-muted);
   border-top: 1px solid var(--color-border);
   color: var(--color-text);
-  text-align: left;
   height: auto;
 }
 
@@ -512,20 +506,8 @@ footer p {
 }
 
 @media only screen and (max-width: 1300px) {
-	#hero {
-		padding: 120px 10% 60px;
-	}
-
-	#projects {
-		padding: 60px 5%;
-	}
-
 	.projects-grid {
-		column-count: 2;
-	}
-
-	section {
-		padding: 60px 10%;
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
@@ -539,15 +521,7 @@ footer p {
 		font-size: 28px;
 	}
 
-	#projects {
-		padding: 60px 20px;
-	}
-
 	.projects-grid {
-		column-count: 1;
-	}
-
-	section {
-		padding: 40px 20px;
+		grid-template-columns: 1fr;
 	}
 }

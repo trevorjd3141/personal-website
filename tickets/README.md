@@ -21,7 +21,7 @@ Check items off below as they move to `completed/`.
 4. [x] [visual-redesign.md](completed/visual-redesign.md) — Terminal Light redesign: dark mode, terminal aesthetic, CSS custom properties, greyscale accent
 
 ## Audit follow-ups
-5. [ ] [portfolio-audit-fixes.md](backlog/portfolio-audit-fixes.md) — fixes from the 2026-06 senior UI/UX + frontend audit (stale docs, heading outline, unused icon libs, contrast, dead files, OG tags, perf, polish)
+5. [x] [portfolio-audit-fixes.md](completed/portfolio-audit-fixes.md) — fixes from the 2026-06 senior UI/UX + frontend audit (stale docs, heading outline, unused icon libs, contrast, dead files, OG tags, perf, polish)
 
 ---
 Notes:
