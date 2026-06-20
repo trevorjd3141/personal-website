@@ -55,10 +55,19 @@ html {
 	color: var(--color-text-muted) !important;
 }
 
-#my-nav .nav-link:hover,
-#my-nav .nav-link.active {
+#my-nav .nav-link:hover {
 	color: var(--color-text) !important;
 	background-color: transparent !important;
+}
+
+#my-nav .nav-link.active {
+	color: var(--color-text) !important;
+	background-color: rgba(0, 0, 0, 0.06) !important;
+	border-radius: 4px;
+}
+
+[data-theme="dark"] #my-nav .nav-link.active {
+	background-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 .navbar-toggler {
@@ -153,10 +162,10 @@ html {
 
 .hero-cursor {
   display: inline-block;
-  width: 3px;
-  height: 0.85em;
+  width: 2px;
+  height: 0.75em;
   background-color: var(--color-accent);
-  vertical-align: text-bottom;
+  vertical-align: baseline;
   margin-left: 6px;
   animation: blink 1s step-end infinite;
 }
@@ -208,6 +217,7 @@ html {
 }
 
 #projects .card {
+  position: relative;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
@@ -251,7 +261,25 @@ html {
   text-decoration: none;
 }
 
+.card-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
 .card-link:hover {
+  color: var(--color-accent-light);
+  text-decoration: underline;
+}
+
+#projects .card-text a {
+  position: relative;
+  z-index: 1;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+#projects .card-text a:hover {
   color: var(--color-accent-light);
   text-decoration: underline;
 }
@@ -299,6 +327,10 @@ html {
   padding-left: 20px;
   margin-bottom: 40px;
   text-align: left;
+}
+
+#education .exp-block {
+  border-left-color: var(--color-accent);
 }
 
 .exp-header {
@@ -445,7 +477,6 @@ footer {
   background-color: #0d0f12;
 }
 
-.footer-header .hash,
 .footer-header .section-name {
   color: #ffffff;
 }
