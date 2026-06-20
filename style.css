@@ -2,6 +2,31 @@
 
 /*CSS Organized by order in ids, then classes, then HTML elements */
 
+/* ── CSS Custom Properties ─────────────────────────────── */
+:root {
+  --color-bg:           #ffffff;
+  --color-bg-subtle:    #fafafa;
+  --color-border:       #e9ecef;
+  --color-border-muted: #f1f3f5;
+  --color-text:         #212529;
+  --color-text-muted:   #6c757d;
+  --color-text-faint:   #adb5bd;
+  --color-accent:       #0096c7;
+  --color-accent-light: #00b4d8;
+}
+
+[data-theme="dark"] {
+  --color-bg:           #111318;
+  --color-bg-subtle:    #1a1e25;
+  --color-border:       #1e2229;
+  --color-border-muted: #2c3038;
+  --color-text:         #e9ecef;
+  --color-text-muted:   #868e96;
+  --color-text-faint:   #495057;
+  --color-accent:       #0096c7;
+  --color-accent-light: #00b4d8;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -250,6 +275,8 @@ body {
 	overflow-x: hidden;
 	font-family: 'Raleway', sans-serif;
 	line-height: 25px;
+	background-color: var(--color-bg);
+	color: var(--color-text);
 }
 
 h1, h2, h3 {
@@ -257,8 +284,8 @@ h1, h2, h3 {
 }
 
 section {
-	padding: 150px 25%; 
-	color: #434242; 
+	padding: 150px 25%;
+	color: var(--color-text);
 	font-size: 13pt;
 	line-height: 1.7em;
 }
