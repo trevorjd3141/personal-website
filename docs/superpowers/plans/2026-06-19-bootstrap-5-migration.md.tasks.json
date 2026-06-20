@@ -1,0 +1,40 @@
+{
+  "planPath": "docs/superpowers/plans/2026-06-19-bootstrap-5-migration.md",
+  "tasks": [
+    {
+      "id": 1,
+      "subject": "Task 1: Swap CDN links and remove IE shiv",
+      "status": "pending",
+      "description": "**Goal:** Replace all Bootstrap 4 and jQuery CDN references in `<head>` with Bootstrap 5.3 equivalents and delete the IE shiv comment block.\n\n**Files:**\n- Modify: `index.html` (head section)\n\n**Acceptance Criteria:**\n- [ ] No reference to `bootstrap/4.5.0` anywhere in `index.html`\n- [ ] No reference to `jquery` anywhere in `<head>`\n- [ ] Bootstrap 5.3.3 CSS loaded from jsDelivr\n- [ ] Bootstrap 5.3.3 JS bundle loaded from jsDelivr (single tag)\n- [ ] Bootstrap Icons upgraded to 1.13.1\n- [ ] IE shiv comment block is gone\n\n**Verify:** `grep -n \"bootstrap/4\\|jquery\\|html5shiv\\|bootstrap-icons@1.4\" index.html` → no output\n\n```json:metadata\n{\"files\": [\"index.html\"], \"verifyCommand\": \"grep -n \\\"bootstrap/4\\\\|jquery\\\\|html5shiv\\\\|bootstrap-icons@1.4\\\" index.html\", \"acceptanceCriteria\": [\"No bootstrap/4.5.0 CDN reference\", \"No jquery in head\", \"Bootstrap 5.3.3 CSS from jsDelivr\", \"Bootstrap 5.3.3 JS bundle from jsDelivr\", \"Bootstrap Icons 1.13.1\", \"IE shiv removed\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 2,
+      "subject": "Task 2: Replace jQuery smooth scroll with CSS",
+      "status": "pending",
+      "blockedBy": [1],
+      "description": "**Goal:** Remove the jQuery smooth-scroll script block at the bottom of `<body>` and replace it with a single `scroll-behavior: smooth` CSS rule.\n\n**Files:**\n- Modify: `index.html` (bottom of body)\n- Modify: `style.css` (add one rule at top)\n\n**Acceptance Criteria:**\n- [ ] No jQuery CDN reference anywhere in `index.html`\n- [ ] No scroll script block in `index.html`\n- [ ] `html { scroll-behavior: smooth; }` present in `style.css`\n\n**Verify:** `grep -n \"jquery\\|scrollTop\\|\\.animate\" index.html` → no output\n\n```json:metadata\n{\"files\": [\"index.html\", \"style.css\"], \"verifyCommand\": \"grep -n \\\"jquery\\\\|scrollTop\\\\|\\\\.animate\\\" index.html\", \"acceptanceCriteria\": [\"No jQuery CDN in index.html\", \"No scroll script block in index.html\", \"html { scroll-behavior: smooth } in style.css\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 3,
+      "subject": "Task 3: Migrate Bootstrap 4 data attributes to Bootstrap 5",
+      "status": "pending",
+      "blockedBy": [1],
+      "description": "**Goal:** Update all `data-toggle`, `data-target`, `data-spy`, and `data-offset` attributes to their Bootstrap 5 `data-bs-*` equivalents.\n\n**Files:**\n- Modify: `index.html` (navbar toggler button, body tag)\n\n**Acceptance Criteria:**\n- [ ] No `data-toggle` attribute anywhere in `index.html`\n- [ ] No `data-spy` attribute anywhere in `index.html`\n- [ ] Navbar toggler uses `data-bs-toggle` and `data-bs-target`\n- [ ] Body tag uses `data-bs-spy`, `data-bs-target`, `data-bs-offset`\n\n**Verify:** `grep -n \"data-toggle\\|data-spy\\b\\|data-offset\" index.html` → no output\n\n```json:metadata\n{\"files\": [\"index.html\"], \"verifyCommand\": \"grep -n \\\"data-toggle\\\\|data-spy\\\\b\\\\|data-offset\\\" index.html\", \"acceptanceCriteria\": [\"No data-toggle in index.html\", \"No data-spy in index.html\", \"Navbar uses data-bs-toggle and data-bs-target\", \"Body uses data-bs-spy, data-bs-target, data-bs-offset\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 4,
+      "subject": "Task 4: Replace card-columns with projects-grid layout",
+      "status": "pending",
+      "blockedBy": [1],
+      "description": "**Goal:** Replace the removed-in-Bootstrap-5 `card-columns` class with a custom `projects-grid` class using CSS `column-count`.\n\n**Files:**\n- Modify: `index.html` (Projects section container div)\n- Modify: `style.css` (replace card-columns rules, add projects-grid default)\n\n**Acceptance Criteria:**\n- [ ] No `card-columns` class anywhere in `index.html`\n- [ ] No `card-columns` rule anywhere in `style.css`\n- [ ] `.projects-grid` has `column-count: 3` at default breakpoint\n- [ ] `.projects-grid` has `column-count: 2` inside `max-width: 1300px` media query\n- [ ] `.projects-grid .card` has `break-inside: avoid`\n\n**Verify:** `grep -n \"card-columns\" index.html style.css` → no output\n\n```json:metadata\n{\"files\": [\"index.html\", \"style.css\"], \"verifyCommand\": \"grep -n \\\"card-columns\\\" index.html style.css\", \"acceptanceCriteria\": [\"No card-columns in index.html\", \"No card-columns in style.css\", \"projects-grid column-count: 3 at desktop\", \"projects-grid column-count: 2 in 1300px media query\", \"break-inside: avoid on .projects-grid .card\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 5,
+      "subject": "Task 5: Fix tickets README and close ticket",
+      "status": "pending",
+      "blockedBy": [2, 3, 4],
+      "description": "**Goal:** Mark `refresh-about-content` and `upgrade-bootstrap-5` as done in the tickets index, and move the ticket file to completed/.\n\n**Files:**\n- Modify: `tickets/README.md`\n- Move: `tickets/in-progress/upgrade-bootstrap-5.md` → `tickets/completed/upgrade-bootstrap-5.md`\n\n**Acceptance Criteria:**\n- [ ] `refresh-about-content` checkbox is `[x]` in `tickets/README.md`\n- [ ] `upgrade-bootstrap-5` checkbox is `[x]` in `tickets/README.md`\n- [ ] `tickets/completed/upgrade-bootstrap-5.md` exists\n\n**Verify:** `grep \"\\[ \\]\" tickets/README.md` → only items 3 and 4 remain unchecked\n\n```json:metadata\n{\"files\": [\"tickets/README.md\", \"tickets/completed/upgrade-bootstrap-5.md\"], \"verifyCommand\": \"grep \\\"\\\\[ \\\\]\\\" tickets/README.md\", \"acceptanceCriteria\": [\"refresh-about-content is [x]\", \"upgrade-bootstrap-5 is [x]\", \"tickets/completed/upgrade-bootstrap-5.md exists\"], \"modelTier\": \"mechanical\"}\n```"
+    }
+  ],
+  "lastUpdated": "2026-06-19T00:00:00Z"
+}
