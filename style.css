@@ -348,6 +348,10 @@ footer p {
 		padding: 100px 25px 25px;
 	}
 
+	.projects-grid {
+		column-count: 1;
+	}
+
 	.title-separator {
 		width: 200px;
 	}
