@@ -218,17 +218,6 @@ html {
 }
 
 
-#education .bubble-tags li {
-	background-color: #1d7ab7;
-	color: white;
-	-webkit-transition: .25s ease-in-out;
-	transition: .25s ease-in-out;
-}
-
-#education .bubble-tags li:hover {
-	-webkit-transform: scale(1.05);
-	transform: scale(1.05);
-}
 
 #projects {
 	padding: 150px 20%;
@@ -429,6 +418,35 @@ html {
   border-radius: 2px;
 }
 
+.bagel-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.bagel-list li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  color: var(--color-text);
+  line-height: 1.75;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.bagel-list img {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+[data-theme="dark"] .bagel-list img {
+  filter: invert(1);
+}
+
 .stack-icons img {
 	max-height: 60px;
 }
@@ -443,18 +461,6 @@ html {
 	transform: scale(1.03);
 }
 
-.bubble-tags {
-	list-style: none;
-}
-
-.bubble-tags li {
-	font-size: 80%;
-	display: inline-block;
-	padding: 0px 8px;
-	margin: 10px 3px 3px;
-	border-radius: 10px;
-	backface-visibility: hidden;
-}
 
 body {
 	position: relative;
@@ -559,10 +565,6 @@ footer p {
 
 	.remove-mobile {
 		display: none;
-	}
-
-	.bubble-tags {
-		padding: 0px;
 	}
 
 	section {
