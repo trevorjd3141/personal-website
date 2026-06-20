@@ -2,8 +2,8 @@
 
 /*CSS Organized by order in ids, then classes, then HTML elements */
 
-html {
-	scroll-behavior: smooth;
+#my-nav {
+	--bs-navbar-padding-x: 1rem;
 }
 
 #name-area {
@@ -93,6 +93,10 @@ html {
 
 #education h4, #experience h4 {
 	color: black;
+}
+
+#education a, #experience a {
+	text-decoration: none;
 }
 
 #education a:hover, #experience a:hover {
