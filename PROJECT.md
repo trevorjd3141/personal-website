@@ -8,7 +8,7 @@ It presents Trevor Dalton's experience, education, and projects in a résumé-st
 
 ### Current state
 - Single `index.html` with sections: terminal hero (merged with about), Experience, Education, Projects.
-- "Terminal Light" visual redesign in progress on `feature/visual-redesign` — CSS custom properties, dark mode toggle, DM Mono typography, terminal-style section headers and content blocks.
+- "Terminal Light" visual redesign complete — CSS custom properties, greyscale accent, dark mode toggle, DM Mono typography, terminal-style section headers and content blocks.
 - Responsive via Bootstrap 5.3 grid; custom styles in `style.css`. No jQuery dependency.
 - Contact in footer: `# reach out` terminal header and `→ mailto:` text link.
 - No resume link or PDF (removed).
