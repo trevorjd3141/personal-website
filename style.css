@@ -91,41 +91,6 @@ html {
 	color: var(--color-text);
 }
 
-#name-area {
-	padding: 375px 15% 200px;
-	font-size: 54pt;
-	color: white;
-	background-image: url(pics/jumbotron.jpg);
-	background-size: cover;
-	background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-
-#top-chevron {
-	font-size: 120%;
-	display: block;
-	color: white;
-	margin: 0px auto 350px;
-	left: 50%;
-	animation: bounce 0.75s ease-in-out 4;
-}
-
-#top-chevron:hover {
-	color: #434242;
-}
-
-#name-area p {
-	text-align: center;
-    font-family: 'DM Mono', monospace;
-	display: inline;
-	font-size: 100%;
-}
-
-@keyframes bounce {
-	0%   { transform: translateY(0); }
-	50%  { transform: translateY(20px); }
-	100% { transform: translateY(0); }
-}
 
 #about-me {
 	padding: 150px 30%;
@@ -148,6 +113,80 @@ html {
 #about-me .col p {
 	text-align: left;
 	margin-bottom: 0px;
+}
+
+#hero {
+  padding: 140px 25% 80px;
+  text-align: left;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-prompt {
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+
+.hero-prefix,
+.hero-comment {
+  color: var(--color-accent);
+}
+
+.hero-name {
+  font-family: 'DM Mono', monospace;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.hero-cursor {
+  display: inline-block;
+  color: var(--color-accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.hero-role {
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+}
+
+.hero-bio {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: var(--color-text);
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.hero-link:hover {
+  color: var(--color-accent-light);
+  text-decoration: underline;
 }
 
 #education .card, #experience .card {
@@ -369,10 +408,8 @@ footer p {
 }
 
 @media only screen and (max-width: 1300px) {
-	#name-area {
-		font-size: 40pt;
-		padding: 350px 5% 5px;
-		background-image: url(pics/tablet_jumbotron.jpg);
+	#hero {
+		padding: 120px 10% 60px;
 	}
 
 	#about-me {
@@ -393,6 +430,14 @@ footer p {
 }
 
 @media only screen and (max-width: 767px) {
+
+	#hero {
+		padding: 90px 20px 40px;
+	}
+
+	.hero-name {
+		font-size: 28px;
+	}
 
 	#about-me {
 		padding: 100px 25px 25px;
