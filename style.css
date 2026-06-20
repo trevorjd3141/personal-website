@@ -217,22 +217,6 @@ html {
   text-decoration: underline;
 }
 
-#education .card, #experience .card {
-	margin: auto auto 40px;
-	border-radius: 10px;
-}
-
-#education h4, #experience h4 {
-	color: black;
-}
-
-#education a, #experience a {
-	text-decoration: none;
-}
-
-#education a:hover, #experience a:hover {
-	text-decoration: underline;
-}
 
 #education .bubble-tags li {
 	background-color: #1d7ab7;
@@ -346,13 +330,103 @@ html {
 	overflow: hidden;
 }
 
-.bagel-bullets {
-	list-style-image: url(pics/bagel-bullet.png);
-	list-style-position: inside;
-	text-align: left;
 
-	/* Done as a backup in case the image fails */
-	list-style-type: circle;
+.exp-block {
+  border-left: 2px solid var(--color-border);
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 16px;
+}
+
+.exp-company {
+  font-family: 'DM Mono', monospace;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.exp-company a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.exp-company a:hover {
+  color: var(--color-accent);
+}
+
+.exp-roles {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.exp-role {
+  color: var(--color-text-muted);
+}
+
+.exp-date-inline {
+  color: var(--color-text-faint);
+}
+
+.exp-sep {
+  color: var(--color-text-faint);
+}
+
+.exp-date-range {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--color-text-faint);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.arrow-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.arrow-list li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  color: var(--color-text);
+  line-height: 1.6;
+  text-align: left;
+}
+
+.arrow-list li::before {
+  content: '→';
+  color: var(--color-accent);
+  flex-shrink: 0;
+  font-family: 'DM Mono', monospace;
+}
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.exp-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  padding: 2px 8px;
+  border-radius: 2px;
 }
 
 .stack-icons img {
