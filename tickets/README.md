@@ -18,7 +18,7 @@ Check items off below as they move to `completed/`.
 4. [ ] [replace-contact-form.md](backlog/replace-contact-form.md) — replace broken PHP form with static-friendly alternative
 
 ## Design / UX
-4. [ ] [visual-redesign.md](backlog/visual-redesign.md) — AI-assisted redesign + AI/human toggle + dark mode (AI theme only); depends on Bootstrap 5
+4. [ ] [visual-redesign.md](backlog/visual-redesign.md) — modernize look and feel, CSS custom properties, dark mode toggle; depends on Bootstrap 5
 
 ---
 Notes:
