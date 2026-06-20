@@ -472,28 +472,25 @@ section p {
 
 footer {
   padding: 60px 25%;
-  background-color: #212529;
-  color: rgba(255, 255, 255, 0.6);
+  background-color: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text);
   text-align: left;
   height: auto;
 }
 
-[data-theme="dark"] footer {
-  background-color: #0d0f12;
-}
-
 .footer-header .section-name {
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .footer-rule {
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--color-border);
 }
 
 footer p {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-text-muted);
   margin: 0 0 20px;
 }
 
