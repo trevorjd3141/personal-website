@@ -11,8 +11,8 @@
   --color-text:         #212529;
   --color-text-muted:   #6c757d;
   --color-text-faint:   #adb5bd;
-  --color-accent:       #0096c7;
-  --color-accent-light: #00b4d8;
+  --color-accent:       #343a40;
+  --color-accent-light: #495057;
 }
 
 [data-theme="dark"] {
@@ -23,8 +23,8 @@
   --color-text:         #e9ecef;
   --color-text-muted:   #868e96;
   --color-text-faint:   #495057;
-  --color-accent:       #0096c7;
-  --color-accent-light: #00b4d8;
+  --color-accent:       #adb5bd;
+  --color-accent-light: #ced4da;
 }
 
 html {
