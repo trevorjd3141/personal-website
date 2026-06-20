@@ -35,6 +35,9 @@ html {
 	html {
 		scroll-behavior: auto;
 	}
+	.hero-cursor {
+		animation: none;
+	}
 }
 
 #my-nav {
