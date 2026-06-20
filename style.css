@@ -190,11 +190,11 @@ html {
 
 .hero-cursor {
   display: inline-block;
-  width: 2px;
+  width: 3px;
   height: 0.85em;
   background-color: var(--color-accent);
   vertical-align: text-bottom;
-  margin-left: 2px;
+  margin-left: 6px;
   animation: blink 1s step-end infinite;
 }
 
@@ -335,6 +335,7 @@ html {
   border-left: 2px solid var(--color-border);
   padding-left: 20px;
   margin-bottom: 40px;
+  text-align: left;
 }
 
 .exp-header {
@@ -400,7 +401,7 @@ html {
   gap: 10px;
   margin-bottom: 8px;
   font-family: 'Raleway', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--color-text);
   line-height: 1.6;
   text-align: left;
@@ -429,34 +430,6 @@ html {
   border-radius: 2px;
 }
 
-.bagel-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 12px;
-  margin-bottom: 0;
-}
-
-.bagel-list li {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 13px;
-  color: var(--color-text);
-  line-height: 1.75;
-  margin-bottom: 4px;
-  text-align: left;
-}
-
-.bagel-list img {
-  flex-shrink: 0;
-  width: 14px;
-  height: 14px;
-}
-
-[data-theme="dark"] .bagel-list img {
-  filter: invert(1);
-}
 
 
 body {
@@ -470,13 +443,13 @@ body {
 }
 
 h1, h2, h3 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 
 section {
 	padding: 60px 25%;
 	color: var(--color-text);
-	font-size: 13pt;
+	font-size: 14px;
 	line-height: 1.7em;
 }
 
@@ -486,8 +459,8 @@ section p {
 
 #copyright {
   font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  color: var(--color-text-faint);
+  font-size: 12px;
+  color: var(--color-text-muted);
   background-color: var(--color-bg);
   text-align: center;
   padding: 12px 0 16px;
