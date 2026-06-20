@@ -1,0 +1,82 @@
+{
+  "planPath": "docs/superpowers/plans/2026-06-20-visual-redesign.md",
+  "tasks": [
+    {
+      "id": 10,
+      "subject": "Task 1: Create feature branch",
+      "status": "pending",
+      "description": "**Goal:** Create the `feature/visual-redesign` branch so all work stays off `main` until explicit sign-off.\n\n**Files:**\n- No file changes\n\n**Acceptance Criteria:**\n- [ ] Branch `feature/visual-redesign` exists and is checked out\n- [ ] `git status` shows clean working tree on the new branch\n\n**Verify:** `git branch --show-current` → `feature/visual-redesign`\n\n```json:metadata\n{\"files\": [], \"verifyCommand\": \"git branch --show-current\", \"acceptanceCriteria\": [\"Branch feature/visual-redesign checked out\", \"git status shows clean working tree\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 11,
+      "subject": "Task 2: CSS custom properties + dark mode infrastructure",
+      "status": "pending",
+      "blockedBy": [10],
+      "description": "**Goal:** Add the `--color-*` CSS custom property layer, dark mode overrides, and the inline theme-detection script.\n\n**Files:**\n- Modify: `style.css`\n- Modify: `index.html`\n\n**Acceptance Criteria:**\n- [ ] All `--color-*` variables defined on `:root` and `[data-theme=\"dark\"]`\n- [ ] `body` uses `var(--color-bg)` and `var(--color-text)`\n- [ ] `section` uses `var(--color-text)`\n- [ ] Inline script in `<head>` reads localStorage and prefers-color-scheme\n\n**Verify:** Open `index.html`, run `document.documentElement.setAttribute('data-theme','dark')` in DevTools — background switches to `#111318`.\n\n```json:metadata\n{\"files\": [\"style.css\", \"index.html\"], \"verifyCommand\": \"open index.html and toggle data-theme in DevTools\", \"acceptanceCriteria\": [\"All --color-* vars defined\", \"body uses var(--color-bg)\", \"Inline theme script in <head>\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 12,
+      "subject": "Task 3: Navbar — brand, link styles, dark mode toggle",
+      "status": "pending",
+      "blockedBy": [11],
+      "description": "**Goal:** Update navbar with `~/trevordalton` brand, DM Mono lowercase links, and dark mode toggle pill.\n\n**Files:**\n- Modify: `index.html`\n- Modify: `style.css`\n\n**Acceptance Criteria:**\n- [ ] Brand shows `~/trevordalton` in DM Mono\n- [ ] Nav links lowercase in DM Mono\n- [ ] Toggle switches theme and persists to localStorage\n- [ ] Growing underline uses `--color-accent-light`\n\n**Verify:** Click toggle, confirm theme switches; refresh to confirm localStorage persistence.\n\n```json:metadata\n{\"files\": [\"index.html\", \"style.css\"], \"verifyCommand\": \"open index.html, click theme toggle, refresh\", \"acceptanceCriteria\": [\"Brand ~/trevordalton\", \"Nav links lowercase DM Mono\", \"Toggle persists to localStorage\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 13,
+      "subject": "Task 4: Hero section — replace parallax with terminal hero",
+      "status": "pending",
+      "blockedBy": [12],
+      "description": "**Goal:** Remove `#name-area` parallax hero, add `$ whoami` terminal hero with blinking cursor.\n\n**Files:**\n- Modify: `index.html`\n- Modify: `style.css`\n\n**Acceptance Criteria:**\n- [ ] No parallax/background-image hero remains\n- [ ] `$ whoami` prompt, large DM Mono name with blinking cursor\n- [ ] `// Senior Data Engineer · AI/ML · LLMs` subtitle\n- [ ] CTA links: Email me, ↗ LinkedIn, ↗ GitHub, ↗ Resume PDF\n- [ ] Hero left-aligned with bottom border\n\n**Verify:** Open `index.html` — terminal hero renders and cursor blinks in both modes.\n\n```json:metadata\n{\"files\": [\"index.html\", \"style.css\"], \"verifyCommand\": \"open index.html and confirm terminal hero in light and dark modes\", \"acceptanceCriteria\": [\"$ whoami prompt\", \"Blinking cursor\", \"CTA links present\", \"Left-aligned\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 14,
+      "subject": "Task 5: Remove parallax dividers",
+      "status": "pending",
+      "blockedBy": [13],
+      "description": "**Goal:** Delete the three `.divider-img` spacer divs and their CSS.\n\n**Files:**\n- Modify: `index.html`\n- Modify: `style.css`\n\n**Acceptance Criteria:**\n- [ ] No `divider-img` elements remain in `index.html`\n- [ ] No `.divider-img`, `#candy`, `#zion`, `#writing` rules in `style.css`\n\n**Verify:** Open `index.html` — no photo dividers between sections.\n\n```json:metadata\n{\"files\": [\"index.html\", \"style.css\"], \"verifyCommand\": \"open index.html and confirm no photo dividers\", \"acceptanceCriteria\": [\"No divider-img elements\", \"No #candy #zion #writing CSS\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 15,
+      "subject": "Task 6: About section restyling",
+      "status": "pending",
+      "blockedBy": [14],
+      "description": "**Goal:** Restyle about section — updated border, text link for Source Code, updated separator.\n\n**Files:**\n- Modify: `index.html`\n- Modify: `style.css`\n\n**Acceptance Criteria:**\n- [ ] `.text-box` border is `1px solid var(--color-border)`\n- [ ] Source Code is `↗ Source code` DM Mono text link\n- [ ] `.title-separator` is 1px `--color-border`\n\n**Verify:** Open `index.html` — about shows subtle border and text link.\n\n```json:metadata\n{\"files\": [\"index.html\", \"style.css\"], \"verifyCommand\": \"open index.html and confirm about section restyling\", \"acceptanceCriteria\": [\".text-box 1px --color-border border\", \"Source Code is text link\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 16,
+      "subject": "Task 7: Terminal section headers",
+      "status": "pending",
+      "blockedBy": [15],
+      "description": "**Goal:** Replace `<h1>X</h1><div class=\"title-separator\">` with `# section-name` terminal headers in experience, education, projects.\n\n**Files:**\n- Modify: `index.html`\n- Modify: `style.css`\n\n**Acceptance Criteria:**\n- [ ] Three terminal headers added\n- [ ] `#` in `--color-accent`, section-name in DM Mono bold, rule in `--color-border`\n\n**Verify:** Open `index.html` — terminal headers visible at top of each content section.\n\n```json:metadata\n{\"files\": [\"index.html\", \"style.css\"], \"verifyCommand\": \"open index.html and confirm # section-name headers\", \"acceptanceCriteria\": [\"Three section-header blocks\", \"# in accent color\", \"DM Mono bold section-name\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 17,
+      "subject": "Task 8: Experience section — left-bordered blocks",
+      "status": "pending",
+      "blockedBy": [16],
+      "description": "**Goal:** Replace Bootstrap cards in experience with left-bordered blocks, `→` arrow bullets, DM Mono labels, and tech tags.\n\n**Files:**\n- Modify: `index.html`\n- Modify: `style.css`\n\n**Acceptance Criteria:**\n- [ ] Two `.exp-block` entries with left border `2px solid var(--color-border)`\n- [ ] Arrow bullets via CSS `::before` in accent color\n- [ ] Stack icon grid retained\n- [ ] DM Mono tech tags below icons\n\n**Verify:** Open `index.html` — experience blocks with arrow bullets and tags.\n\n```json:metadata\n{\"files\": [\"index.html\", \"style.css\"], \"verifyCommand\": \"open index.html and confirm experience section\", \"acceptanceCriteria\": [\"Two exp-block entries\", \"Arrow bullets in accent\", \"Tech tags visible\"], \"modelTier\": \"standard\"}\n```"
+    },
+    {
+      "id": 18,
+      "subject": "Task 9: Education section — left-bordered blocks with bagel bullets",
+      "status": "pending",
+      "blockedBy": [17],
+      "description": "**Goal:** Replace Bootstrap cards in education with left-bordered blocks and bagel-bullet-large.png at 14px.\n\n**Files:**\n- Modify: `index.html`\n- Modify: `style.css`\n\n**Acceptance Criteria:**\n- [ ] Three `.exp-block` entries\n- [ ] `bagel-list` with bagel-bullet-large.png at 14×14px\n- [ ] Dark mode: `filter: invert(1)` on bagel images\n- [ ] `.bubble-tags` CSS removed\n\n**Verify:** Open `index.html` in light and dark modes — bagels render black/white correctly.\n\n```json:metadata\n{\"files\": [\"index.html\", \"style.css\"], \"verifyCommand\": \"open index.html, check education in light and dark\", \"acceptanceCriteria\": [\"Three exp-blocks\", \"Bagel at 14px\", \"filter: invert(1) on dark\", \"No .bubble-tags\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 19,
+      "subject": "Task 10: Projects section — terminal card styling",
+      "status": "pending",
+      "blockedBy": [18],
+      "description": "**Goal:** Restyle project cards with terminal aesthetic and `↗` text links.\n\n**Files:**\n- Modify: `index.html`\n- Modify: `style.css`\n\n**Acceptance Criteria:**\n- [ ] All 5 cards use `.card-link` with `↗` prefix\n- [ ] Card border `1px solid var(--color-border)`\n- [ ] DM Mono bold 13px card titles\n- [ ] Image hover scale retained\n\n**Verify:** Open `index.html` — terminal card styling and text links in both modes.\n\n```json:metadata\n{\"files\": [\"index.html\", \"style.css\"], \"verifyCommand\": \"open index.html and confirm project card styling\", \"acceptanceCriteria\": [\"All cards use .card-link with ↗\", \"1px --color-border border\", \"DM Mono title\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 20,
+      "subject": "Task 11: Footer restyling",
+      "status": "pending",
+      "blockedBy": [19],
+      "description": "**Goal:** Update footer with `# reach out` terminal header and `→ email` text link.\n\n**Files:**\n- Modify: `index.html`\n- Modify: `style.css`\n\n**Acceptance Criteria:**\n- [ ] `# reach out` terminal header\n- [ ] `→ trevorjd3141@gmail.com` text link\n- [ ] Footer bg `#212529` light / `#0d0f12` dark\n\n**Verify:** Open `index.html` — terminal footer in both modes.\n\n```json:metadata\n{\"files\": [\"index.html\", \"style.css\"], \"verifyCommand\": \"open index.html and confirm footer\", \"acceptanceCriteria\": [\"# reach out header\", \"→ email text link\", \"Correct bg colors\"], \"modelTier\": \"mechanical\"}\n```"
+    }
+  ],
+  "lastUpdated": "2026-06-20T00:00:00Z"
+}
