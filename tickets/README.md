@@ -18,7 +18,7 @@ Check items off below as they move to `completed/`.
 4. [x] [replace-contact-form.md](completed/replace-contact-form.md) — replace broken PHP form with static-friendly alternative
 
 ## Design / UX
-4. [ ] [visual-redesign.md](backlog/visual-redesign.md) — modernize look and feel, CSS custom properties, dark mode toggle; depends on Bootstrap 5
+4. [ ] [visual-redesign.md](in-progress/visual-redesign.md) — Terminal Light redesign: dark mode, terminal aesthetic, CSS custom properties; phase 2 polish in progress
 
 ---
 Notes:

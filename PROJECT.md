@@ -7,10 +7,11 @@ It presents Trevor Dalton's experience, education, and projects in a résumé-st
 ## Status — Live, maintained as-needed
 
 ### Current state
-- Single `index.html` with five sections: name hero, About Me, Experience, Education, Projects.
+- Single `index.html` with sections: terminal hero, About, Experience, Education, Projects.
+- "Terminal Light" visual redesign in progress on `feature/visual-redesign` — CSS custom properties, dark mode toggle, DM Mono typography, terminal-style section headers and content blocks.
 - Responsive via Bootstrap 5.3 grid; custom styles in `style.css`. No jQuery dependency.
-- Contact section in footer: heading, short blurb, and a `mailto:` button.
-- Resume PDF served from `assets/trevor_dalton_resume.pdf`.
+- Contact in footer: `# reach out` terminal header and `→ mailto:` text link.
+- No resume link or PDF (removed).
 - Custom domain `trevorjdalton.com` via `CNAME` on GitHub Pages.
 
 ### Experience shown (most recent → oldest)

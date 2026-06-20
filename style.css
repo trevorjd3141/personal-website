@@ -28,13 +28,10 @@
 }
 
 html {
-	scroll-behavior: smooth;
+	scroll-behavior: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
 	.hero-cursor {
 		animation: none;
 	}
@@ -83,6 +80,8 @@ html {
 	border: 1px solid var(--color-border);
 	border-radius: 12px;
 	padding: 4px 12px;
+	min-width: 76px;
+	text-align: center;
 	color: var(--color-text-muted);
 	cursor: pointer;
 	margin-left: 16px;
@@ -119,31 +118,46 @@ html {
 
 .section-rule {
   flex: 1;
-  height: 1px;
+  height: 2px;
   background: var(--color-border);
 }
 
-#about-me {
-	padding: 150px 30%;
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
 }
 
-#about-me .text-box {
-	padding: 30px 40px;
+.about-text {
+  flex: 1;
+  min-width: 0;
 }
 
-#about-me img {
-	padding: 15px;
-	max-height: 170px;
-	border-radius: 50%;
+#about-me #headshot {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
-#about-me .title-separator {
-	width: 100%;	
+.about-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-#about-me .col p {
-	text-align: left;
-	margin-bottom: 0px;
+.about-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.about-link:hover {
+  color: var(--color-accent-light);
+  text-decoration: underline;
 }
 
 #hero {
@@ -176,7 +190,11 @@ html {
 
 .hero-cursor {
   display: inline-block;
-  color: var(--color-accent);
+  width: 2px;
+  height: 0.85em;
+  background-color: var(--color-accent);
+  vertical-align: text-bottom;
+  margin-left: 2px;
   animation: blink 1s step-end infinite;
 }
 
@@ -223,7 +241,7 @@ html {
 
 
 #projects {
-	padding: 150px 20%;
+	padding: 60px 20%;
 }
 
 #projects .card {
@@ -285,9 +303,6 @@ html {
 	margin-bottom: 1.25rem;
 }
 
-.remove-desktop {
-	display: none;
-}
 
 .nav-item::after {
 	content: '';
@@ -313,49 +328,6 @@ html {
 	background-color: rgba(0, 0, 0, 0.0) !important;
 }
 
-.text-box {
-  border-radius: 12px;
-  border: 1px solid var(--color-border);
-  padding: 40px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-}
-
-.title-separator {
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: var(--color-border);
-  margin: auto auto 24px;
-  float: none;
-}
-
-.links a {
-	margin-left: 5px;
-	margin-right: 5px;
-}
-
-/* Otherwise there'll be a text underline
-   when hovering over the icons */
-.links a:hover {
-	text-decoration: none;
-}
-
-.links i {
-	vertical-align: middle;
-	font-size: 20pt;
-}
-
-.about-source-link {
-  font-family: 'DM Mono', monospace;
-  font-size: 13px;
-  color: var(--color-accent);
-  text-decoration: none;
-}
-
-.about-source-link:hover {
-  color: var(--color-accent-light);
-  text-decoration: underline;
-}
 
 
 
@@ -486,20 +458,6 @@ html {
   filter: invert(1);
 }
 
-.stack-icons img {
-	max-height: 60px;
-}
-
-.stack-icons .col {
-	-webkit-transition: .5s ease-in-out;
-	transition: .25s ease-in-out;
-}
-
-.stack-icons .col:hover {
-	-webkit-transform: scale(1.03);
-	transform: scale(1.03);
-}
-
 
 body {
 	position: relative;
@@ -516,7 +474,7 @@ h1, h2, h3 {
 }
 
 section {
-	padding: 150px 25%;
+	padding: 60px 25%;
 	color: var(--color-text);
 	font-size: 13pt;
 	line-height: 1.7em;
@@ -526,12 +484,17 @@ section p {
 	text-align: left;
 }
 
-section .col p {
-	text-align: center;
+#copyright {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--color-text-faint);
+  background-color: var(--color-bg);
+  text-align: center;
+  padding: 12px 0 16px;
 }
 
-section h1 {
-	padding-bottom: 15px;
+#copyright p {
+  margin: 0;
 }
 
 footer {
@@ -578,12 +541,8 @@ footer p {
 		padding: 120px 10% 60px;
 	}
 
-	#about-me {
-		padding: 150px 10%;
-	}
-
 	#projects {
-		padding: 150px 5%;
+		padding: 60px 5%;
 	}
 
 	.projects-grid {
@@ -591,7 +550,7 @@ footer p {
 	}
 
 	section {
-		padding: 150px 10%;
+		padding: 60px 10%;
 	}
 }
 
@@ -605,31 +564,24 @@ footer p {
 		font-size: 28px;
 	}
 
-	#about-me {
-		padding: 100px 25px 25px;
-	}
-
-	#about-me .title-separator {
-		margin: auto;
-	}
-
 	#projects {
-		padding: 100px 25px 25px;
+		padding: 60px 20px;
 	}
 
 	.projects-grid {
 		column-count: 1;
 	}
 
-	.remove-desktop {
-		display: initial;
+	.about-content {
+		flex-direction: column;
 	}
 
-	.remove-mobile {
-		display: none;
+	#about-me #headshot {
+		width: 80px;
+		height: 80px;
 	}
 
 	section {
-		padding: 25px;
+		padding: 40px 20px;
 	}
 }
