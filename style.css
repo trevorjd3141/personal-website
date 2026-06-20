@@ -2,6 +2,10 @@
 
 /*CSS Organized by order in ids, then classes, then HTML elements */
 
+html {
+	scroll-behavior: smooth;
+}
+
 #name-area {
 	padding: 375px 15% 200px;
 	font-size: 54pt;

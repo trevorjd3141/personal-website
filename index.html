@@ -580,20 +580,6 @@
 
 	</main>
 
-<!--Script for scrolling in middle so it doesn't affect footer-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<script>
-	$('a[href^="#"]').on('click', function(event) {
-	    var target = $(this.getAttribute('href'));
-	    if( target.length ) {
-	        event.preventDefault();
-	        $('html, body').stop().animate({
-	            scrollTop: target.offset().top
-	        }, 1000);
-	    }
-	});
-</script>
-
 <footer>
 
 	<!-- Credits to Free Contact Form for the Code in the Form Below -->
