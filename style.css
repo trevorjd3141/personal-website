@@ -125,6 +125,16 @@ html {
     transform: scale(1.03);
 }
 
+.projects-grid {
+	column-count: 3;
+	column-gap: 1.25rem;
+}
+
+.projects-grid .card {
+	break-inside: avoid;
+	margin-bottom: 1.25rem;
+}
+
 /*individual background images.  Name of ID is the name of picture*/
 #candy { background-image: url("pics/candy.jpg"); }
 #zion { background-image: url("pics/zion.jpg"); }
@@ -309,7 +319,7 @@ footer p {
 		padding: 150px 5%;
 	}
 
-	.card-columns {
+	.projects-grid {
 		column-count: 2;
 	}
 
