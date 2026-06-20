@@ -10,10 +10,14 @@ lifecycle folders (it stays listed here regardless of which folder it's in):
 Check items off below as they move to `completed/`.
 
 ## Content updates
-1. [ ] [refresh-about-content.md](backlog/refresh-about-content.md) — update bio, current role, reading list
+1. [ ] [refresh-about-content.md](backlog/refresh-about-content.md) — update bio, current role, reading list; remove resume link
 
-## Site improvements
-_(add tickets here as work is identified)_
+## Technical
+2. [ ] [upgrade-bootstrap-5.md](backlog/upgrade-bootstrap-5.md) — migrate from Bootstrap 4 + jQuery to Bootstrap 5; clean up dead code
+3. [ ] [replace-contact-form.md](backlog/replace-contact-form.md) — replace broken PHP form with static-friendly alternative
+
+## Design / UX
+4. [ ] [visual-redesign.md](backlog/visual-redesign.md) — AI-assisted redesign + AI/human toggle + dark mode (AI theme only); depends on Bootstrap 5
 
 ---
 Notes:
