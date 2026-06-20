@@ -2,6 +2,16 @@
 
 /*CSS Organized by order in ids, then classes, then HTML elements */
 
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 #my-nav {
 	--bs-navbar-padding-x: 1rem;
 }
@@ -22,9 +32,6 @@
 	color: white;
 	margin: 0px auto 350px;
 	left: 50%;
-	-webkit-animation: bounce 0.75s ease-in-out 4;
-	-moz-animation: bounce 0.75s ease-in-out 4;
-	-o-animation: bounce 0.75s ease-in-out 4;
 	animation: bounce 0.75s ease-in-out 4;
 }
 
@@ -39,28 +46,10 @@
 	font-size: 100%;
 }
 
-@-webkit-keyframes bounce {
-	0%       { margin: 0px auto 320px; }
-	50%      { margin: 20px auto 300px; }
-	100%     { margin: 0px auto 320px; }
-}
-
-@-moz-keyframes bounce {
-	0%       { margin: 0px auto 320px; }
-	50%      { margin: 20px auto 300px; }
-	100%     { margin: 0px auto 320px; }
-}
-
-@-o-keyframes bounce {
-	0%       { margin: 0px auto 320px; }
-	50%      { margin: 20px auto 300px; }
-	100%     { margin: 0px auto 320px; }
-}
-
 @keyframes bounce {
-	0%       { margin: 0px auto 320px; }
-	50%      { margin: 20px auto 300px; }
-	100%     { margin: 0px auto 320px; }
+	0%   { transform: translateY(0); }
+	50%  { transform: translateY(20px); }
+	100% { transform: translateY(0); }
 }
 
 #about-me {
@@ -284,12 +273,6 @@ section .col p {
 
 section h1 {
 	padding-bottom: 15px;
-}
-
-text {
-	font-weight: 200;
-	font-size: 13pt;
-	color: #434242
 }
 
 footer {

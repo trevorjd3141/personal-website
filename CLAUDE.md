@@ -12,11 +12,10 @@ Hosted on GitHub Pages at trevorjdalton.com.
 
 # Tech Stack
 - Plain HTML5 / CSS3 / vanilla JavaScript — no build step
-- Bootstrap 4.5 (CSS + JS via CDN) for layout and responsive grid
-- Bootstrap Icons 1.4.1 (CDN) and Font Awesome for icons
-- jQuery 3.5.1 (CDN) — required by Bootstrap 4 JS
+- Bootstrap 5.3.3 (CSS + JS via CDN) for layout and responsive grid
+- Bootstrap Icons 1.13.1 (CDN) and Font Awesome for icons
 - Google Fonts (Open Sans, Raleway, DM Mono)
-- FCF (Free Contact Form) — PHP-based contact form in `fcf-assets/`
+- FCF (Free Contact Form) — PHP-based contact form in `fcf-assets/` (broken on GitHub Pages; replacement tracked in tickets)
 - GitHub Pages for hosting; custom domain via `CNAME`
 
 # Setup & Environment
@@ -42,7 +41,7 @@ CNAME               # GitHub Pages custom domain
   doesn't cover it.
 - Images in `pics/cardPics/` for project cards; `pics/icons/` for stack icons.
 - Prefer descriptive `alt` text on all images.
-- No JavaScript frameworks — jQuery is only present because Bootstrap 4 needs it.
+- No JavaScript frameworks and no jQuery — Bootstrap 5 has no jQuery dependency.
 
 # Content Update Rules
 - **Experience:** update the card copy and period text in `index.html`.

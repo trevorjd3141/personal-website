@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 
 	<!--Meta Info-->
-	<meta content="Trevor Dalton is a Senior Data Engineer with a passion for agentic AI systems and data pipelines" name="Trevor Dalton">
+	<meta content="Trevor Dalton is a Senior Data Engineer with a passion for agentic AI systems and data pipelines" name="description">
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -32,20 +32,21 @@
     <link href="fcf-assets/css/fcf.default-custom.css" rel="stylesheet">
 
 	<!--Fonts-->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|DM+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|DM+Mono&display=swap" rel="stylesheet">
 
 	<!--Bootstrap JS CDN-->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
 	<!--Font Awesome CDN-->
 	<script src="https://use.fontawesome.com/3f383c3879.js"></script>
 </head>
+<body data-bs-spy="scroll" data-bs-target="#my-nav" data-bs-offset="10">
 <nav id="my-nav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#pill-target" aria-controls="pill-target" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<a class="navbar-brand" href="#">TD</a>
-  
+
 	<div class="collapse navbar-collapse" id="pill-target">
 		  <ul class="navbar-nav nav-pills">
 			<li class="nav-item">
@@ -63,7 +64,6 @@
 	  </ul>
 	</div>
 </nav>
-<body data-bs-spy="scroll" data-bs-target="#my-nav" data-bs-offset="10">
 	<main>
 		<!--Main title with my name in huge letters-->
 		<section class="remove-mobile" id="name-area">
@@ -171,15 +171,15 @@
 
 					<div class="row row-cols-6 mt-4 stack-icons remove-mobile">
 						<div class="col">
-							<img alt="typescript icon" src="pics/icons/python.png">
+							<img alt="python icon" src="pics/icons/python.png">
 							<p>Python</p>
 						</div>
 						<div class="col">
-							<img alt="neo4j icon" src="pics/icons/databricks.png">
+							<img alt="databricks icon" src="pics/icons/databricks.png">
 							<p>Databricks</p>
 						</div>
 						<div class="col">
-							<img alt="neo4j icon" src="pics/icons/spark.png">
+							<img alt="apache spark icon" src="pics/icons/spark.png">
 							<p>Apache Spark</p>
 						</div>
 						<div class="col">
@@ -187,11 +187,11 @@
 							<p>PyTorch</p>
 						</div>
 						<div class="col">
-							<img alt="hf icon" src="pics/icons/huggingface.png">
+							<img alt="hugging face icon" src="pics/icons/huggingface.png">
 							<p>Hugging Face</p>
 						</div>
 						<div class="col">
-							<img alt="neo4j icon" src="pics/icons/snowflake.png">
+							<img alt="snowflake icon" src="pics/icons/snowflake.png">
 							<p>Snowflake</p>
 						</div>
 						<div class="col">
@@ -199,15 +199,15 @@
 							<p>AWS</p>
 						</div>
 						<div class="col">
-							<img alt="react icon" src="pics/icons/airflow.png">
+							<img alt="apache airflow icon" src="pics/icons/airflow.png">
 							<p>Apache Airflow</p>
 						</div>
 						<div class="col">
-							<img alt="javascript icon" src="pics/icons/mysql.png">
+							<img alt="mysql icon" src="pics/icons/mysql.png">
 							<p>MySQL</p>
 						</div>
 						<div class="col">
-							<img alt="node.js icon" src="pics/icons/git.png">
+							<img alt="git icon" src="pics/icons/git.png">
 							<p>Git</p>
 						</div>
 						<div class="col">
@@ -580,30 +580,6 @@
 
 	</main>
 
-<script>
-	document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-		anchor.addEventListener('click', function(e) {
-			var target = document.querySelector(this.getAttribute('href'));
-			if (target) {
-				e.preventDefault();
-				var start = window.scrollY;
-				var end = target.getBoundingClientRect().top + window.scrollY;
-				var distance = end - start;
-				var duration = 1000;
-				var startTime = null;
-				function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
-				function step(now) {
-					if (!startTime) startTime = now;
-					var elapsed = now - startTime;
-					var progress = Math.min(elapsed / duration, 1);
-					window.scrollTo(0, start + distance * ease(progress));
-					if (elapsed < duration) requestAnimationFrame(step);
-				}
-				requestAnimationFrame(step);
-			}
-		});
-	});
-</script>
 
 <footer>
 
