@@ -9,7 +9,7 @@ It presents Trevor Dalton's experience, education, and projects in a résumé-st
 ### Current state
 - Single `index.html` with five sections: name hero, About Me, Experience, Education, Projects.
 - Responsive via Bootstrap 5.3 grid; custom styles in `style.css`. No jQuery dependency.
-- Contact form via FCF (Free Contact Form) PHP library in `fcf-assets/`.
+- Contact section in footer: heading, short blurb, and a `mailto:` button.
 - Resume PDF served from `assets/trevor_dalton_resume.pdf`.
 - Custom domain `trevorjdalton.com` via `CNAME` on GitHub Pages.
 
@@ -29,7 +29,7 @@ It presents Trevor Dalton's experience, education, and projects in a résumé-st
 
 ## How to preview
 Open `index.html` in any browser — no server needed for local preview.
-The contact form (`fcf-assets/`) requires a PHP server to function.
+No server needed — the contact section uses a `mailto:` link.
 
 ## Live site
 https://trevorjdalton.com (GitHub Pages, auto-deploys from `master`)

@@ -15,11 +15,12 @@ class using `column-count` (3 columns desktop → 2 at 1300px → 1 at 767px).
 Smooth scroll is now handled by a 1000ms `requestAnimationFrame` easing function
 rather than `scroll-behavior: smooth` (which cannot be given a duration).
 
-## Contact form: FCF (Free Contact Form)
-The contact form uses the FCF PHP library (`fcf-assets/`) which sends email via
-PHPMailer/SMTP. It was integrated because GitHub Pages doesn't support
-server-side code — FCF runs on a separate PHP-capable host. For a future
-redesign, a form service like Formspree or Resend would be simpler.
+## Contact section: mailto link
+The original FCF PHP form never worked on GitHub Pages (static hosting only).
+Replaced with a `mailto:` button in the footer. Formspree was considered but
+rejected: the free tier's 50 submissions/month cap and third-party dependency
+aren't worth it for a portfolio site. A mailto link is zero-dependency and
+never breaks.
 
 ## Hosting: GitHub Pages + custom domain
 Zero cost, automatic deploys on push to `master`, HTTPS via Let's Encrypt.
