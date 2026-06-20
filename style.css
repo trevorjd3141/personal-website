@@ -242,11 +242,6 @@ html {
 	margin-bottom: 1.25rem;
 }
 
-/*individual background images.  Name of ID is the name of picture*/
-#candy { background-image: url("pics/candy.jpg"); }
-#zion { background-image: url("pics/zion.jpg"); }
-#writing { background-image: url("pics/writing.jpg"); }
-
 .remove-desktop {
 	display: none;
 }
@@ -280,17 +275,6 @@ html {
 	border: 2px solid #0099ff;
 	padding: 40px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 14px 0 rgba(0, 0, 0, 0.19);
-}
-
-.divider-img {
-    /* Set a specific height */
-    min-height: 200px; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .title-separator {
@@ -475,12 +459,6 @@ footer p {
 
 	.bubble-tags {
 		padding: 0px;
-	}
-
-	.divider-img {
-		background-color: #434242;
-		min-height: 50px;
-		background-image: none;
 	}
 
 	section {
