@@ -271,19 +271,19 @@ html {
 }
 
 .text-box {
-	border-radius: 25px;
-	border: 2px solid #0099ff;
-	padding: 40px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 14px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  padding: 40px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
 .title-separator {
-	display: block;
-	width: 350px;
-	height: 3px;
-	background: #0099ff;
-	margin: auto auto 40px;
-	float: none;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--color-border);
+  margin: auto auto 24px;
+  float: none;
 }
 
 .links a {
@@ -300,6 +300,18 @@ html {
 .links i {
 	vertical-align: middle;
 	font-size: 20pt;
+}
+
+.about-source-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.about-source-link:hover {
+  color: var(--color-accent-light);
+  text-decoration: underline;
 }
 
 .card {
@@ -427,12 +439,6 @@ footer p {
 		padding: 100px 25px 25px;
 	}
 
-	#about-me .text-box {
-		border: 1px solid rgba(0,0,0,.125);
-		border-radius: 10px;
-		box-shadow: none;
-	}
-
 	#about-me .title-separator {
 		margin: auto;
 	}
@@ -443,10 +449,6 @@ footer p {
 
 	.projects-grid {
 		column-count: 1;
-	}
-
-	.title-separator {
-		width: 200px;
 	}
 
 	.remove-desktop {
