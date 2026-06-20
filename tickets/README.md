@@ -14,7 +14,7 @@ Check items off below as they move to `completed/`.
 
 ## Technical
 2. [x] [upgrade-bootstrap-5.md](completed/upgrade-bootstrap-5.md) — migrate from Bootstrap 4 + jQuery to Bootstrap 5; clean up dead code
-3. [ ] [html-css-audit-fixes.md](in-progress/html-css-audit-fixes.md) — fix invalid HTML structure, meta description, alt text, perf issues, dead CSS
+3. [x] [html-css-audit-fixes.md](completed/html-css-audit-fixes.md) — fix invalid HTML structure, meta description, alt text, perf issues, dead CSS
 4. [ ] [replace-contact-form.md](backlog/replace-contact-form.md) — replace broken PHP form with static-friendly alternative
 
 ## Design / UX
