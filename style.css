@@ -361,7 +361,8 @@ html {
 }
 
 .exp-company a:hover {
-  color: var(--color-accent);
+  color: var(--color-text-muted);
+  text-decoration: underline;
 }
 
 .exp-roles {
