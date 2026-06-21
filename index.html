@@ -490,7 +490,7 @@
 
     drawer.querySelectorAll('.drawer-link').forEach(function(link) {
       link.addEventListener('click', function() {
-        closeDrawer();
+        if (header.classList.contains('drawer-open')) closeDrawer();
       });
     });
 
@@ -502,6 +502,10 @@
       ) {
         closeDrawer();
       }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && header.classList.contains('drawer-open')) closeDrawer();
     });
   })();
 </script>
