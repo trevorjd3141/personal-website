@@ -66,19 +66,15 @@
 <a class="skip-link" href="#experience">Skip to content</a>
 <!-- Mobile top bar (hidden on desktop; shown at ≤767px) -->
 <header class="mobile-topbar" id="mobile-topbar">
-  <!-- State 1: hero screen — shows brand -->
   <div class="mobile-topbar-brand">
     <span class="mobile-brand-text">~/trevordalton</span>
     <button class="theme-toggle" id="mobile-theme-toggle" aria-label="Toggle dark mode">☾ dark</button>
   </div>
-  <!-- State 2: off-hero screens — shows nameplate -->
-  <div class="mobile-topbar-nameplate">
-    <div class="mobile-nameplate-left">
-      <div class="mobile-nameplate-name">Trevor Dalton</div>
-      <div class="mobile-nameplate-role">// Senior Data Engineer</div>
-    </div>
-    <button class="theme-toggle" id="mobile-theme-toggle-nameplate" aria-label="Toggle dark mode">☾ dark</button>
-  </div>
+  <nav class="mobile-tab-strip" aria-label="Page sections">
+    <a href="#experience" class="mobile-tab-item" data-section="experience">experience</a>
+    <a href="#education" class="mobile-tab-item" data-section="education">education</a>
+    <a href="#projects" class="mobile-tab-item" data-section="projects">projects</a>
+  </nav>
 </header>
 <nav id="my-nav" class="navbar navbar-expand-lg fixed-top">
   <a class="navbar-brand" href="#">~/trevordalton</a>
@@ -366,21 +362,6 @@
 
 	</main>
 
-<!-- Mobile bottom nav (hidden on desktop; shown at ≤767px) -->
-<nav class="mobile-bottom-nav" aria-label="Page sections">
-  <a href="#experience" class="mobile-nav-item" data-section="experience">
-    <div class="mobile-nav-indicator" aria-hidden="true"></div>
-    <span>experience</span>
-  </a>
-  <a href="#education" class="mobile-nav-item" data-section="education">
-    <div class="mobile-nav-indicator" aria-hidden="true"></div>
-    <span>education</span>
-  </a>
-  <a href="#projects" class="mobile-nav-item" data-section="projects">
-    <div class="mobile-nav-indicator" aria-hidden="true"></div>
-    <span>projects</span>
-  </a>
-</nav>
 
 <footer>
   <div class="section-header footer-header">
@@ -456,6 +437,10 @@
           target.scrollIntoView();
           return;
         }
+        if (window.innerWidth <= 767) {
+          target.scrollIntoView({ behavior: 'smooth' });
+          return;
+        }
         var nav = document.getElementById('my-nav');
         var navH = nav ? nav.offsetHeight : 70;
         var start = window.scrollY;
@@ -481,14 +466,12 @@
       return document.getElementById(id);
     }).filter(Boolean);
     if (sections.length === 0) return;
-    var navItems = document.querySelectorAll('.mobile-nav-item');
-    var body = document.body;
+    var navItems = document.querySelectorAll('.mobile-tab-item');
     var observer = null;
     var ratios = {};
     var initialized = {};
 
     function setActive(id) {
-      body.classList.toggle('off-hero', id !== 'hero');
       navItems.forEach(function(item) {
         var isActive = item.dataset.section === id;
         item.classList.toggle('active', isActive);
@@ -502,7 +485,6 @@
 
     function teardown() {
       if (observer) { observer.disconnect(); observer = null; }
-      body.classList.remove('off-hero');
       navItems.forEach(function(item) {
         item.classList.remove('active');
         item.removeAttribute('aria-current');
