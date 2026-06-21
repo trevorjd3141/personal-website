@@ -25,7 +25,7 @@ Check items off below as they move to `completed/`.
 6. [ ] [mobile-uiux-audit-fixes.md](backlog/mobile-uiux-audit-fixes.md) — fixes from the 2026-06 mobile UI/UX review (navbar wrap at 320px, hamburger jump on open, small tap targets, dead brand link, mobile date de-dup)
 
 ## Mobile UX
-7. [ ] [mobile-hamburger-menu.md](backlog/mobile-hamburger-menu.md) — replace tab-strip topbar with animated right-drawer hamburger menu
+7. [x] [mobile-hamburger-menu.md](completed/mobile-hamburger-menu.md) — replace tab-strip topbar with animated right-drawer hamburger menu
 
 ---
 Notes:
