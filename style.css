@@ -508,7 +508,7 @@ footer {
 }
 
 .footer-rule {
-  background: var(--color-border);
+  background: var(--color-text-muted);
 }
 
 footer p {
@@ -646,8 +646,6 @@ footer p {
   }
 
   .exp-block {
-    border-left: none;
-    padding-left: 0;
     margin-bottom: 28px;
   }
 
