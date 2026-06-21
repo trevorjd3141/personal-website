@@ -543,3 +543,145 @@ footer p {
 		grid-template-columns: 1fr;
 	}
 }
+
+/* ── Mobile Layout Redesign (≤767px) ───────────────────── */
+@media (max-width: 767px) {
+
+  /* Scroll snap */
+  html {
+    scroll-snap-type: y mandatory;
+  }
+
+  #hero,
+  section {
+    scroll-snap-align: start;
+    min-height: 100dvh;
+    box-sizing: border-box;
+  }
+
+  /* Hide desktop nav */
+  #my-nav {
+    display: none !important;
+  }
+
+  /* ── Mobile topbar ── */
+  .mobile-topbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 48px;
+    padding: 0 16px;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    align-items: center;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .mobile-topbar-brand {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-brand-text {
+    font-size: 13px;
+    color: var(--color-text);
+  }
+
+  .mobile-topbar-nameplate {
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  body.off-hero .mobile-topbar-brand {
+    display: none;
+  }
+
+  body.off-hero .mobile-topbar-nameplate {
+    display: flex;
+  }
+
+  .mobile-nameplate-name {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.2;
+  }
+
+  .mobile-nameplate-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--color-text-muted);
+  }
+
+  .mobile-topbar .theme-toggle {
+    margin-left: 0;
+    flex-shrink: 0;
+  }
+
+  /* Adjust section top padding to clear the 48px fixed topbar */
+  #hero {
+    padding-top: 72px;
+  }
+
+  section {
+    padding-top: 68px;
+    padding-bottom: 64px;
+  }
+
+  /* ── Mobile bottom nav ── */
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 48px;
+    background-color: var(--color-bg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .mobile-nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 8px;
+    gap: 4px;
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--color-text-muted);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-nav-item:visited {
+    color: var(--color-text-muted);
+  }
+
+  .mobile-nav-item.active {
+    color: var(--color-text);
+  }
+
+  .mobile-nav-indicator {
+    width: 20px;
+    height: 2px;
+    background-color: var(--color-accent);
+    border-radius: 1px;
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+
+  .mobile-nav-item.active .mobile-nav-indicator {
+    opacity: 1;
+  }
+}
