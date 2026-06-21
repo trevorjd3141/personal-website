@@ -532,7 +532,7 @@ footer p {
 @media only screen and (max-width: 767px) {
 
 	#hero {
-		padding: 90px 20px 40px;
+		padding: 72px 20px 40px;
 	}
 
 	.hero-name {
@@ -550,6 +550,7 @@ footer p {
   /* Scroll snap */
   html {
     scroll-snap-type: y mandatory;
+    scroll-padding-top: 48px; /* height of fixed mobile topbar */
   }
 
   #hero,
@@ -557,6 +558,10 @@ footer p {
     scroll-snap-align: start;
     min-height: 100dvh;
     box-sizing: border-box;
+  }
+
+  footer {
+    scroll-snap-align: start;
   }
 
   /* Hide desktop nav */
@@ -627,10 +632,6 @@ footer p {
   }
 
   /* Adjust section top padding to clear the 48px fixed topbar */
-  #hero {
-    padding-top: 72px;
-  }
-
   section {
     padding-top: 68px;
     padding-bottom: 64px;
