@@ -1,0 +1,40 @@
+{
+  "planPath": "docs/superpowers/plans/2026-06-20-mobile-layout-redesign.md",
+  "tasks": [
+    {
+      "id": 1,
+      "subject": "Task 1: Create feature branch",
+      "status": "pending",
+      "description": "**Goal:** Establish the working branch so no changes land on `main` unreviewed.\n\n**Files:**\n- No file changes.\n\n**Acceptance Criteria:**\n- [ ] Branch `feature/mobile-layout-redesign` exists and is checked out.\n- [ ] `git status` shows clean working tree on the new branch.\n\n**Verify:** `git branch --show-current` → `feature/mobile-layout-redesign`\n\n```json:metadata\n{\"files\": [], \"verifyCommand\": \"git branch --show-current\", \"acceptanceCriteria\": [\"Branch feature/mobile-layout-redesign is checked out\", \"git status shows clean working tree\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 2,
+      "subject": "Task 2: Add mobile HTML elements",
+      "status": "pending",
+      "blockedBy": [1],
+      "description": "**Goal:** Insert `.mobile-topbar` and `.mobile-bottom-nav` into `index.html` and add base CSS to hide them on desktop.\n\n**Files:**\n- Modify: `index.html`\n- Modify: `style.css`\n\n**Acceptance Criteria:**\n- [ ] `.mobile-topbar` is in the DOM directly before `<nav id=\"my-nav\">`.\n- [ ] `.mobile-topbar` has `.mobile-topbar-brand` and `.mobile-topbar-nameplate` children, each with a `.theme-toggle` button.\n- [ ] `.mobile-bottom-nav` is in the DOM directly after `</main>`.\n- [ ] `.mobile-bottom-nav` has three `<a>` elements with `data-section` of `experience`, `education`, `projects`.\n- [ ] Both new elements are hidden on desktop.\n\n**Verify:** Open `index.html` in desktop browser → elements invisible; inspect DOM → elements present.\n\n```json:metadata\n{\"files\": [\"index.html\", \"style.css\"], \"verifyCommand\": \"open index.html in browser and inspect DOM\", \"acceptanceCriteria\": [\".mobile-topbar present before #my-nav\", \".mobile-bottom-nav present after </main>\", \"both hidden on desktop\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 3,
+      "subject": "Task 3: Add mobile CSS",
+      "status": "pending",
+      "blockedBy": [2],
+      "description": "**Goal:** Write all `@media (max-width: 767px)` rules for scroll-snap, mobile topbar two-state toggle, and B1a bottom nav.\n\n**Files:**\n- Modify: `style.css` — append new `@media (max-width: 767px)` block\n\n**Acceptance Criteria:**\n- [ ] `#my-nav` hidden on 375px viewport.\n- [ ] `.mobile-topbar` fixed at top 48px, shows brand state by default.\n- [ ] `body.off-hero` class switches topbar to nameplate state.\n- [ ] `.mobile-bottom-nav` fixed at bottom 48px.\n- [ ] `.active` on a nav item shows indicator line.\n- [ ] Sections snap on scroll in DevTools mobile emulation.\n\n**Verify:** Chrome DevTools → 375px → scroll between sections.\n\n```json:metadata\n{\"files\": [\"style.css\"], \"verifyCommand\": \"Chrome DevTools mobile 375px — scroll between sections\", \"acceptanceCriteria\": [\"#my-nav hidden on mobile\", \"mobile-topbar fixed top 48px\", \"mobile-bottom-nav fixed bottom 48px\", \"scroll-snap-type y mandatory on html\", \"sections snap\"], \"modelTier\": \"mechanical\"}\n```"
+    },
+    {
+      "id": 4,
+      "subject": "Task 4: Add mobile JavaScript",
+      "status": "pending",
+      "blockedBy": [3],
+      "description": "**Goal:** Replace theme-toggle JS to sync all `.theme-toggle` buttons; add IntersectionObserver for topbar state and bottom nav active class.\n\n**Files:**\n- Modify: `index.html` — replace theme-toggle script block; append IntersectionObserver IIFE\n\n**Acceptance Criteria:**\n- [ ] All three `.theme-toggle` buttons sync on click.\n- [ ] On hero: `body.off-hero` absent, no active bottom nav item.\n- [ ] On experience: `body.off-hero` present, `[data-section=\"experience\"]` has `active`.\n- [ ] On education: `[data-section=\"education\"]` has `active`.\n- [ ] On projects: `[data-section=\"projects\"]` has `active`.\n- [ ] Resize to >767px: `body.off-hero` removed, all `.active` removed.\n\n**Verify:** Chrome DevTools → mobile 375px → scroll all 4 sections; check body class and nav active state in Elements panel.\n\n```json:metadata\n{\"files\": [\"index.html\"], \"verifyCommand\": \"Chrome DevTools mobile 375px — scroll all 4 sections and check body class + nav active state\", \"acceptanceCriteria\": [\"All .theme-toggle buttons sync\", \"body.off-hero added/removed correctly\", \"correct .active class per section\", \"teardown on resize >767px\"], \"modelTier\": \"standard\"}\n```"
+    },
+    {
+      "id": 5,
+      "subject": "Task 5: Merge to main",
+      "status": "pending",
+      "blockedBy": [4],
+      "description": "**Goal:** Merge the completed feature branch into `main`.\n\n**Files:**\n- No file changes.\n\n**Acceptance Criteria:**\n- [ ] `feature/mobile-layout-redesign` merged into `main`.\n- [ ] All three feature commits present on `main`.\n- [ ] Feature branch deleted.\n\n**Verify:** `git log main --oneline -5` → three feature commits at top.\n\n```json:metadata\n{\"files\": [], \"verifyCommand\": \"git log main --oneline -5\", \"acceptanceCriteria\": [\"feature branch merged to main\", \"feature branch deleted\"], \"modelTier\": \"mechanical\"}\n```"
+    }
+  ],
+  "lastUpdated": "2026-06-20T00:00:00Z"
+}
