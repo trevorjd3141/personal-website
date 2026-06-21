@@ -80,6 +80,19 @@
 	background-color: transparent !important;
 }
 
+#my-nav .nav-item::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: var(--color-accent-light);
+	transition: width 0.3s;
+}
+
+#my-nav .nav-item:hover::after {
+	width: 100%;
+}
+
 #my-nav .nav-link.active {
 	color: var(--color-text) !important;
 	background-color: rgba(0, 0, 0, 0.06) !important;
