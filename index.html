@@ -399,18 +399,22 @@
 
 <script>
   (function() {
-    var btn = document.getElementById('theme-toggle');
-    if (!btn) return;
     var html = document.documentElement;
-    function updateLabel() {
-      btn.textContent = html.getAttribute('data-theme') === 'dark' ? '☀ light' : '☾ dark';
+    function updateAllToggles() {
+      var isDark = html.getAttribute('data-theme') === 'dark';
+      var label = isDark ? '☀ light' : '☾ dark';
+      document.querySelectorAll('.theme-toggle').forEach(function(btn) {
+        btn.textContent = label;
+      });
     }
-    updateLabel();
-    btn.addEventListener('click', function() {
-      var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      updateLabel();
+    updateAllToggles();
+    document.querySelectorAll('.theme-toggle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateAllToggles();
+      });
     });
   })();
 
@@ -469,6 +473,54 @@
         requestAnimationFrame(step);
       });
     });
+  })();
+
+  (function() {
+    var sectionIds = ['hero', 'experience', 'education', 'projects'];
+    var sections = sectionIds.map(function(id) {
+      return document.getElementById(id);
+    }).filter(Boolean);
+    var navItems = document.querySelectorAll('.mobile-nav-item');
+    var body = document.body;
+    var observer = null;
+    var ratios = {};
+
+    function setActive(id) {
+      body.classList.toggle('off-hero', id !== 'hero');
+      navItems.forEach(function(item) {
+        item.classList.toggle('active', item.dataset.section === id);
+      });
+    }
+
+    function teardown() {
+      if (observer) { observer.disconnect(); observer = null; }
+      body.classList.remove('off-hero');
+      navItems.forEach(function(item) { item.classList.remove('active'); });
+      ratios = {};
+    }
+
+    function setup() {
+      ratios = {};
+      observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) { ratios[e.target.id] = e.intersectionRatio; });
+        var best = sections.reduce(function(a, b) {
+          return (ratios[b.id] || 0) > (ratios[a.id] || 0) ? b : a;
+        });
+        setActive(best.id);
+      }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] });
+      sections.forEach(function(s) { observer.observe(s); });
+    }
+
+    function onResize() {
+      if (window.innerWidth <= 767) {
+        if (!observer) setup();
+      } else {
+        teardown();
+      }
+    }
+
+    onResize();
+    window.addEventListener('resize', onResize, { passive: true });
   })();
 </script>
 
