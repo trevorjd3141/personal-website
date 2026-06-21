@@ -401,6 +401,9 @@
   color: var(--color-text-faint);
 }
 
+.exp-date-inline::before { content: "("; }
+.exp-date-inline::after  { content: ")"; }
+
 .exp-sep {
   color: var(--color-text-faint);
 }
@@ -626,7 +629,7 @@ footer p {
 
   section {
     padding-top: 92px;
-    padding-bottom: 40px;
+    padding-bottom: 24px;
   }
 
   .hero-link,
@@ -642,9 +645,33 @@ footer p {
     align-items: center;
   }
 
-  .exp-date-range {
-    display: none;
+  .exp-block {
+    border-left: none;
+    padding-left: 0;
+    margin-bottom: 28px;
   }
 
+  .exp-header-left {
+    min-width: 0;
+  }
+
+  .exp-date-inline {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .exp-date-inline::before,
+  .exp-date-inline::after {
+    content: "";
+  }
+
+  .exp-role-line {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .exp-sep {
+    display: none;
+  }
 
 }
