@@ -537,7 +537,7 @@ footer p {
 
   /* Pre-existing breakpoint rules */
   #hero {
-    padding: 88px 20px 40px;
+    padding: 92px 20px 40px;
   }
 
   .exp-block {
@@ -553,7 +553,7 @@ footer p {
   }
 
   html {
-    scroll-padding-top: 72px;
+    scroll-padding-top: 76px;
   }
 
   /* Hide desktop nav */
@@ -577,21 +577,24 @@ footer p {
 
   .mobile-topbar-brand {
     display: flex;
-    height: 40px;
+    height: 44px;
     padding: 0 16px;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--color-border);
   }
 
-  .mobile-brand-text {
+  .mobile-brand-text,
+  .mobile-brand-text:visited {
     font-size: 13px;
     color: var(--color-text);
+    text-decoration: none;
   }
 
   .mobile-topbar .theme-toggle {
     margin-left: 0;
     flex-shrink: 0;
+    min-height: 44px;
   }
 
   /* ── Tab strip ── */
@@ -621,10 +624,26 @@ footer p {
     border-bottom-color: var(--color-accent);
   }
 
-  /* Adjust section top padding to clear the 72px fixed topbar + 16px gap */
   section {
-    padding-top: 88px;
+    padding-top: 92px;
     padding-bottom: 40px;
+  }
+
+  .hero-link,
+  .hero-link:visited {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .footer-email {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .exp-date-range {
+    display: none;
   }
 
 
