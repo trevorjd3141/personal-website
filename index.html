@@ -480,10 +480,12 @@
     var sections = sectionIds.map(function(id) {
       return document.getElementById(id);
     }).filter(Boolean);
+    if (sections.length === 0) return;
     var navItems = document.querySelectorAll('.mobile-nav-item');
     var body = document.body;
     var observer = null;
     var ratios = {};
+    var initialized = {};
 
     function setActive(id) {
       body.classList.toggle('off-hero', id !== 'hero');
@@ -497,12 +499,18 @@
       body.classList.remove('off-hero');
       navItems.forEach(function(item) { item.classList.remove('active'); });
       ratios = {};
+      initialized = {};
     }
 
     function setup() {
       ratios = {};
+      initialized = {};
       observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(e) { ratios[e.target.id] = e.intersectionRatio; });
+        entries.forEach(function(e) {
+          ratios[e.target.id] = e.intersectionRatio;
+          initialized[e.target.id] = true;
+        });
+        if (!sections.every(function(s) { return initialized[s.id]; })) return;
         var best = sections.reduce(function(a, b) {
           return (ratios[b.id] || 0) > (ratios[a.id] || 0) ? b : a;
         });
@@ -519,8 +527,12 @@
       }
     }
 
+    var resizeTimer;
     onResize();
-    window.addEventListener('resize', onResize, { passive: true });
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(onResize, 150);
+    }, { passive: true });
   })();
 </script>
 
