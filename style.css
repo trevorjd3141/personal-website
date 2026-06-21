@@ -413,6 +413,10 @@
   flex-shrink: 0;
 }
 
+.exp-date-prefix {
+  color: var(--color-accent-light);
+}
+
 .arrow-list {
   list-style: none;
   padding: 0;
@@ -534,6 +538,10 @@ footer p {
   /* Pre-existing breakpoint rules */
   #hero {
     padding: 88px 20px 40px;
+  }
+
+  .exp-block {
+    padding-left: 12px;
   }
 
   .hero-name {
