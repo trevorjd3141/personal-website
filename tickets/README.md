@@ -24,6 +24,9 @@ Check items off below as they move to `completed/`.
 5. [x] [portfolio-audit-fixes.md](completed/portfolio-audit-fixes.md) — fixes from the 2026-06 senior UI/UX + frontend audit (stale docs, heading outline, unused icon libs, contrast, dead files, OG tags, perf, polish)
 6. [ ] [mobile-uiux-audit-fixes.md](backlog/mobile-uiux-audit-fixes.md) — fixes from the 2026-06 mobile UI/UX review (navbar wrap at 320px, hamburger jump on open, small tap targets, dead brand link, mobile date de-dup)
 
+## Mobile UX
+7. [ ] [mobile-hamburger-menu.md](backlog/mobile-hamburger-menu.md) — replace tab-strip topbar with animated right-drawer hamburger menu
+
 ---
 Notes:
 - This is a static site — no build step, no tests, no type-checking.
