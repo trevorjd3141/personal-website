@@ -135,6 +135,11 @@
 	color: var(--color-text);
 }
 
+.mobile-topbar,
+.mobile-bottom-nav {
+	display: none;
+}
+
 .section-header {
   display: flex;
   align-items: center;
