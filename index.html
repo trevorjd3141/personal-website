@@ -384,9 +384,8 @@
     function updateAllToggles() {
       var isDark = html.getAttribute('data-theme') === 'dark';
       var label = isDark ? '☀ light' : '☾ dark';
-      var iconOnly = isDark ? '☀' : '☾';
       document.querySelectorAll('.theme-toggle').forEach(function(btn) {
-        btn.textContent = btn.id === 'mobile-theme-toggle' ? iconOnly : label;
+        btn.textContent = label;
       });
     }
     updateAllToggles();
@@ -462,69 +461,48 @@
   })();
 
   (function() {
-    var sectionIds = ['hero', 'experience', 'education', 'projects'];
-    var sections = sectionIds.map(function(id) {
-      return document.getElementById(id);
-    }).filter(Boolean);
-    if (sections.length === 0) return;
-    var navItems = document.querySelectorAll('.mobile-tab-item');
-    var observer = null;
-    var ratios = {};
-    var initialized = {};
+    var header = document.getElementById('mobile-topbar');
+    var drawer = document.getElementById('mobile-drawer');
+    var hamburger = document.getElementById('mobile-hamburger');
+    if (!header || !drawer || !hamburger) return;
 
-    function setActive(id) {
-      navItems.forEach(function(item) {
-        var isActive = item.dataset.section === id;
-        item.classList.toggle('active', isActive);
-        if (isActive) {
-          item.setAttribute('aria-current', 'page');
-        } else {
-          item.removeAttribute('aria-current');
-        }
-      });
+    function openDrawer() {
+      header.classList.add('drawer-open');
+      drawer.classList.add('is-open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      drawer.removeAttribute('aria-hidden');
     }
 
-    function teardown() {
-      if (observer) { observer.disconnect(); observer = null; }
-      navItems.forEach(function(item) {
-        item.classList.remove('active');
-        item.removeAttribute('aria-current');
-      });
-      ratios = {};
-      initialized = {};
+    function closeDrawer() {
+      header.classList.remove('drawer-open');
+      drawer.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      drawer.setAttribute('aria-hidden', 'true');
     }
 
-    function setup() {
-      ratios = {};
-      initialized = {};
-      observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(e) {
-          ratios[e.target.id] = e.intersectionRatio;
-          initialized[e.target.id] = true;
-        });
-        if (!sections.every(function(s) { return initialized[s.id]; })) return;
-        var best = sections.reduce(function(a, b) {
-          return (ratios[b.id] || 0) > (ratios[a.id] || 0) ? b : a;
-        });
-        setActive(best.id);
-      }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] });
-      sections.forEach(function(s) { observer.observe(s); });
-    }
-
-    function onResize() {
-      if (window.innerWidth <= 767) {
-        if (!observer) setup();
+    hamburger.addEventListener('click', function() {
+      if (header.classList.contains('drawer-open')) {
+        closeDrawer();
       } else {
-        teardown();
+        openDrawer();
       }
-    }
+    });
 
-    var resizeTimer;
-    onResize();
-    window.addEventListener('resize', function() {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(onResize, 150);
-    }, { passive: true });
+    drawer.querySelectorAll('.drawer-link').forEach(function(link) {
+      link.addEventListener('click', function() {
+        closeDrawer();
+      });
+    });
+
+    document.addEventListener('click', function(e) {
+      if (
+        header.classList.contains('drawer-open') &&
+        !drawer.contains(e.target) &&
+        !hamburger.contains(e.target)
+      ) {
+        closeDrawer();
+      }
+    });
   })();
 </script>
 
