@@ -67,13 +67,20 @@
 <header class="mobile-topbar" id="mobile-topbar">
   <div class="mobile-topbar-brand">
     <a href="#hero" class="mobile-brand-text">~/trevordalton</a>
-    <button class="theme-toggle" id="mobile-theme-toggle" aria-label="Toggle dark mode">☾ dark</button>
+    <button class="mobile-hamburger" id="mobile-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+    </button>
   </div>
-  <nav class="mobile-tab-strip" aria-label="Page sections">
-    <a href="#experience" class="mobile-tab-item" data-section="experience">experience</a>
-    <a href="#education" class="mobile-tab-item" data-section="education">education</a>
-    <a href="#projects" class="mobile-tab-item" data-section="projects">projects</a>
-  </nav>
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <nav aria-label="Page sections">
+      <a href="#experience" class="drawer-link">experience</a>
+      <a href="#education" class="drawer-link">education</a>
+      <a href="#projects" class="drawer-link">projects</a>
+    </nav>
+    <button class="theme-toggle drawer-toggle" id="mobile-theme-toggle" aria-label="Toggle dark mode">☾ dark</button>
+  </div>
 </header>
 <nav id="my-nav" class="navbar navbar-expand-lg fixed-top">
   <a class="navbar-brand" href="#">~/trevordalton</a>
@@ -377,8 +384,9 @@
     function updateAllToggles() {
       var isDark = html.getAttribute('data-theme') === 'dark';
       var label = isDark ? '☀ light' : '☾ dark';
+      var iconOnly = isDark ? '☀' : '☾';
       document.querySelectorAll('.theme-toggle').forEach(function(btn) {
-        btn.textContent = label;
+        btn.textContent = btn.id === 'mobile-theme-toggle' ? iconOnly : label;
       });
     }
     updateAllToggles();
