@@ -545,24 +545,8 @@ footer p {
     grid-template-columns: 1fr;
   }
 
-  /* Scroll snap */
-  html, body {
-    scroll-snap-type: y mandatory;
-  }
-
   html {
-    scroll-padding-top: 48px;    /* height of fixed mobile topbar */
-    scroll-padding-bottom: 48px; /* height of fixed mobile bottom nav */
-  }
-
-  main > section {
-    scroll-snap-align: start;
-    min-height: 100dvh;
-    box-sizing: border-box;
-  }
-
-  footer {
-    scroll-snap-align: start;
+    scroll-padding-top: 72px;
   }
 
   /* Hide desktop nav */
