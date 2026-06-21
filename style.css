@@ -613,10 +613,11 @@ footer p {
     border-bottom-color: var(--color-accent);
   }
 
-  /* Adjust section top padding to clear the 72px fixed topbar */
+  /* Adjust section top padding to clear the 72px fixed topbar + 16px gap */
   section {
     padding-top: 88px;
     padding-bottom: 40px;
   }
+
 
 }
